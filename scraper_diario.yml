@@ -1,0 +1,67 @@
+name: Scraper Diario Carnicerías
+
+on:
+  schedule:
+    # 8:30 AM hora Argentina (UTC-3 = 11:30 UTC)
+    - cron: '30 11 * * *'
+  workflow_dispatch:
+
+jobs:
+  scraper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias Python
+        run: pip install requests beautifulsoup4 lxml pandas playwright
+
+      - name: Instalar Chromium (Playwright)
+        run: playwright install chromium --with-deps
+
+      - name: Crear directorios
+        run: |
+          mkdir -p outputs/output_piala
+          mkdir -p outputs/output_chanear
+          mkdir -p data docs
+
+      - name: Scraper Piala
+        run: python scraper_piala.py
+        env:
+          PYTHONPATH: .
+
+      - name: Mover outputs Piala
+        run: mv output_piala/* outputs/output_piala/ 2>/dev/null || true
+
+      - name: Scraper El Chañar (Playwright)
+        run: python scraper_chanear.py
+        env:
+          PYTHONPATH: .
+
+      - name: Mover outputs El Chañar
+        run: mv output_chanear/* outputs/output_chanear/ 2>/dev/null || true
+
+      - name: Analizar precios
+        run: python analizar_precios.py
+
+      - name: Generar web (GitHub Pages)
+        run: python generar_web.py
+
+      - name: Commit y push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ docs/ outputs/
+          git diff --staged --quiet || git commit -m "🥩 Precios $(date +'%Y-%m-%d')"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

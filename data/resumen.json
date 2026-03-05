@@ -1,6 +1,6 @@
 {
   "fecha": "20260305",
-  "total_productos": 75,
+  "total_productos": 61,
   "variacion_dia": null,
   "variacion_7d": null,
   "variacion_mes": null,
@@ -13,7 +13,7 @@
   "resumen_supermercados": [
     {
       "supermercado": "chanear",
-      "total_productos": 75,
+      "total_productos": 61,
       "categorias": [
         {
           "categoria": "Carnes Vacunas",
@@ -21,13 +21,6 @@
           "precio_min": 5800.0,
           "precio_max": 31000.0,
           "cantidad": 35
-        },
-        {
-          "categoria": "Cerdo",
-          "precio_promedio": 12413.57,
-          "precio_min": 7300.0,
-          "precio_max": 22900.0,
-          "cantidad": 14
         },
         {
           "categoria": "Elaborados",

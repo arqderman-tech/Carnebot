@@ -168,4 +168,3 @@ if __name__ == "__main__":
         guardar(productos, OUTPUT_DIR, "piala")
     else:
         log.warning("[Piala] Sin productos obtenidos")
-```

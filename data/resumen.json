@@ -1,0 +1,63 @@
+{
+  "fecha": "20260305",
+  "total_productos": 75,
+  "variacion_dia": null,
+  "variacion_7d": null,
+  "variacion_mes": null,
+  "productos_subieron_dia": 0,
+  "productos_bajaron_dia": 0,
+  "productos_sin_cambio_dia": 0,
+  "ranking_subida_dia": [],
+  "ranking_baja_dia": [],
+  "comparativa_supermercados": [],
+  "resumen_supermercados": [
+    {
+      "supermercado": "chanear",
+      "total_productos": 75,
+      "categorias": [
+        {
+          "categoria": "Carnes Vacunas",
+          "precio_promedio": 18371.14,
+          "precio_min": 5800.0,
+          "precio_max": 31000.0,
+          "cantidad": 35
+        },
+        {
+          "categoria": "Cerdo",
+          "precio_promedio": 12413.57,
+          "precio_min": 7300.0,
+          "precio_max": 22900.0,
+          "cantidad": 14
+        },
+        {
+          "categoria": "Elaborados",
+          "precio_promedio": 6750.0,
+          "precio_min": 2000.0,
+          "precio_max": 11500.0,
+          "cantidad": 2
+        },
+        {
+          "categoria": "Elaborados Premium",
+          "precio_promedio": 18580.0,
+          "precio_min": 9500.0,
+          "precio_max": 33000.0,
+          "cantidad": 5
+        },
+        {
+          "categoria": "Embutidos",
+          "precio_promedio": 9815.0,
+          "precio_min": 8200.0,
+          "precio_max": 12000.0,
+          "cantidad": 6
+        },
+        {
+          "categoria": "Pollo",
+          "precio_promedio": 8671.15,
+          "precio_min": 4390.0,
+          "precio_max": 16100.0,
+          "cantidad": 13
+        }
+      ]
+    }
+  ]
+}

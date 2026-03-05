@@ -1,0 +1,66 @@
+{
+  "7d": {
+    "total": [
+      {
+        "fecha": "2026-03-05",
+        "pct": 0.0
+      }
+    ],
+    "supermercados": {
+      "chanear": [
+        {
+          "fecha": "2026-03-05",
+          "pct": 0.0
+        }
+      ]
+    }
+  },
+  "30d": {
+    "total": [
+      {
+        "fecha": "2026-03-05",
+        "pct": 0.0
+      }
+    ],
+    "supermercados": {
+      "chanear": [
+        {
+          "fecha": "2026-03-05",
+          "pct": 0.0
+        }
+      ]
+    }
+  },
+  "6m": {
+    "total": [
+      {
+        "fecha": "2026-03-05",
+        "pct": 0.0
+      }
+    ],
+    "supermercados": {
+      "chanear": [
+        {
+          "fecha": "2026-03-05",
+          "pct": 0.0
+        }
+      ]
+    }
+  },
+  "1y": {
+    "total": [
+      {
+        "fecha": "2026-03-05",
+        "pct": 0.0
+      }
+    ],
+    "supermercados": {
+      "chanear": [
+        {
+          "fecha": "2026-03-05",
+          "pct": 0.0
+        }
+      ]
+    }
+  }
+}

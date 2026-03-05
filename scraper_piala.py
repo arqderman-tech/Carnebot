@@ -5,32 +5,16 @@ from scraper_base import guardar, log
 from bs4 import BeautifulSoup
 from pathlib import Path
 from datetime import datetime
-import urllib.request, ssl
+
+try:
+    from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
+    PLAYWRIGHT_OK = True
+except ImportError:
+    PLAYWRIGHT_OK = False
 
 BASE_URL     = "https://www.piala.com.ar/productos/"
 SUPERMERCADO = "piala"
 OUTPUT_DIR   = Path("output_piala")
-
-SSL_CTX = ssl.create_default_context()
-SSL_CTX.check_hostname = False
-SSL_CTX.verify_mode = ssl.CERT_NONE
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36",
-    "Accept-Language": "es-AR,es;q=0.9",
-}
-
-
-def get_html(url, retries=4):
-    for i in range(retries):
-        try:
-            req = urllib.request.Request(url, headers=HEADERS)
-            with urllib.request.urlopen(req, context=SSL_CTX, timeout=20) as r:
-                return r.read().decode("utf-8", errors="replace")
-        except Exception as e:
-            log.warning(f"  intento {i+1}/{retries}: {e}")
-            time.sleep(3 * (i + 1))
-    return None
 
 
 def parse_precio(texto):
@@ -45,19 +29,14 @@ def parse_precio(texto):
     return float(raw.replace(".", "").replace(",", "."))
 
 
-def parsear_pagina(html, url_pagina):
+def parsear_pagina(html):
     soup = BeautifulSoup(html, "lxml")
     productos = []
     fecha = datetime.now().strftime("%Y-%m-%d %H:%M")
     vistos = set()
 
-    items = soup.select("li.product")
-    for item in items:
-        nombre_el = item.select_one(
-            "h2.woocommerce-loop-product__title,"
-            "h3.woocommerce-loop-product__title,"
-            ".woocommerce-loop-product__title"
-        )
+    for item in soup.select("li.product"):
+        nombre_el = item.select_one(".woocommerce-loop-product__title")
         if not nombre_el:
             continue
         nombre = nombre_el.get_text(strip=True)
@@ -67,6 +46,8 @@ def parsear_pagina(html, url_pagina):
         precio_el  = item.select_one("span.price, .woocommerce-Price-amount")
         precio_raw = precio_el.get_text(" ", strip=True) if precio_el else ""
         precio     = parse_precio(precio_raw)
+        if not precio:
+            continue
 
         link_el  = item.select_one("a")
         url_prod = link_el.get("href", "") if link_el else ""
@@ -74,29 +55,26 @@ def parsear_pagina(html, url_pagina):
         img_el = item.select_one("img")
         imagen = ""
         if img_el:
-            imagen = (img_el.get("src") or
-                      img_el.get("data-src") or
-                      img_el.get("data-lazy-src") or "")
+            imagen = img_el.get("src") or img_el.get("data-src") or img_el.get("data-lazy-src") or ""
 
         unidad = "kg" if re.search(r'/kg', precio_raw, re.I) else "unidad"
 
-        if precio:
-            vistos.add(nombre)
-            productos.append({
-                "supermercado": SUPERMERCADO,
-                "codigo":       "",
-                "nombre":       nombre,
-                "categoria":    "Carnes",
-                "precio_actual": precio,
-                "unidad":       unidad,
-                "imagen":       imagen,
-                "url":          url_prod,
-                "fecha":        fecha,
-            })
+        vistos.add(nombre)
+        productos.append({
+            "supermercado": SUPERMERCADO,
+            "codigo":       "",
+            "nombre":       nombre,
+            "categoria":    "Carnes",
+            "precio_actual": precio,
+            "unidad":       unidad,
+            "imagen":       imagen,
+            "url":          url_prod,
+            "fecha":        fecha,
+        })
 
     if productos:
-        log.info(f"  [Estrategia 1 - li.product] {len(productos)} productos")
-        return productos, get_next_url(soup)
+        log.info(f"  [li.product] {len(productos)} productos")
+        return productos
 
     for h3 in soup.find_all("h3"):
         link = h3.find("a")
@@ -117,6 +95,9 @@ def parsear_pagina(html, url_pagina):
                     break
 
         precio = parse_precio(precio_raw)
+        if not precio:
+            continue
+
         unidad = "kg" if re.search(r'/kg', precio_raw, re.I) else "unidad"
 
         imagen = ""
@@ -127,56 +108,89 @@ def parsear_pagina(html, url_pagina):
                     imagen = img.get("src") or img.get("data-src", "")
                 break
 
-        if precio:
-            vistos.add(nombre)
-            productos.append({
-                "supermercado": SUPERMERCADO,
-                "codigo":       "",
-                "nombre":       nombre,
-                "categoria":    "Carnes",
-                "precio_actual": precio,
-                "unidad":       unidad,
-                "imagen":       imagen,
-                "url":          url_prod,
-                "fecha":        fecha,
-            })
+        vistos.add(nombre)
+        productos.append({
+            "supermercado": SUPERMERCADO,
+            "codigo":       "",
+            "nombre":       nombre,
+            "categoria":    "Carnes",
+            "precio_actual": precio,
+            "unidad":       unidad,
+            "imagen":       imagen,
+            "url":          url_prod,
+            "fecha":        fecha,
+        })
 
     if productos:
-        log.info(f"  [Estrategia 2 - h3] {len(productos)} productos")
+        log.info(f"  [h3 fallback] {len(productos)} productos")
 
-    return productos, get_next_url(soup)
+    return productos
 
 
-def get_next_url(soup):
-    next_el = soup.select_one(
-        "a.next.page-numbers,"
-        ".woocommerce-pagination a.next,"
-        "a[aria-label='Next']"
-    )
+def get_next_url(html):
+    soup = BeautifulSoup(html, "lxml")
+    next_el = soup.select_one("a.next.page-numbers, .woocommerce-pagination a.next")
     return next_el.get("href") if next_el else None
 
 
 def scrape_all():
+    if not PLAYWRIGHT_OK:
+        log.error("Playwright no instalado. Correr: pip install playwright && playwright install chromium")
+        return []
+
     todos = []
-    url = BASE_URL
-    pagina = 1
 
-    while url:
-        log.info(f"[Piala] Pagina {pagina}: {url}")
-        html = get_html(url)
-        if not html:
-            log.error(f"  FALLO descargando pagina {pagina}")
-            break
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-dev-shm-usage"],
+        )
+        context = browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36",
+            locale="es-AR",
+            viewport={"width": 1280, "height": 900},
+        )
+        page = context.new_page()
 
-        prods, next_url = parsear_pagina(html, url)
-        log.info(f"  -> {len(prods)} productos")
-        todos.extend(prods)
+        page.route("**/*.{png,jpg,jpeg,gif,webp,svg,woff,woff2,ttf,otf}", lambda r: r.abort())
+        page.route("**/google-analytics.com/**", lambda r: r.abort())
+        page.route("**/googletagmanager.com/**", lambda r: r.abort())
+        page.route("**/facebook.com/**", lambda r: r.abort())
 
-        if not next_url or next_url == url:
-            break
-        url = next_url
-        pagina += 1
-        time.sleep(1)
+        url = BASE_URL
+        pagina = 1
+
+        while url:
+            log.info(f"[Piala] Pagina {pagina}: {url}")
+
+            try:
+                page.goto(url, wait_until="networkidle", timeout=30000)
+            except PWTimeout:
+                try:
+                    page.goto(url, wait_until="load", timeout=20000)
+                    page.wait_for_timeout(3000)
+                except PWTimeout:
+                    log.error(f"  FALLO en pagina {pagina}")
+                    break
+
+            try:
+                page.wait_for_selector("li.product, h3", timeout=8000)
+            except PWTimeout:
+                pass
+
+            html = page.content()
+            prods = parsear_pagina(html)
+            log.info(f"  -> {len(prods)} productos")
+            todos.extend(prods)
+
+            next_url = get_next_url(html)
+            if not next_url or next_url == url:
+                break
+            url = next_url
+            pagina += 1
+            time.sleep(0.5)
+
+        browser.close()
 
     log.info(f"[Piala] Total: {len(todos)} productos")
     return todos

@@ -20,26 +20,25 @@ OUTPUT_DIR   = Path("output_piala")
 # DIAGNÓSTICO DEL SITIO
 #
 # El sitio usa JetEngine + JetSmartFilters + Elementor.
-# Los productos están en div.jet-listing-grid__item (NO en li.product).
+# Hay DOS grids en la página:
+#   - listing-id=2613 → grid principal de productos (15 por página)
+#   - listing-id=1068 → grid de "destacados" (3 fijos, se repite en cada página)
 #
-# PROBLEMA DE PAGINACIÓN:
-#   La paginación JetSmartFilters solo renderiza botones hasta el nro 4
-#   en el HTML inicial. Los botones 5,6,7 aparecen recién cuando navegás
-#   a páginas avanzadas. Por eso get_total_pages() detectaba 4 y el loop
-#   nunca llegaba a las últimas páginas.
+# El scraper original mezclaba ambos grids y el set "vistos" no alcanzaba
+# porque parsear_pagina usaba soup.select() global en lugar de filtrar por grid.
+# Resultado: 90 filas en el CSV pero solo ~15 únicos tras deduplicar.
 #
-# SOLUCIÓN: usar el botón "→" (next, data-value="next") en loop
-#   hasta que desaparezca (última página).
+# FIX: filtrar SIEMPRE por .jet-listing-grid--2613 (grid principal).
 #
-# Estructura de cada item:
-#   Nombre:  .p-title .elementor-heading-title
-#   Precio:  .woocommerce-Price-amount → parent .elementor-heading-title
-#   Imagen:  primer <img>
-#   URL:     a[href*="/producto/"]
+# PAGINACIÓN:
+#   La paginación JetSmartFilters solo renderiza botones numéricos cercanos
+#   a la página actual (ej: en pág 1 muestra [1,2,3,4,…,→]).
+#   Los botones 5,6,7 no aparecen hasta navegar más adelante.
+#   Solución: loop por botón "→" (data-value="next") hasta que desaparezca.
 # ─────────────────────────────────────────────
 
 NEXT_SELECTOR = ".jet-filters-pagination__item.next[data-value='next']"
-GRID_ITEM     = ".jet-listing-grid--2613 .jet-listing-grid__item"
+GRID_SELECTOR = ".jet-listing-grid--2613 .jet-listing-grid__item"
 
 
 def parse_precio(texto):
@@ -55,15 +54,24 @@ def parse_precio(texto):
 
 
 def parsear_pagina(html, vistos):
+    """
+    Extrae productos del grid principal (listing-id=2613).
+    vistos: set de nombres ya procesados entre páginas.
+    """
     soup = BeautifulSoup(html, "lxml")
     productos = []
-
-    grid = soup.select_one(".jet-listing-grid--2613")
-    items = grid.select(".jet-listing-grid__item") if grid else []
-
     fecha = datetime.now().strftime("%Y-%m-%d %H:%M")
 
+    # SOLO el grid 2613 — ignorar el 1068 (destacados que se repiten en todas las páginas)
+    grid = soup.select_one(".jet-listing-grid--2613")
+    if not grid:
+        log.warning("  Grid 2613 no encontrado en el HTML")
+        return []
+
+    items = grid.select(".jet-listing-grid__item")
+
     for item in items:
+        # Nombre
         nombre_el = item.select_one(".p-title .elementor-heading-title")
         if not nombre_el:
             nombre_el = item.select_one("h3.elementor-heading-title")
@@ -73,6 +81,7 @@ def parsear_pagina(html, vistos):
         if not nombre or nombre in vistos:
             continue
 
+        # Precio — buscar .woocommerce-Price-amount y subir al heading para capturar "/kg"
         precio_container = item.select_one(".woocommerce-Price-amount")
         if precio_container:
             heading = precio_container.find_parent(class_="elementor-heading-title")
@@ -89,15 +98,13 @@ def parsear_pagina(html, vistos):
         if not precio:
             continue
 
-        unidad = "kg" if re.search(r'/kg', precio_raw, re.I) else "unidad"
-
+        unidad   = "kg" if re.search(r'/kg', precio_raw, re.I) else "unidad"
         link_el  = item.select_one("a[href*='/producto/']")
         url_prod = link_el.get("href", "") if link_el else ""
-
-        img_el = item.select_one("img")
-        imagen = ""
+        img_el   = item.select_one("img")
+        imagen   = ""
         if img_el:
-            imagen = (img_el.get("src") or img_el.get("data-src") or img_el.get("data-lazy-src") or "")
+            imagen = img_el.get("src") or img_el.get("data-src") or img_el.get("data-lazy-src") or ""
 
         vistos.add(nombre)
         productos.append({
@@ -116,7 +123,7 @@ def parsear_pagina(html, vistos):
 
 
 def tiene_next(page):
-    """Devuelve True si el botón → (next) existe y es visible."""
+    """Devuelve True si el botón → existe y es visible."""
     try:
         loc = page.locator(NEXT_SELECTOR).first
         return loc.count() > 0 and loc.is_visible()
@@ -126,7 +133,7 @@ def tiene_next(page):
 
 def scrape_all():
     if not PLAYWRIGHT_OK:
-        log.error("Playwright no instalado. Correr: pip install playwright && playwright install chromium")
+        log.error("Playwright no instalado.")
         return []
 
     todos  = []
@@ -145,12 +152,11 @@ def scrape_all():
         page = context.new_page()
 
         page.route("**/*.{png,jpg,jpeg,gif,webp,svg,woff,woff2,ttf,otf}", lambda r: r.abort())
-        page.route("**/google-analytics.com/**",   lambda r: r.abort())
-        page.route("**/googletagmanager.com/**",   lambda r: r.abort())
-        page.route("**/facebook.com/**",           lambda r: r.abort())
-        page.route("**/doubleclick.net/**",        lambda r: r.abort())
+        page.route("**/google-analytics.com/**",  lambda r: r.abort())
+        page.route("**/googletagmanager.com/**",  lambda r: r.abort())
+        page.route("**/facebook.com/**",          lambda r: r.abort())
+        page.route("**/doubleclick.net/**",       lambda r: r.abort())
 
-        # ── Cargar página 1 ──────────────────────────────────
         log.info(f"[Piala] Cargando: {BASE_URL}")
         try:
             page.goto(BASE_URL, wait_until="networkidle", timeout=45000)
@@ -164,9 +170,9 @@ def scrape_all():
                 return []
 
         try:
-            page.wait_for_selector(GRID_ITEM, timeout=15000)
+            page.wait_for_selector(GRID_SELECTOR, timeout=15000)
         except PWTimeout:
-            log.warning("  Timeout esperando el grid principal")
+            log.warning("  Timeout esperando el grid 2613")
 
         page.wait_for_timeout(1500)
 
@@ -174,12 +180,11 @@ def scrape_all():
         while True:
             html  = page.content()
             prods = parsear_pagina(html, vistos)
-            log.info(f"  Página {num_pagina} → {len(prods)} productos nuevos")
+            log.info(f"  Página {num_pagina} → {len(prods)} productos nuevos (total: {len(todos) + len(prods)})")
             todos.extend(prods)
 
-            # ¿Hay botón siguiente?
             if not tiene_next(page):
-                log.info("  Sin botón siguiente — fin de paginación")
+                log.info("  Sin botón → — fin de paginación")
                 break
 
             num_pagina += 1
@@ -187,25 +192,21 @@ def scrape_all():
 
             try:
                 page.locator(NEXT_SELECTOR).first.click()
-
-                # Esperar que el grid actualice: primero desaparece, luego vuelve
                 try:
                     page.wait_for_load_state("networkidle", timeout=12000)
                 except PWTimeout:
                     page.wait_for_timeout(3000)
-
-                page.wait_for_selector(GRID_ITEM, timeout=10000)
+                page.wait_for_selector(GRID_SELECTOR, timeout=10000)
                 page.wait_for_timeout(800)
-
             except PWTimeout:
-                log.warning(f"  Timeout navegando a página {num_pagina}, abortando")
+                log.warning(f"  Timeout en página {num_pagina}, abortando")
                 break
 
             time.sleep(0.3)
 
         browser.close()
 
-    log.info(f"[Piala] Total: {len(todos)} productos")
+    log.info(f"[Piala] Total: {len(todos)} productos únicos")
     return todos
 
 

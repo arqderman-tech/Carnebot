@@ -685,4 +685,274 @@ footer a {{ color: var(--red-light); text-decoration: none; }}
   <h1>Monitor de <em>Precios</em><br>de Carnicerías</h1>
   <p class="hero-sub">Seguimiento diario de precios en Piala de Patria &amp; El Chañar · Rosario, Argentina</p>
   <div class="kpi-row">
-    
+    <div class="kpi-card">
+      <div class="kpi-valor kpi-neu">{total_prods}</div>
+      <div class="kpi-label">Cortes monitoreados</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-valor {'kpi-up' if (var_dia or 0) > 0 else 'kpi-down' if (var_dia or 0) < 0 else 'kpi-neu'}">{fmt_pct(var_dia, arrow=False)}</div>
+      <div class="kpi-label">Var. hoy vs ayer</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-valor {'kpi-up' if (var_7d or 0) > 0 else 'kpi-down' if (var_7d or 0) < 0 else 'kpi-neu'}">{fmt_pct(var_7d, arrow=False)}</div>
+      <div class="kpi-label">Var. 7 días</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-valor" style="color:#e74c3c">{subieron}</div>
+      <div class="kpi-label">Subieron hoy</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-valor" style="color:#2ecc71">{bajaron}</div>
+      <div class="kpi-label">Bajaron hoy</div>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- SUPERMERCADOS -->
+  <section class="section">
+    <h2 class="section-title">📍 Carnicerías</h2>
+    <div class="sup-grid">
+      {sup_cards()}
+    </div>
+  </section>
+
+  <!-- GRÁFICOS -->
+  <section class="section">
+    <h2 class="section-title">📈 Evolución de precios</h2>
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('tab-7d', this)">7 días</button>
+      <button class="tab-btn" onclick="switchTab('tab-30d', this)">30 días</button>
+    </div>
+    <div id="tab-7d" class="tab-content active">
+      <div class="chart-wrapper"><canvas id="chart7d"></canvas></div>
+    </div>
+    <div id="tab-30d" class="tab-content">
+      <div class="chart-wrapper"><canvas id="chart30d"></canvas></div>
+    </div>
+  </section>
+
+  <!-- RANKINGS HOY -->
+  <section class="section">
+    <h2 class="section-title">🔥 Movimientos de hoy</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="ranking-grid">
+      <div>
+        <h3 style="font-family:'Bebas Neue';letter-spacing:2px;color:#e74c3c;margin-bottom:12px;font-size:1.1rem">▲ MÁS SUBIERON</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr>
+              <th>Producto</th><th>Carnicería</th><th>Antes</th><th>Ahora</th><th>Var.</th>
+            </tr></thead>
+            <tbody>{ranking_rows((ranking_dia or {{}}).get('subidas', []), 10)}</tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:'Bebas Neue';letter-spacing:2px;color:#2ecc71;margin-bottom:12px;font-size:1.1rem">▼ MÁS BAJARON</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr>
+              <th>Producto</th><th>Carnicería</th><th>Antes</th><th>Ahora</th><th>Var.</th>
+            </tr></thead>
+            <tbody>{ranking_rows((ranking_dia or {{}}).get('bajadas', []), 10)}</tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARATIVA -->
+  <section class="section">
+    <h2 class="section-title">⚖️ Comparativa entre carnicerías</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Corte</th>
+          <th>Piala</th>
+          <th>El Chañar</th>
+          <th>Diferencia</th>
+          <th>Más barato</th>
+        </tr></thead>
+        <tbody>{comparativas_rows(comparativas)}</tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- RANKING 7D -->
+  <section class="section">
+    <h2 class="section-title">📊 Top subidas · últimos 7 días</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Producto</th><th>Carnicería</th><th>Precio hace 7d</th><th>Precio actual</th><th>Var. 7d</th>
+        </tr></thead>
+        <tbody>{ranking_rows(ranking_7d or [], 15)}</tbody>
+      </table>
+    </div>
+  </section>
+
+{lista_html}
+
+</main>
+
+<footer>
+  <p>CarneBot · Monitor de precios de carnicerías en Rosario, Argentina</p>
+  <p style="margin-top:8px">
+    <a href="https://www.piala.com.ar/productos/" target="_blank">Piala de Patria</a> ·
+    <a href="https://carneselchanear.com.ar/shop" target="_blank">Carnes El Chañar</a> ·
+    Datos actualizados diariamente via GitHub Actions
+  </p>
+  <p style="margin-top:8px;color:#555;font-size:0.7rem">Los precios son de referencia. Verificar en cada local.</p>
+</footer>
+
+<script>
+// ── Tabs ─────────────────────────────────────────────────────────────────
+function switchTab(id, btn) {{
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}}
+
+// ── Chart helper ────────────────────────────────────────────────────────
+const CHART_DEFAULTS = {{
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {{
+    legend: {{
+      labels: {{ color: '#aaa', font: {{ family: 'IBM Plex Mono', size: 11 }} }}
+    }},
+    tooltip: {{
+      backgroundColor: '#1e1e1e',
+      titleColor: '#e8e8e8',
+      bodyColor: '#aaa',
+      borderColor: '#333',
+      borderWidth: 1,
+      callbacks: {{
+        label: ctx => ` ${{ctx.dataset.label}}: ${{ctx.parsed.y > 0 ? '+' : ''}}${{ctx.parsed.y.toFixed(2)}}%`
+      }}
+    }}
+  }},
+  scales: {{
+    x: {{
+      ticks: {{ color: '#666', font: {{ family: 'IBM Plex Mono', size: 10 }} }},
+      grid:  {{ color: '#1e1e1e' }}
+    }},
+    y: {{
+      ticks: {{
+        color: '#666',
+        font: {{ family: 'IBM Plex Mono', size: 10 }},
+        callback: v => (v>0?'+':'')+v.toFixed(1)+'%'
+      }},
+      grid: {{ color: '#1e1e1e' }},
+    }}
+  }}
+}};
+
+function makeChart(canvasId, labels, datasets) {{
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+  new Chart(ctx, {{
+    type: 'line',
+    data: {{ labels, datasets }},
+    options: CHART_DEFAULTS
+  }});
+}}
+
+// ── 7d Chart ────────────────────────────────────────────────────────────
+makeChart('chart7d', {labels_7d}, [
+  {{
+    label: 'Total',
+    data: {vals_7d_total},
+    borderColor: '#e74c3c',
+    backgroundColor: 'rgba(231,76,60,.08)',
+    borderWidth: 2.5,
+    pointRadius: 4,
+    pointBackgroundColor: '#e74c3c',
+    fill: true,
+    tension: 0.3,
+  }},
+  {{
+    label: 'Piala',
+    data: {vals_7d_piala},
+    borderColor: '#c0392b',
+    borderWidth: 1.5,
+    borderDash: [4,3],
+    pointRadius: 3,
+    pointBackgroundColor: '#c0392b',
+    fill: false,
+    tension: 0.3,
+  }},
+  {{
+    label: 'El Chañar',
+    data: {vals_7d_chanear},
+    borderColor: '#2980b9',
+    borderWidth: 1.5,
+    borderDash: [4,3],
+    pointRadius: 3,
+    pointBackgroundColor: '#2980b9',
+    fill: false,
+    tension: 0.3,
+  }},
+]);
+
+// ── 30d Chart ────────────────────────────────────────────────────────────
+makeChart('chart30d', {labels_30d}, [
+  {{
+    label: 'Total',
+    data: {vals_30d_total},
+    borderColor: '#e74c3c',
+    backgroundColor: 'rgba(231,76,60,.08)',
+    borderWidth: 2.5,
+    pointRadius: 3,
+    pointBackgroundColor: '#e74c3c',
+    fill: true,
+    tension: 0.4,
+  }},
+  {{
+    label: 'Piala',
+    data: {vals_30d_piala},
+    borderColor: '#c0392b',
+    borderWidth: 1.5,
+    borderDash: [4,3],
+    pointRadius: 2,
+    pointBackgroundColor: '#c0392b',
+    fill: false,
+    tension: 0.4,
+  }},
+  {{
+    label: 'El Chañar',
+    data: {vals_30d_chanear},
+    borderColor: '#2980b9',
+    borderWidth: 1.5,
+    borderDash: [4,3],
+    pointRadius: 2,
+    pointBackgroundColor: '#2980b9',
+    fill: false,
+    tension: 0.4,
+  }},
+]);
+{lista_js}
+</script>
+</body>
+</html>"""
+
+
+def main():
+    DIR_DOCS.mkdir(exist_ok=True)
+
+    resumen        = leer_json("resumen.json", {})
+    graficos       = leer_json("graficos.json", {})
+    ranking_d      = leer_json("ranking_dia.json", {})
+    ranking_7d     = leer_json("ranking_7d.json", [])
+    precios_todos  = leer_csv("precios_compacto.csv")
+
+    html = generar_html(resumen, graficos, ranking_d, ranking_7d, precios_todos)
+    out = DIR_DOCS / "index.html"
+    out.write_text(html, encoding="utf-8")
+    print(f"✅ Web generada → {out}")
+
+
+if __name__ == "__main__":
+    main()

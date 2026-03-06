@@ -685,4 +685,4 @@ footer a {{ color: var(--red-light); text-decoration: none; }}
   <h1>Monitor de <em>Precios</em><br>de Carnicerías</h1>
   <p class="hero-sub">Seguimiento diario de precios en Piala de Patria &amp; El Chañar · Rosario, Argentina</p>
   <div class="kpi-row">
-            
+    

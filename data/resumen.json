@@ -1,6 +1,6 @@
 {
   "fecha": "20260306",
-  "total_productos": 76,
+  "total_productos": 165,
   "variacion_dia": null,
   "variacion_7d": null,
   "variacion_mes": null,
@@ -9,7 +9,208 @@
   "productos_sin_cambio_dia": 0,
   "ranking_subida_dia": [],
   "ranking_baja_dia": [],
-  "comparativa_supermercados": [],
+  "comparativa_supermercados": [
+    {
+      "nombre": "Mar del plata",
+      "supermercado_1": "piala",
+      "precio_1": 22000.0,
+      "supermercado_2": "chanear",
+      "precio_2": 8900.0,
+      "diff_abs": -13100.0,
+      "diff_pct": -59.55,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Pollo",
+      "supermercado_1": "piala",
+      "precio_1": 4100.0,
+      "supermercado_2": "chanear",
+      "precio_2": 16100.0,
+      "diff_abs": 12000.0,
+      "diff_pct": 292.68,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Matambre arrollado",
+      "supermercado_1": "piala",
+      "precio_1": 21300.0,
+      "supermercado_2": "chanear",
+      "precio_2": 33000.0,
+      "diff_abs": 11700.0,
+      "diff_pct": 54.93,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Nalga de cerdo",
+      "supermercado_1": "piala",
+      "precio_1": 9900.0,
+      "supermercado_2": "chanear",
+      "precio_2": 20500.0,
+      "diff_abs": 10600.0,
+      "diff_pct": 107.07,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Lomo",
+      "supermercado_1": "piala",
+      "precio_1": 26200.0,
+      "supermercado_2": "chanear",
+      "precio_2": 16700.0,
+      "diff_abs": -9500.0,
+      "diff_pct": -36.26,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Cabeza de lomo / Bola de lomo",
+      "supermercado_1": "piala",
+      "precio_1": 16700.0,
+      "supermercado_2": "chanear",
+      "precio_2": 25800.0,
+      "diff_abs": 9100.0,
+      "diff_pct": 54.49,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Tapa de cuadril con hongos",
+      "supermercado_1": "piala",
+      "precio_1": 28350.0,
+      "supermercado_2": "chanear",
+      "precio_2": 19300.0,
+      "diff_abs": -9050.0,
+      "diff_pct": -31.92,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Tapa de cuadril rellena",
+      "supermercado_1": "piala",
+      "precio_1": 27900.0,
+      "supermercado_2": "chanear",
+      "precio_2": 19300.0,
+      "diff_abs": -8600.0,
+      "diff_pct": -30.82,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Pollo",
+      "supermercado_1": "piala",
+      "precio_1": 4100.0,
+      "supermercado_2": "chanear",
+      "precio_2": 12200.0,
+      "diff_abs": 8100.0,
+      "diff_pct": 197.56,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Hamburguesa",
+      "supermercado_1": "piala",
+      "precio_1": 1750.0,
+      "supermercado_2": "chanear",
+      "precio_2": 9500.0,
+      "diff_abs": 7750.0,
+      "diff_pct": 442.86,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Lomo",
+      "supermercado_1": "piala",
+      "precio_1": 26200.0,
+      "supermercado_2": "chanear",
+      "precio_2": 18500.0,
+      "diff_abs": -7700.0,
+      "diff_pct": -29.39,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Pollo",
+      "supermercado_1": "piala",
+      "precio_1": 4100.0,
+      "supermercado_2": "chanear",
+      "precio_2": 11300.0,
+      "diff_abs": 7200.0,
+      "diff_pct": 175.61,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Milanesas",
+      "supermercado_1": "piala",
+      "precio_1": 14800.0,
+      "supermercado_2": "chanear",
+      "precio_2": 8900.0,
+      "diff_abs": -5900.0,
+      "diff_pct": -39.86,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Brochette de lomo",
+      "supermercado_1": "piala",
+      "precio_1": 20220.0,
+      "supermercado_2": "chanear",
+      "precio_2": 25800.0,
+      "diff_abs": 5580.0,
+      "diff_pct": 27.6,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Ojo de bife",
+      "supermercado_1": "piala",
+      "precio_1": 24500.0,
+      "supermercado_2": "chanear",
+      "precio_2": 29900.0,
+      "diff_abs": 5400.0,
+      "diff_pct": 22.04,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Cuadril",
+      "supermercado_1": "piala",
+      "precio_1": 19300.0,
+      "supermercado_2": "chanear",
+      "precio_2": 24500.0,
+      "diff_abs": 5200.0,
+      "diff_pct": 26.94,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Pollo",
+      "supermercado_1": "piala",
+      "precio_1": 4100.0,
+      "supermercado_2": "chanear",
+      "precio_2": 9050.0,
+      "diff_abs": 4950.0,
+      "diff_pct": 120.73,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Milanesas",
+      "supermercado_1": "piala",
+      "precio_1": 14800.0,
+      "supermercado_2": "chanear",
+      "precio_2": 9990.0,
+      "diff_abs": -4810.0,
+      "diff_pct": -32.5,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Pollo",
+      "supermercado_1": "piala",
+      "precio_1": 4100.0,
+      "supermercado_2": "chanear",
+      "precio_2": 8900.0,
+      "diff_abs": 4800.0,
+      "diff_pct": 117.07,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Hamburguesa",
+      "supermercado_1": "piala",
+      "precio_1": 1750.0,
+      "supermercado_2": "chanear",
+      "precio_2": 6500.0,
+      "diff_abs": 4750.0,
+      "diff_pct": 271.43,
+      "mas_barato": "piala"
+    }
+  ],
   "resumen_supermercados": [
     {
       "supermercado": "chanear",
@@ -61,14 +262,14 @@
     },
     {
       "supermercado": "piala",
-      "total_productos": 1,
+      "total_productos": 90,
       "categorias": [
         {
           "categoria": "Carnes",
-          "precio_promedio": 9000.0,
-          "precio_min": 9000.0,
-          "precio_max": 9000.0,
-          "cantidad": 1
+          "precio_promedio": 14598.1,
+          "precio_min": 1100.0,
+          "precio_max": 33150.0,
+          "cantidad": 90
         }
       ]
     }

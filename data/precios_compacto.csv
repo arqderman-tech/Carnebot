@@ -60,7 +60,96 @@ chanear,147,MATAMBRE ARROLLADO CASERO DE TERNERA,Elaborados Premium,33000.0,kg,2
 chanear,138,MILANESAS DE TERNERA DE OFERTA X 2 KG O MAS,Elaborados Premium,12200.0,kg,20260305,chanear_138_milanesas de ternera de oferta x 2 kg o mas
 chanear,141,MILANESAS DE TERNERA X KG,Elaborados Premium,13700.0,kg,20260305,chanear_141_milanesas de ternera x kg
 chanear,163,TAPITA DE CUADRIL RELLENA,Elaborados Premium,24500.0,unidad,20260305,chanear_163_tapita de cuadril rellena
-piala,,Picada común,Carnes,9000.0,kg,20260306,
+piala,,Picada común,Carnes,9000.0,kg,20260306,piala__picada común
+piala,,Brazuelo con hueso/ Pata de ternera de 10kg,Carnes,12000.0,kg,20260306,piala__brazuelo con hueso/ pata de ternera de 10kg
+piala,,Pata de ternera de 7kg,Carnes,13332.0,unidad,20260306,piala__pata de ternera de 7kg
+piala,,Lomo,Carnes,26200.0,kg,20260306,piala__lomo
+piala,,Falda,Carnes,11800.0,kg,20260306,piala__falda
+piala,,Entrecot comun / Roast beef,Carnes,13000.0,kg,20260306,piala__entrecot comun / roast beef
+piala,,Entraña fina,Carnes,29500.0,kg,20260306,piala__entraña fina
+piala,,Cuadril,Carnes,19300.0,kg,20260306,piala__cuadril
+piala,,Costeleta grande,Carnes,12400.0,kg,20260306,piala__costeleta grande
+piala,,Costeleta chica,Carnes,16800.0,kg,20260306,piala__costeleta chica
+piala,,Colita de cuadril / Punta de vacio,Carnes,22700.0,kg,20260306,piala__colita de cuadril / punta de vacio
+piala,,Cima de ternera,Carnes,16500.0,kg,20260306,piala__cima de ternera
+piala,,Cabeza de lomo / Bola de lomo,Carnes,16700.0,kg,20260306,piala__cabeza de lomo / bola de lomo
+piala,,Brazuelo sin hueso,Carnes,16300.0,kg,20260306,piala__brazuelo sin hueso
+piala,,Brazuelo con hueso/ Pata de ternera de 5kg,Carnes,12000.0,kg,20260306,piala__brazuelo con hueso/ pata de ternera de 5kg
+piala,,Arañita,Carnes,19600.0,kg,20260306,piala__arañita
+piala,,Asado de novillito,Carnes,18000.0,kg,20260306,piala__asado de novillito
+piala,,Vacio,Carnes,26000.0,kg,20260306,piala__vacio
+piala,,Tapa de asado,Carnes,16000.0,kg,20260306,piala__tapa de asado
+piala,,Osobuco,Carnes,10200.0,kg,20260306,piala__osobuco
+piala,,Nalga,Carnes,19900.0,kg,20260306,piala__nalga
+piala,,Matambre de ternera,Carnes,17000.0,kg,20260306,piala__matambre de ternera
+piala,,Mar del plata,Carnes,22000.0,kg,20260306,piala__mar del plata
+piala,,Jamon redondo / Peceto,Carnes,21700.0,kg,20260306,piala__jamon redondo / peceto
+piala,,Jamon cuadrado,Carnes,16700.0,kg,20260306,piala__jamon cuadrado
+piala,,Entrecot especial / Bife de chorizo,Carnes,24500.0,kg,20260306,piala__entrecot especial / bife de chorizo
+piala,,Asado – Costilla de ternera,Carnes,23700.0,kg,20260306,piala__asado – costilla de ternera
+piala,,Chuleton,Carnes,23000.0,kg,20260306,piala__chuleton
+piala,,Pechito con manto,Carnes,6999.0,kg,20260306,piala__pechito con manto
+piala,,Nalga de cerdo,Carnes,9900.0,kg,20260306,piala__nalga de cerdo
+piala,,Matambrito,Carnes,19700.0,kg,20260306,piala__matambrito
+piala,,Mar del plata de cerdo,Carnes,7900.0,kg,20260306,piala__mar del plata de cerdo
+piala,,Chuleta de cerdo,Carnes,5799.0,kg,20260306,piala__chuleta de cerdo
+piala,,Bondiola de cerdo,Carnes,9999.0,kg,20260306,piala__bondiola de cerdo
+piala,,Bifecitos de cerdo / Churrasquito,Carnes,11160.0,kg,20260306,piala__bifecitos de cerdo / churrasquito
+piala,,Picada especial,Carnes,13000.0,kg,20260306,piala__picada especial
+piala,,Sesos,Carnes,2600.0,kg,20260306,piala__sesos
+piala,,Riñon sin grasa,Carnes,5850.0,kg,20260306,piala__riñon sin grasa
+piala,,Riñon con grasa,Carnes,6500.0,kg,20260306,piala__riñon con grasa
+piala,,Molleja,Carnes,33150.0,kg,20260306,piala__molleja
+piala,,Lengua,Carnes,11830.0,kg,20260306,piala__lengua
+piala,,Chinchulines,Carnes,7150.0,kg,20260306,piala__chinchulines
+piala,,Ojo de bife,Carnes,24500.0,unidad,20260306,piala__ojo de bife
+piala,,Salchicha fresca,Carnes,9800.0,kg,20260306,piala__salchicha fresca
+piala,,Salame,Carnes,21000.0,kg,20260306,piala__salame
+piala,,Morcilla salada,Carnes,6800.0,kg,20260306,piala__morcilla salada
+piala,,Morcilla dulce,Carnes,7050.0,kg,20260306,piala__morcilla dulce
+piala,,Chorizo puro,Carnes,8350.0,kg,20260306,piala__chorizo puro
+piala,,Chorizo colorado,Carnes,9800.0,kg,20260306,piala__chorizo colorado
+piala,,Chorizo ahumado,Carnes,9400.0,kg,20260306,piala__chorizo ahumado
+piala,,Pollo,Carnes,4100.0,kg,20260306,piala__pollo
+piala,,Pechuga con alas,Carnes,11000.0,kg,20260306,piala__pechuga con alas
+piala,,Filet de muslo,Carnes,9950.0,kg,20260306,piala__filet de muslo
+piala,,Alitas,Carnes,1100.0,kg,20260306,piala__alitas
+piala,,Carre agridulce,Carnes,11600.0,kg,20260306,piala__carre agridulce
+piala,,Arrollado primavera,Carnes,15100.0,kg,20260306,piala__arrollado primavera
+piala,,Arrollado de pollo 4 estaciones,Carnes,15100.0,kg,20260306,piala__arrollado de pollo 4 estaciones
+piala,,Arrollado de pollo,Carnes,13500.0,kg,20260306,piala__arrollado de pollo
+piala,,Arrollado agridulce,Carnes,13500.0,kg,20260306,piala__arrollado agridulce
+piala,,Albóndigas de pollo,Carnes,8380.0,kg,20260306,piala__albóndigas de pollo
+piala,,Albóndigas de carne,Carnes,17800.0,kg,20260306,piala__albóndigas de carne
+piala,,Milanesas,Carnes,14800.0,kg,20260306,piala__milanesas
+piala,,Matambrito relleno,Carnes,20650.0,kg,20260306,piala__matambrito relleno
+piala,,Matambrito primavera,Carnes,21420.0,kg,20260306,piala__matambrito primavera
+piala,,Matambre arrollado,Carnes,21300.0,kg,20260306,piala__matambre arrollado
+piala,,Matambre 4 quesos,Carnes,21950.0,kg,20260306,piala__matambre 4 quesos
+piala,,Carre salado,Carnes,11600.0,kg,20260306,piala__carre salado
+piala,,Brochette de lomo,Carnes,20220.0,kg,20260306,piala__brochette de lomo
+piala,,Brochette de pollo,Carnes,12200.0,kg,20260306,piala__brochette de pollo
+piala,,Brochette de cerdo,Carnes,11250.0,kg,20260306,piala__brochette de cerdo
+piala,,Bandeja de brochette surtida,Carnes,14950.0,kg,20260306,piala__bandeja de brochette surtida
+piala,,Tapa de nalga,Carnes,16700.0,kg,20260306,piala__tapa de nalga
+piala,,Tapa de cuadril / Picaña,Carnes,21400.0,kg,20260306,piala__tapa de cuadril / picaña
+piala,,Palomita,Carnes,13000.0,kg,20260306,piala__palomita
+piala,,Lechon,Carnes,14300.0,kg,20260306,piala__lechon
+piala,,Chivito,Carnes,19850.0,kg,20260306,piala__chivito
+piala,,Cordero,Carnes,15800.0,kg,20260306,piala__cordero
+piala,,Medallón de pollo,Carnes,1200.0,unidad,20260306,piala__medallón de pollo
+piala,,Pata muslo,Carnes,3000.0,kg,20260306,piala__pata muslo
+piala,,Rollitos de pollo,Carnes,8550.0,kg,20260306,piala__rollitos de pollo
+piala,,Tripa gorda rellena,Carnes,8000.0,kg,20260306,piala__tripa gorda rellena
+piala,,Tapa de cuadril rellena,Carnes,27900.0,kg,20260306,piala__tapa de cuadril rellena
+piala,,Tapa de cuadril con hongos,Carnes,28350.0,kg,20260306,piala__tapa de cuadril con hongos
+piala,,Suprema de pechuga,Carnes,11000.0,kg,20260306,piala__suprema de pechuga
+piala,,Suprema de muslo,Carnes,10990.0,kg,20260306,piala__suprema de muslo
+piala,,Filet de pechuga,Carnes,11050.0,kg,20260306,piala__filet de pechuga
+piala,,Solomillos con panceta,Carnes,14600.0,kg,20260306,piala__solomillos con panceta
+piala,,Hamburguesa,Carnes,1750.0,unidad,20260306,piala__hamburguesa
+piala,,Provoleta,Carnes,20300.0,kg,20260306,piala__provoleta
+piala,,Provoleta c/ bandeja,Carnes,20550.0,kg,20260306,piala__provoleta c/ bandeja
 chanear,128.0,AZOTILLO,Carnes Vacunas,8300.0,kg,20260306,chanear_128.0_azotillo
 chanear,124.0,BIFE A 7 COSTILLAS,Carnes Vacunas,16400.0,kg,20260306,chanear_124.0_bife a 7 costillas
 chanear,175.0,BIFE DE ENTRECOT ESPECIAL MADURADO,Carnes Vacunas,28000.0,kg,20260306,chanear_175.0_bife de entrecot especial madurado

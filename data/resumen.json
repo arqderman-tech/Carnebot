@@ -21,16 +21,6 @@
       "mas_barato": "piala"
     },
     {
-      "nombre": "Mar del plata",
-      "supermercado_1": "piala",
-      "precio_1": 22000.0,
-      "supermercado_2": "chanear",
-      "precio_2": 8900.0,
-      "diff_abs": -13100.0,
-      "diff_pct": -59.55,
-      "mas_barato": "chanear"
-    },
-    {
       "nombre": "Pollo",
       "supermercado_1": "piala",
       "precio_1": 4100.0,
@@ -48,16 +38,6 @@
       "precio_2": 33000.0,
       "diff_abs": 11700.0,
       "diff_pct": 54.93,
-      "mas_barato": "piala"
-    },
-    {
-      "nombre": "Nalga de cerdo",
-      "supermercado_1": "piala",
-      "precio_1": 9900.0,
-      "supermercado_2": "chanear",
-      "precio_2": 20500.0,
-      "diff_abs": 10600.0,
-      "diff_pct": 107.07,
       "mas_barato": "piala"
     },
     {
@@ -79,26 +59,6 @@
       "diff_abs": 9100.0,
       "diff_pct": 54.49,
       "mas_barato": "piala"
-    },
-    {
-      "nombre": "Tapa de cuadril con hongos",
-      "supermercado_1": "piala",
-      "precio_1": 28350.0,
-      "supermercado_2": "chanear",
-      "precio_2": 19300.0,
-      "diff_abs": -9050.0,
-      "diff_pct": -31.92,
-      "mas_barato": "chanear"
-    },
-    {
-      "nombre": "Tapa de cuadril rellena",
-      "supermercado_1": "piala",
-      "precio_1": 27900.0,
-      "supermercado_2": "chanear",
-      "precio_2": 19300.0,
-      "diff_abs": -8600.0,
-      "diff_pct": -30.82,
-      "mas_barato": "chanear"
     },
     {
       "nombre": "Pollo",
@@ -141,36 +101,6 @@
       "mas_barato": "piala"
     },
     {
-      "nombre": "Milanesas",
-      "supermercado_1": "piala",
-      "precio_1": 14800.0,
-      "supermercado_2": "chanear",
-      "precio_2": 8900.0,
-      "diff_abs": -5900.0,
-      "diff_pct": -39.86,
-      "mas_barato": "chanear"
-    },
-    {
-      "nombre": "Hamburguesa de pollo",
-      "supermercado_1": "piala",
-      "precio_1": 810.0,
-      "supermercado_2": "chanear",
-      "precio_2": 6500.0,
-      "diff_abs": 5690.0,
-      "diff_pct": 702.47,
-      "mas_barato": "piala"
-    },
-    {
-      "nombre": "Brochette de lomo",
-      "supermercado_1": "piala",
-      "precio_1": 20220.0,
-      "supermercado_2": "chanear",
-      "precio_2": 25800.0,
-      "diff_abs": 5580.0,
-      "diff_pct": 27.6,
-      "mas_barato": "piala"
-    },
-    {
       "nombre": "Ojo de bife",
       "supermercado_1": "piala",
       "precio_1": 24500.0,
@@ -178,16 +108,6 @@
       "precio_2": 29900.0,
       "diff_abs": 5400.0,
       "diff_pct": 22.04,
-      "mas_barato": "piala"
-    },
-    {
-      "nombre": "Cuadril",
-      "supermercado_1": "piala",
-      "precio_1": 19300.0,
-      "supermercado_2": "chanear",
-      "precio_2": 24500.0,
-      "diff_abs": 5200.0,
-      "diff_pct": 26.94,
       "mas_barato": "piala"
     },
     {
@@ -201,13 +121,93 @@
       "mas_barato": "piala"
     },
     {
-      "nombre": "Milanesas",
+      "nombre": "Pollo",
       "supermercado_1": "piala",
-      "precio_1": 14800.0,
+      "precio_1": 4100.0,
       "supermercado_2": "chanear",
-      "precio_2": 9990.0,
-      "diff_abs": -4810.0,
-      "diff_pct": -32.5,
+      "precio_2": 8900.0,
+      "diff_abs": 4800.0,
+      "diff_pct": 117.07,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Nalga",
+      "supermercado_1": "piala",
+      "precio_1": 19900.0,
+      "supermercado_2": "chanear",
+      "precio_2": 15800.0,
+      "diff_abs": -4100.0,
+      "diff_pct": -20.6,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Pollo",
+      "supermercado_1": "piala",
+      "precio_1": 4100.0,
+      "supermercado_2": "chanear",
+      "precio_2": 8000.0,
+      "diff_abs": 3900.0,
+      "diff_pct": 95.12,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Tapa de nalga",
+      "supermercado_1": "piala",
+      "precio_1": 16700.0,
+      "supermercado_2": "chanear",
+      "precio_2": 20500.0,
+      "diff_abs": 3800.0,
+      "diff_pct": 22.75,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Solomillo",
+      "supermercado_1": "piala",
+      "precio_1": 9200.0,
+      "supermercado_2": "chanear",
+      "precio_2": 12900.0,
+      "diff_abs": 3700.0,
+      "diff_pct": 40.22,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Cuadril",
+      "supermercado_1": "piala",
+      "precio_1": 19300.0,
+      "supermercado_2": "chanear",
+      "precio_2": 22990.0,
+      "diff_abs": 3690.0,
+      "diff_pct": 19.12,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Chorizo puro",
+      "supermercado_1": "piala",
+      "precio_1": 8350.0,
+      "supermercado_2": "chanear",
+      "precio_2": 12000.0,
+      "diff_abs": 3650.0,
+      "diff_pct": 43.71,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Colita de cuadril / Punta de vacio",
+      "supermercado_1": "piala",
+      "precio_1": 22700.0,
+      "supermercado_2": "chanear",
+      "precio_2": 19300.0,
+      "diff_abs": -3400.0,
+      "diff_pct": -14.98,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Vacio",
+      "supermercado_1": "piala",
+      "precio_1": 26000.0,
+      "supermercado_2": "chanear",
+      "precio_2": 22990.0,
+      "diff_abs": -3010.0,
+      "diff_pct": -11.58,
       "mas_barato": "chanear"
     }
   ],

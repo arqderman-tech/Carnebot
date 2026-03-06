@@ -22,8 +22,22 @@ BASE_URL     = "https://www.piala.com.ar/productos/"
 SUPERMERCADO = "piala"
 OUTPUT_DIR   = Path("output_piala")
 
-NEXT_SELECTOR = ".jet-filters-pagination__item.next[data-value='next']"
-GRID_SELECTOR = ".jet-listing-grid--2613 .jet-listing-grid__item"
+# Categorías de Piala con sus slugs WooCommerce
+# Scrapeamos por categoría para asignarla correctamente a cada producto
+CATEGORIAS = [
+    ("Cortes vacunos",    "cortes-vacunos"),
+    ("Pollos y Derivados","pollos-y-derivados"),
+    ("Cortes de Cerdo",   "cortes-de-cerdo"),
+    ("Elaborados",        "elaborados"),
+    ("Embutidos",         "embutidos"),
+    ("Menudencias",       "menudencias"),
+    ("Envasados al Vacio","envasados-al-vacio"),
+    ("Complementos",      "complementos"),
+    ("Bichos",            "bichos"),
+]
+
+NEXT_SEL  = ".jet-filters-pagination__item.next[data-value='next']"
+GRID_SEL  = ".jet-listing-grid--2613 .jet-listing-grid__item"
 
 
 def parse_precio(texto):
@@ -38,14 +52,13 @@ def parse_precio(texto):
     return float(raw.replace(".", "").replace(",", "."))
 
 
-def parsear_pagina(html, vistos):
+def parsear_pagina(html, categoria, vistos):
     soup = BeautifulSoup(html, "lxml")
     productos = []
     fecha = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     grid = soup.select_one(".jet-listing-grid--2613")
     if not grid:
-        log.warning("  Grid 2613 no encontrado - posible bloqueo")
         return []
 
     for item in grid.select(".jet-listing-grid__item"):
@@ -85,7 +98,7 @@ def parsear_pagina(html, vistos):
             "supermercado":  SUPERMERCADO,
             "codigo":        "",
             "nombre":        nombre,
-            "categoria":     "Carnes",
+            "categoria":     categoria,
             "precio_actual": precio,
             "unidad":        unidad,
             "imagen":        imagen,
@@ -120,10 +133,83 @@ def esperar_challenge(page, timeout_ms=45000):
 
 def tiene_next(page):
     try:
-        loc = page.locator(NEXT_SELECTOR).first
+        loc = page.locator(NEXT_SEL).first
         return loc.count() > 0 and loc.is_visible()
     except Exception:
         return False
+
+
+def primer_nombre(page):
+    try:
+        loc = page.locator(".jet-listing-grid--2613 .p-title .elementor-heading-title").first
+        if loc.count() > 0:
+            return loc.inner_text(timeout=3000).strip()
+    except Exception:
+        pass
+    return ""
+
+
+def esperar_cambio(page, nombre_anterior, timeout_s=15):
+    for _ in range(timeout_s * 2):
+        nombre_actual = primer_nombre(page)
+        if nombre_actual and nombre_actual != nombre_anterior:
+            return True
+        time.sleep(0.5)
+    return False
+
+
+def scrape_categoria(page, categoria, slug, vistos):
+    """Scrape todos los productos de una categoría dada."""
+    url = f"{BASE_URL}?product_cat={slug}"
+    log.info(f"[Piala] Categoria: {categoria} ({url})")
+
+    try:
+        page.goto(url, wait_until="domcontentloaded", timeout=30000)
+    except PWTimeout:
+        log.warning(f"  Timeout cargando {categoria}")
+        return []
+
+    page.wait_for_timeout(2000)
+
+    if es_challenge(page):
+        if not esperar_challenge(page):
+            return []
+
+    try:
+        page.wait_for_selector(GRID_SEL, timeout=15000)
+    except PWTimeout:
+        log.warning(f"  Grid no encontrado para {categoria} — categoria vacia o no existe")
+        return []
+
+    page.wait_for_timeout(1000)
+
+    todos_cat = []
+    num_pagina = 1
+
+    while True:
+        html  = page.content()
+        prods = parsear_pagina(html, categoria, vistos)
+        log.info(f"  Pagina {num_pagina}: {len(prods)} nuevos")
+        todos_cat.extend(prods)
+
+        if not tiene_next(page):
+            break
+
+        nombre_antes = primer_nombre(page)
+        num_pagina += 1
+
+        try:
+            page.locator(NEXT_SEL).first.click()
+            esperar_cambio(page, nombre_antes, timeout_s=12)
+            page.wait_for_timeout(500)
+        except PWTimeout:
+            log.warning(f"  Timeout paginando {categoria}")
+            break
+
+        time.sleep(0.3)
+
+    log.info(f"  Total {categoria}: {len(todos_cat)} productos")
+    return todos_cat
 
 
 def scrape_all():
@@ -132,7 +218,7 @@ def scrape_all():
         return []
 
     if not STEALTH_OK:
-        log.warning("playwright-stealth no disponible - instalar con: pip install playwright-stealth")
+        log.warning("playwright-stealth no disponible - instalar: pip install playwright-stealth")
 
     todos  = []
     vistos = set()
@@ -150,7 +236,6 @@ def scrape_all():
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             locale="es-AR",
             viewport={"width": 1280, "height": 900},
-            java_script_enabled=True,
         )
         page = context.new_page()
 
@@ -163,59 +248,30 @@ def scrape_all():
         page.route("**/facebook.com/**",         lambda r: r.abort())
         page.route("**/doubleclick.net/**",      lambda r: r.abort())
 
-        log.info(f"[Piala] Cargando: {BASE_URL}")
+        # Carga inicial para resolver challenge una sola vez
+        log.info(f"[Piala] Carga inicial para resolver challenge...")
         try:
             page.goto(BASE_URL, wait_until="domcontentloaded", timeout=30000)
         except PWTimeout:
-            log.error("  FALLO al cargar")
+            log.error("  FALLO carga inicial")
             browser.close()
             return []
 
         page.wait_for_timeout(3000)
-
         if es_challenge(page):
-            ok = esperar_challenge(page, timeout_ms=45000)
-            if not ok:
-                log.error("  Challenge no resuelto - abortando")
+            if not esperar_challenge(page):
                 browser.close()
                 return []
 
-        try:
-            page.wait_for_selector(GRID_SELECTOR, timeout=20000)
-        except PWTimeout:
-            log.warning("  Timeout esperando grid 2613")
-
-        page.wait_for_timeout(1500)
-
-        num_pagina = 1
-        while True:
-            html  = page.content()
-            prods = parsear_pagina(html, vistos)
-            log.info(f"  Pagina {num_pagina} -> {len(prods)} nuevos (acum: {len(todos) + len(prods)})")
+        # Scrapear por categoría
+        for categoria, slug in CATEGORIAS:
+            prods = scrape_categoria(page, categoria, slug, vistos)
             todos.extend(prods)
-
-            if not tiene_next(page):
-                log.info("  Sin boton next - fin")
-                break
-
-            num_pagina += 1
-            try:
-                page.locator(NEXT_SELECTOR).first.click()
-                try:
-                    page.wait_for_load_state("networkidle", timeout=12000)
-                except PWTimeout:
-                    page.wait_for_timeout(3000)
-                page.wait_for_selector(GRID_SELECTOR, timeout=10000)
-                page.wait_for_timeout(800)
-            except PWTimeout:
-                log.warning(f"  Timeout pagina {num_pagina}, abortando")
-                break
-
-            time.sleep(0.3)
+            time.sleep(0.5)
 
         browser.close()
 
-    log.info(f"[Piala] Total: {len(todos)} productos")
+    log.info(f"[Piala] Total: {len(todos)} productos unicos")
     return todos
 
 
@@ -225,4 +281,4 @@ if __name__ == "__main__":
         guardar(productos, OUTPUT_DIR, "piala")
     else:
         log.warning("[Piala] Sin productos obtenidos")
-      
+    

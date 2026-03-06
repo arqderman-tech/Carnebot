@@ -397,7 +397,7 @@ footer a { color: var(--red-light); text-decoration: none; }
   <p class="hero-sub">Seguimiento diario de precios en Piala de Patria &amp; El Chañar · Rosario, Argentina</p>
   <div class="kpi-row">
     <div class="kpi-card">
-      <div class="kpi-valor kpi-neu">165</div>
+      <div class="kpi-valor kpi-neu">180</div>
       <div class="kpi-label">Cortes monitoreados</div>
     </div>
     <div class="kpi-card">
@@ -474,18 +474,38 @@ footer a { color: var(--red-light); text-decoration: none; }
                 </div>
                 <div class="sup-stats">
                     <div class="sup-stat">
-                        <div class="sup-stat-valor">90</div>
+                        <div class="sup-stat-valor">105</div>
                         <div class="sup-stat-label">Cortes</div>
                     </div>
                     <div class="sup-stat">
-                        <div class="sup-stat-valor">$14.598</div>
+                        <div class="sup-stat-valor">$14.767</div>
                         <div class="sup-stat-label">Precio prom/kg</div>
                     </div>
                 </div>
                 <div class="cat-list">
                 <div class="cat-row">
-                    <span class="cat-nombre">Carnes</span>
-                    <span class="cat-precio">$14.598 prom · 90 cortes</span>
+                    <span class="cat-nombre">Elaborados</span>
+                    <span class="cat-precio">$14.883 prom · 35 cortes</span>
+                </div>
+                <div class="cat-row">
+                    <span class="cat-nombre">Cortes vacunos</span>
+                    <span class="cat-precio">$17.645 prom · 34 cortes</span>
+                </div>
+                <div class="cat-row">
+                    <span class="cat-nombre">Pollos y Derivados</span>
+                    <span class="cat-precio">$14.755 prom · 10 cortes</span>
+                </div>
+                <div class="cat-row">
+                    <span class="cat-nombre">Cortes de Cerdo</span>
+                    <span class="cat-precio">$9.684 prom · 9 cortes</span>
+                </div>
+                <div class="cat-row">
+                    <span class="cat-nombre">Embutidos</span>
+                    <span class="cat-precio">$10.314 prom · 7 cortes</span>
+                </div>
+                <div class="cat-row">
+                    <span class="cat-nombre">Menudencias</span>
+                    <span class="cat-precio">$11.180 prom · 6 cortes</span>
                 </div></div>
             </div>
     </div>
@@ -549,6 +569,13 @@ footer a { color: var(--red-light); text-decoration: none; }
         </tr></thead>
         <tbody>
             <tr>
+                <td class="nombre-prod">Solomillo</td>
+                <td class="precio">$9.200<br><small style="color:#888">piala</small></td>
+                <td class="precio">$22.900<br><small style="color:#888">chanear</small></td>
+                <td style="color:#e74c3c;font-weight:700">▲ +148.91%</td>
+                <td><span class="badge badge-piala">Piala 🏆</span></td>
+            </tr>
+            <tr>
                 <td class="nombre-prod">Mar del plata</td>
                 <td class="precio">$22.000<br><small style="color:#888">piala</small></td>
                 <td class="precio">$8.900<br><small style="color:#888">chanear</small></td>
@@ -610,13 +637,6 @@ footer a { color: var(--red-light); text-decoration: none; }
                 <td class="precio">$12.200<br><small style="color:#888">chanear</small></td>
                 <td style="color:#e74c3c;font-weight:700">▲ +197.56%</td>
                 <td><span class="badge badge-piala">Piala 🏆</span></td>
-            </tr>
-            <tr>
-                <td class="nombre-prod">Hamburguesa</td>
-                <td class="precio">$1.750<br><small style="color:#888">piala</small></td>
-                <td class="precio">$9.500<br><small style="color:#888">chanear</small></td>
-                <td style="color:#e74c3c;font-weight:700">▲ +442.86%</td>
-                <td><span class="badge badge-piala">Piala 🏆</span></td>
             </tr></tbody>
       </table>
     </div>
@@ -642,7 +662,7 @@ footer a { color: var(--red-light); text-decoration: none; }
     <div class="lista-controls">
       <input type="text" id="lista-buscar" placeholder="Buscar producto..." class="lista-input">
       <select id="lista-sup" class="lista-select"><option value="">Todos los locales</option><option value="chanear">El Chañar</option><option value="piala">Piala de Patria</option></select>
-      <select id="lista-cat" class="lista-select"><option value="">Todas las categorías</option><option value="Carnes">Carnes</option><option value="Carnes Vacunas">Carnes Vacunas</option><option value="Cerdo">Cerdo</option><option value="Elaborados">Elaborados</option><option value="Elaborados Premium">Elaborados Premium</option><option value="Embutidos">Embutidos</option><option value="Pollo">Pollo</option></select>
+      <select id="lista-cat" class="lista-select"><option value="">Todas las categorías</option><option value="Bichos">Bichos</option><option value="Carnes Vacunas">Carnes Vacunas</option><option value="Cerdo">Cerdo</option><option value="Cortes de Cerdo">Cortes de Cerdo</option><option value="Cortes vacunos">Cortes vacunos</option><option value="Elaborados">Elaborados</option><option value="Elaborados Premium">Elaborados Premium</option><option value="Embutidos">Embutidos</option><option value="Menudencias">Menudencias</option><option value="Pollo">Pollo</option><option value="Pollos y Derivados">Pollos y Derivados</option></select>
       <span id="lista-count" class="lista-count"></span>
     </div>
     <div class="table-wrap">
@@ -787,96 +807,111 @@ footer a { color: var(--red-light); text-decoration: none; }
 <tr data-sup="chanear" data-cat="Pollo"><td class="nombre-prod">Pollo Entero</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Pollo</td><td class="precio">$5.400/unidad</td></tr>
 <tr data-sup="chanear" data-cat="Pollo"><td class="nombre-prod">Promo De Filet De Pechuga X 3 Kg O Mas</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Pollo</td><td class="precio">$8.385/unidad</td></tr>
 <tr data-sup="chanear" data-cat="Pollo"><td class="nombre-prod">Promo De Filet De Pechuga X 3 Kg O Mas</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Pollo</td><td class="precio">$8.385/unidad</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Albóndigas De Carne</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$17.800/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Albóndigas De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$8.380/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Alitas</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$1.100/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Arañita</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$19.600/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Arrollado Agridulce</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$13.500/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Arrollado De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$13.500/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Arrollado De Pollo 4 Estaciones</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$15.100/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Arrollado Primavera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$15.100/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Asado De Novillito</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$18.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Asado – Costilla De Ternera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$23.700/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Bandeja De Brochette Surtida</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$14.950/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Bifecitos De Cerdo / Churrasquito</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$11.160/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Bondiola De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$9.999/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Brazuelo Con Hueso/ Pata De Ternera De 10Kg</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$12.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Brazuelo Con Hueso/ Pata De Ternera De 5Kg</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$12.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Brazuelo Sin Hueso</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$16.300/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Brochette De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$11.250/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Brochette De Lomo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$20.220/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Brochette De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$12.200/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Cabeza De Lomo / Bola De Lomo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$16.700/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Carre Agridulce</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$11.600/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Carre Salado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$11.600/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Chinchulines</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$7.150/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Chivito</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$19.850/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Chorizo Ahumado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$9.400/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Chorizo Colorado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$9.800/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Chorizo Puro</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$8.350/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Chuleta De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$5.799/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Chuleton</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$23.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Cima De Ternera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$16.500/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Colita De Cuadril / Punta De Vacio</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$22.700/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Cordero</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$15.800/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Costeleta Chica</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$16.800/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Costeleta Grande</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$12.400/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Cuadril</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$19.300/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Entraña Fina</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$29.500/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Entrecot Comun / Roast Beef</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$13.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Entrecot Especial / Bife De Chorizo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$24.500/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Falda</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$11.800/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Filet De Muslo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$9.950/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Filet De Pechuga</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$11.050/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Hamburguesa</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$1.750/unidad</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Jamon Cuadrado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$16.700/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Jamon Redondo / Peceto</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$21.700/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Lechon</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$14.300/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Lengua</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$11.830/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Lomo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$26.200/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Mar Del Plata</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$22.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Mar Del Plata De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$7.900/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Matambre 4 Quesos</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$21.950/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Matambre Arrollado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$21.300/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Matambre De Ternera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$17.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Matambrito</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$19.700/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Matambrito Primavera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$21.420/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Matambrito Relleno</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$20.650/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Medallón De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$1.200/unidad</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Milanesas</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$14.800/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Molleja</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$33.150/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Morcilla Dulce</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$7.050/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Morcilla Salada</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$6.800/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Nalga</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$19.900/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Nalga De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$9.900/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Ojo De Bife</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$24.500/unidad</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Osobuco</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$10.200/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Palomita</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$13.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Pata De Ternera De 7Kg</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$13.332/unidad</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Pata Muslo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$3.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Pechito Con Manto</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$6.999/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Pechuga Con Alas</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$11.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Picada Común</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$9.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Picada Especial</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$13.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$4.100/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Provoleta</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$20.300/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Provoleta C/ Bandeja</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$20.550/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Riñon Con Grasa</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$6.500/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Riñon Sin Grasa</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$5.850/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Rollitos De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$8.550/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Salame</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$21.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Salchicha Fresca</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$9.800/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Sesos</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$2.600/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Solomillos Con Panceta</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$14.600/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Suprema De Muslo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$10.990/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Suprema De Pechuga</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$11.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Tapa De Asado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$16.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Tapa De Cuadril / Picaña</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$21.400/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Tapa De Cuadril Con Hongos</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$28.350/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Tapa De Cuadril Rellena</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$27.900/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Tapa De Nalga</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$16.700/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Tripa Gorda Rellena</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$8.000/kg</td></tr>
-<tr data-sup="piala" data-cat="Carnes"><td class="nombre-prod">Vacio</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Carnes</td><td class="precio">$26.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Bichos"><td class="nombre-prod">Chivito</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Bichos</td><td class="precio">$19.850/kg</td></tr>
+<tr data-sup="piala" data-cat="Bichos"><td class="nombre-prod">Cordero</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Bichos</td><td class="precio">$15.800/kg</td></tr>
+<tr data-sup="piala" data-cat="Bichos"><td class="nombre-prod">Lechon</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Bichos</td><td class="precio">$14.300/kg</td></tr>
+<tr data-sup="piala" data-cat="Bichos"><td class="nombre-prod">Pernil De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Bichos</td><td class="precio">$5.799/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes de Cerdo"><td class="nombre-prod">Bifecitos De Cerdo / Churrasquito</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes de Cerdo</td><td class="precio">$11.160/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes de Cerdo"><td class="nombre-prod">Bondiola De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes de Cerdo</td><td class="precio">$9.999/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes de Cerdo"><td class="nombre-prod">Carre De Cerdo / Costeletas De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes de Cerdo</td><td class="precio">$6.499/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes de Cerdo"><td class="nombre-prod">Chuleta De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes de Cerdo</td><td class="precio">$5.799/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes de Cerdo"><td class="nombre-prod">Mar Del Plata De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes de Cerdo</td><td class="precio">$7.900/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes de Cerdo"><td class="nombre-prod">Matambrito</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes de Cerdo</td><td class="precio">$19.700/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes de Cerdo"><td class="nombre-prod">Nalga De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes de Cerdo</td><td class="precio">$9.900/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes de Cerdo"><td class="nombre-prod">Pechito Con Manto</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes de Cerdo</td><td class="precio">$6.999/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes de Cerdo"><td class="nombre-prod">Solomillo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes de Cerdo</td><td class="precio">$9.200/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Arañita</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$19.600/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Asado De Novillito</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$18.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Asado – Costilla De Ternera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$23.700/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Brazuelo Con Hueso/ Pata De Ternera De 10Kg</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$12.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Brazuelo Con Hueso/ Pata De Ternera De 5Kg</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$12.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Brazuelo Sin Hueso</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$16.300/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Cabeza De Lomo / Bola De Lomo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$16.700/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Chuleton</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$23.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Cima De Ternera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$16.500/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Colita De Cuadril / Punta De Vacio</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$22.700/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Costeleta Chica</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$16.800/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Costeleta Grande</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$12.400/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Cuadril</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$19.300/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Entraña Fina</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$29.500/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Entrecot Comun / Roast Beef</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$13.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Entrecot Especial / Bife De Chorizo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$24.500/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Falda</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$11.800/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Jamon Cuadrado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$16.700/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Jamon Redondo / Peceto</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$21.700/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Lomo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$26.200/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Mar Del Plata</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$22.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Matambre De Ternera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$17.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Nalga</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$19.900/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Ojo De Bife</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$24.500/unidad</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Osobuco</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$10.200/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Palomita</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$13.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Pata De Ternera De 7Kg</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$13.332/unidad</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Picada Común</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$9.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Picada Especial</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$13.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Puchero Común</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$5.500/unidad</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Tapa De Asado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$16.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Tapa De Cuadril / Picaña</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$21.400/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Tapa De Nalga</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$16.700/kg</td></tr>
+<tr data-sup="piala" data-cat="Cortes vacunos"><td class="nombre-prod">Vacio</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Cortes vacunos</td><td class="precio">$26.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Albóndigas De Carne</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$17.800/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Albóndigas De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$8.380/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Arrollado Agridulce</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$13.500/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Arrollado De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$13.500/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Arrollado De Pollo 4 Estaciones</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$15.100/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Arrollado Primavera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$15.100/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Bandeja De Brochette Surtida</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$14.950/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Brochette De Cerdo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$11.250/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Brochette De Lomo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$20.220/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Brochette De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$12.200/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Carre Agridulce</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$11.600/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Carre Salado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$11.600/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Hamburguesa</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$1.750/unidad</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Hamburguesa De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$810/unidad</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Matambre 4 Quesos</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$21.950/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Matambre Arrollado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$21.300/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Matambrito Primavera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$21.420/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Matambrito Relleno</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$20.650/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Milanesa De Soja</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$2.600/unidad</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Milanesas</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$14.800/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Muslito Primavera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$12.900/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Pan De Carne</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$18.130/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Panceta Salada</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$18.920/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Pechugas Rellenas</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$15.750/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Pechuguita Primavera</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$15.900/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Provoleta</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$20.300/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Provoleta C/ Bandeja</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$20.550/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Rollitos De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$8.550/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Solomillos Con Panceta</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$14.600/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Suprema De Muslo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$10.990/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Suprema De Pechuga</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$11.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Tapa De Asado Rellena</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$18.580/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Tapa De Cuadril Con Hongos</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$28.350/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Tapa De Cuadril Rellena</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$27.900/kg</td></tr>
+<tr data-sup="piala" data-cat="Elaborados"><td class="nombre-prod">Tripa Gorda Rellena</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Elaborados</td><td class="precio">$8.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Embutidos"><td class="nombre-prod">Chorizo Ahumado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Embutidos</td><td class="precio">$9.400/kg</td></tr>
+<tr data-sup="piala" data-cat="Embutidos"><td class="nombre-prod">Chorizo Colorado</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Embutidos</td><td class="precio">$9.800/kg</td></tr>
+<tr data-sup="piala" data-cat="Embutidos"><td class="nombre-prod">Chorizo Puro</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Embutidos</td><td class="precio">$8.350/kg</td></tr>
+<tr data-sup="piala" data-cat="Embutidos"><td class="nombre-prod">Morcilla Dulce</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Embutidos</td><td class="precio">$7.050/kg</td></tr>
+<tr data-sup="piala" data-cat="Embutidos"><td class="nombre-prod">Morcilla Salada</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Embutidos</td><td class="precio">$6.800/kg</td></tr>
+<tr data-sup="piala" data-cat="Embutidos"><td class="nombre-prod">Salame</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Embutidos</td><td class="precio">$21.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Embutidos"><td class="nombre-prod">Salchicha Fresca</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Embutidos</td><td class="precio">$9.800/kg</td></tr>
+<tr data-sup="piala" data-cat="Menudencias"><td class="nombre-prod">Chinchulines</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Menudencias</td><td class="precio">$7.150/kg</td></tr>
+<tr data-sup="piala" data-cat="Menudencias"><td class="nombre-prod">Lengua</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Menudencias</td><td class="precio">$11.830/kg</td></tr>
+<tr data-sup="piala" data-cat="Menudencias"><td class="nombre-prod">Molleja</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Menudencias</td><td class="precio">$33.150/kg</td></tr>
+<tr data-sup="piala" data-cat="Menudencias"><td class="nombre-prod">Riñon Con Grasa</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Menudencias</td><td class="precio">$6.500/kg</td></tr>
+<tr data-sup="piala" data-cat="Menudencias"><td class="nombre-prod">Riñon Sin Grasa</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Menudencias</td><td class="precio">$5.850/kg</td></tr>
+<tr data-sup="piala" data-cat="Menudencias"><td class="nombre-prod">Sesos</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Menudencias</td><td class="precio">$2.600/kg</td></tr>
+<tr data-sup="piala" data-cat="Pollos y Derivados"><td class="nombre-prod">Alitas</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Pollos y Derivados</td><td class="precio">$1.100/kg</td></tr>
+<tr data-sup="piala" data-cat="Pollos y Derivados"><td class="nombre-prod">Cajon De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Pollos y Derivados</td><td class="precio">$81.250/unidad</td></tr>
+<tr data-sup="piala" data-cat="Pollos y Derivados"><td class="nombre-prod">Filet De Muslo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Pollos y Derivados</td><td class="precio">$9.950/kg</td></tr>
+<tr data-sup="piala" data-cat="Pollos y Derivados"><td class="nombre-prod">Filet De Pechuga</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Pollos y Derivados</td><td class="precio">$11.050/kg</td></tr>
+<tr data-sup="piala" data-cat="Pollos y Derivados"><td class="nombre-prod">Medallón De Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Pollos y Derivados</td><td class="precio">$1.200/unidad</td></tr>
+<tr data-sup="piala" data-cat="Pollos y Derivados"><td class="nombre-prod">Muslo 4 Estaciones</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Pollos y Derivados</td><td class="precio">$13.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Pollos y Derivados"><td class="nombre-prod">Muslo Rellenos Salado/Agridulce</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Pollos y Derivados</td><td class="precio">$11.900/unidad</td></tr>
+<tr data-sup="piala" data-cat="Pollos y Derivados"><td class="nombre-prod">Pata Muslo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Pollos y Derivados</td><td class="precio">$3.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Pollos y Derivados"><td class="nombre-prod">Pechuga Con Alas</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Pollos y Derivados</td><td class="precio">$11.000/kg</td></tr>
+<tr data-sup="piala" data-cat="Pollos y Derivados"><td class="nombre-prod">Pollo</td><td><span class="badge badge-piala">Piala de Patria</span></td><td>Pollos y Derivados</td><td class="precio">$4.100/kg</td></tr>
         </tbody>
       </table>
     </div>

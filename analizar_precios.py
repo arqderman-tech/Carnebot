@@ -161,11 +161,10 @@ CATEGORIAS_EQUIV = [
     {"Elaborados", "Elaborados Premium"},
     {"Embutidos"},
     {"Menudencias", "Achuras y Menudencias"},
-    {"Carnes"},  # categoria genérica de Piala antes del fix
+    {"Carnes"},
 ]
 
 def categorias_compatibles(cat1, cat2):
-    """Devuelve True si cat1 y cat2 son la misma categoría o equivalentes."""
     if cat1 == cat2:
         return True
     for grupo in CATEGORIAS_EQUIV:
@@ -174,44 +173,94 @@ def categorias_compatibles(cat1, cat2):
     return False
 
 
+def similitud_nombre(n1, n2):
+    """Score de similitud entre dos nombres normalizados (0-1).
+    Penaliza fuertemente si uno contiene palabras extra que el otro no tiene.
+    Favorece matches exactos."""
+    if n1 == n2:
+        return 1.0
+    # Palabras de cada nombre
+    w1 = set(n1.split())
+    w2 = set(n2.split())
+    if not w1 or not w2:
+        return 0.0
+    interseccion = w1 & w2
+    union = w1 | w2
+    jaccard = len(interseccion) / len(union)
+    # Penalizar si hay muchas palabras extra (ej: "pollo" vs "pollo arrollado")
+    extra = len(union) - len(interseccion)
+    penalizacion = extra * 0.15
+    return max(0.0, jaccard - penalizacion)
+
+
 def comparar_supermercados(df_dia):
     """
-    Encuentra productos con nombres similares entre diferentes supermercados
-    SOLO dentro de categorías equivalentes (evita comparar pollo vs vacuno, etc).
+    Compara productos entre supermercados con estas reglas:
+    1. Solo productos de categorías equivalentes
+    2. Solo misma unidad (kg vs kg, unidad vs unidad)
+    3. Match por mayor similitud de nombre (Jaccard con penalización)
+    4. Un único par por producto (no duplicar el mismo producto)
     """
     comparativas = []
 
     df = df_dia.copy()
-    df["nombre_norm"] = df["nombre"].str.upper().str.strip()
-    df["nombre_norm"] = df["nombre_norm"].str.replace(r"\s+", " ", regex=True)
+    df["nombre_norm"] = (df["nombre"].str.upper().str.strip()
+                         .str.replace(r"\s+", " ", regex=True))
 
     supermercados = df["supermercado"].unique()
     if len(supermercados) < 2:
         return comparativas
 
-    for _, row1 in df[df["supermercado"] == supermercados[0]].iterrows():
-        for _, row2 in df[df["supermercado"] == supermercados[1]].iterrows():
-            # Solo comparar productos de categorías equivalentes
-            if not categorias_compatibles(row1.get("categoria", ""), row2.get("categoria", "")):
+    sup1, sup2 = supermercados[0], supermercados[1]
+    df1 = df[df["supermercado"] == sup1].copy()
+    df2 = df[df["supermercado"] == sup2].copy()
+
+    usados_sup2 = set()  # índices ya emparejados en sup2
+
+    for idx1, row1 in df1.iterrows():
+        cat1   = row1.get("categoria", "")
+        unidad1 = row1.get("unidad", "kg")
+        nombre1 = row1["nombre_norm"]
+
+        mejor_score = 0.4  # umbral mínimo para considerar un match
+        mejor_idx2  = None
+        mejor_row2  = None
+
+        for idx2, row2 in df2.iterrows():
+            if idx2 in usados_sup2:
+                continue
+            # Filtro 1: categoría compatible
+            if not categorias_compatibles(cat1, row2.get("categoria", "")):
+                continue
+            # Filtro 2: misma unidad
+            if row1.get("unidad", "kg") != row2.get("unidad", "kg"):
                 continue
 
-            nombre1 = row1["nombre_norm"]
-            nombre2 = row2["nombre_norm"]
+            score = similitud_nombre(nombre1, row2["nombre_norm"])
+            if score > mejor_score:
+                mejor_score = score
+                mejor_idx2  = idx2
+                mejor_row2  = row2
 
-            if nombre1 == nombre2 or nombre1 in nombre2 or nombre2 in nombre1:
-                if row1["precio_actual"] and row2["precio_actual"]:
-                    diff = row2["precio_actual"] - row1["precio_actual"]
-                    diff_pct = (diff / row1["precio_actual"]) * 100
-                    comparativas.append({
-                        "nombre": row1["nombre"],
-                        "supermercado_1": row1["supermercado"],
-                        "precio_1": row1["precio_actual"],
-                        "supermercado_2": row2["supermercado"],
-                        "precio_2": row2["precio_actual"],
-                        "diff_abs": round(diff, 2),
-                        "diff_pct": round(diff_pct, 2),
-                        "mas_barato": row1["supermercado"] if row1["precio_actual"] < row2["precio_actual"] else row2["supermercado"],
-                    })
+        if mejor_row2 is not None:
+            usados_sup2.add(mejor_idx2)
+            p1   = row1["precio_actual"]
+            p2   = mejor_row2["precio_actual"]
+            diff = p2 - p1
+            diff_pct = (diff / p1) * 100 if p1 else 0
+            # Nombre para mostrar: el más corto (más genérico)
+            nombre_display = (row1["nombre"] if len(row1["nombre"]) <= len(mejor_row2["nombre"])
+                              else mejor_row2["nombre"])
+            comparativas.append({
+                "nombre":          nombre_display,
+                "supermercado_1":  sup1,
+                "precio_1":        p1,
+                "supermercado_2":  sup2,
+                "precio_2":        p2,
+                "diff_abs":        round(diff, 2),
+                "diff_pct":        round(diff_pct, 2),
+                "mas_barato":      sup1 if p1 < p2 else sup2,
+            })
 
     comparativas.sort(key=lambda x: abs(x["diff_abs"]), reverse=True)
     return comparativas[:20]
@@ -394,3 +443,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+  

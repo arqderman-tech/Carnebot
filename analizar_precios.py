@@ -153,29 +153,51 @@ def top_productos(df_var, n=20, ascendente=False):
 
 
 # ── COMPARATIVA ENTRE SUPERMERCADOS ──────────────────────────────────────────
+# Mapeo de categorías equivalentes entre supermercados
+CATEGORIAS_EQUIV = [
+    {"Cortes vacunos", "Carnes Vacunas"},
+    {"Pollos y Derivados", "Pollo"},
+    {"Cortes de Cerdo", "Cerdo"},
+    {"Elaborados", "Elaborados Premium"},
+    {"Embutidos"},
+    {"Menudencias", "Achuras y Menudencias"},
+    {"Carnes"},  # categoria genérica de Piala antes del fix
+]
+
+def categorias_compatibles(cat1, cat2):
+    """Devuelve True si cat1 y cat2 son la misma categoría o equivalentes."""
+    if cat1 == cat2:
+        return True
+    for grupo in CATEGORIAS_EQUIV:
+        if cat1 in grupo and cat2 in grupo:
+            return True
+    return False
+
+
 def comparar_supermercados(df_dia):
     """
     Encuentra productos con nombres similares entre diferentes supermercados
-    y compara sus precios.
+    SOLO dentro de categorías equivalentes (evita comparar pollo vs vacuno, etc).
     """
     comparativas = []
-    
-    # Normalizar nombres para comparar
+
     df = df_dia.copy()
     df["nombre_norm"] = df["nombre"].str.upper().str.strip()
     df["nombre_norm"] = df["nombre_norm"].str.replace(r"\s+", " ", regex=True)
-    
+
     supermercados = df["supermercado"].unique()
     if len(supermercados) < 2:
         return comparativas
-    
-    # Buscar nombres exactos o muy similares entre supermercados
+
     for _, row1 in df[df["supermercado"] == supermercados[0]].iterrows():
         for _, row2 in df[df["supermercado"] == supermercados[1]].iterrows():
+            # Solo comparar productos de categorías equivalentes
+            if not categorias_compatibles(row1.get("categoria", ""), row2.get("categoria", "")):
+                continue
+
             nombre1 = row1["nombre_norm"]
             nombre2 = row2["nombre_norm"]
-            
-            # Match exacto o si uno contiene al otro
+
             if nombre1 == nombre2 or nombre1 in nombre2 or nombre2 in nombre1:
                 if row1["precio_actual"] and row2["precio_actual"]:
                     diff = row2["precio_actual"] - row1["precio_actual"]
@@ -190,8 +212,7 @@ def comparar_supermercados(df_dia):
                         "diff_pct": round(diff_pct, 2),
                         "mas_barato": row1["supermercado"] if row1["precio_actual"] < row2["precio_actual"] else row2["supermercado"],
                     })
-    
-    # Ordenar por diferencia absoluta (más interesantes primero)
+
     comparativas.sort(key=lambda x: abs(x["diff_abs"]), reverse=True)
     return comparativas[:20]
 

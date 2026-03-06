@@ -34,6 +34,9 @@ PERIODOS = {"7d": 7, "30d": 30, "6m": 180, "1y": 365}
 
 # ── CARGA ────────────────────────────────────────────────────────────────────
 def cargar_csvs_hoy():
+    """Carga el CSV más reciente de cada supermercado del día actual.
+    Si hay múltiples archivos del mismo día (por corridas repetidas),
+    usa solo el último (sorted desc) para evitar duplicados."""
     hoy = datetime.now().strftime("%Y%m%d")
     patrones = [
         f"outputs/output_piala/piala_{hoy}*.csv",
@@ -41,16 +44,20 @@ def cargar_csvs_hoy():
     ]
     dfs = []
     for patron in patrones:
-        for archivo in glob.glob(patron):
+        archivos = sorted(glob.glob(patron))  # orden cronológico
+        if archivos:
+            # Usar solo el más reciente del día
+            archivo = archivos[-1]
             try:
                 df = pd.read_csv(archivo, encoding="utf-8-sig")
                 dfs.append(df)
                 print(f"  Cargado: {archivo} ({len(df)} prods)")
+                if len(archivos) > 1:
+                    print(f"  (ignorando {len(archivos)-1} archivo(s) anterior(es) del mismo día)")
             except Exception as e:
                 print(f"  ERROR cargando {archivo}: {e}")
     if not dfs:
         print("AVISO: No se encontraron CSVs de hoy. Usando últimos disponibles...")
-        # Intentar con cualquier CSV disponible
         for patron_base in ["outputs/output_piala/piala_*.csv", "outputs/output_chanear/chanear_*.csv"]:
             archivos = sorted(glob.glob(patron_base))
             if archivos:
@@ -74,9 +81,11 @@ def preparar_df_dia(df_raw, fecha_str):
     df["precio_actual"] = pd.to_numeric(df["precio_actual"], errors="coerce")
     df = df.dropna(subset=["precio_actual"])
     df = df[df["precio_actual"] > 0]
-    df["codigo"] = df["codigo"].astype(str)
-    df["clave"]  = df["supermercado"] + "_" + df["codigo"].str.strip() + "_" + df["nombre"].str.strip().str.lower()
-    df = df.drop_duplicates(subset=["clave"], keep="first")
+    df["codigo"] = df["codigo"].fillna("").astype(str).str.strip()
+    # Deduplicar por (supermercado, nombre) — el codigo puede estar vacio (piala)
+    df = df.drop_duplicates(subset=["supermercado", "nombre"], keep="first")
+    # Clave: fillna evita que codigo NaN produzca clave "piala_nan_nombre"
+    df["clave"] = df["supermercado"] + "_" + df["codigo"] + "_" + df["nombre"].str.strip().str.lower()
     df["fecha"] = fecha_str
     return df
 
@@ -90,7 +99,8 @@ def guardar_compacto(df_dia, fecha_str):
     if PRECIOS_COMPACTO.exists():
         df_hist = pd.read_csv(PRECIOS_COMPACTO, dtype={"codigo": str, "fecha": str})
         if "clave" not in df_hist.columns:
-            df_hist["clave"] = df_hist["supermercado"] + "_" + df_hist["codigo"].str.strip() + "_" + df_hist["nombre"].str.strip().str.lower()
+            df_hist["codigo"] = df_hist["codigo"].fillna("").astype(str).str.strip()
+            df_hist["clave"] = df_hist["supermercado"] + "_" + df_hist["codigo"] + "_" + df_hist["nombre"].str.strip().str.lower()
         df_hist = df_hist[df_hist["fecha"] != fecha_str]
         df_nuevo = pd.concat([df_hist, df_guardar], ignore_index=True)
     else:
@@ -275,7 +285,8 @@ def main():
             return
         df_hist = pd.read_csv(PRECIOS_COMPACTO, dtype={"codigo": str, "fecha": str})
         if "clave" not in df_hist.columns:
-            df_hist["clave"] = df_hist["supermercado"] + "_" + df_hist["codigo"].str.strip() + "_" + df_hist["nombre"].str.strip().str.lower()
+            df_hist["codigo"] = df_hist["codigo"].fillna("").astype(str).str.strip()
+            df_hist["clave"] = df_hist["supermercado"] + "_" + df_hist["codigo"] + "_" + df_hist["nombre"].str.strip().str.lower()
         fecha_hoy = sorted(df_hist["fecha"].unique())[-1]
         df_dia = df_hist[df_hist["fecha"] == fecha_hoy].copy()
         print(f"  Usando fecha más reciente: {fecha_hoy} ({len(df_dia)} prods)")

@@ -113,20 +113,24 @@ def generar_html(resumen, graficos, ranking_dia, ranking_7d, precios_todos=None)
         return rows
 
     # Comparativas
-    def comparativas_rows(comps, limit=10):
+    def comparativas_rows(comps):
         if not comps:
             return '<tr><td colspan="5" style="text-align:center;color:#666;padding:20px">Sin cortes en común para comparar aún</td></tr>'
         rows = ""
-        for c in comps[:limit]:
+        for i, c in enumerate(comps):
             mas_barato = c.get("mas_barato", "")
+            oculto = ' class="comp-extra" style="display:none"' if i >= 10 else ''
             rows += f"""
-            <tr>
+            <tr{oculto}>
                 <td class="nombre-prod">{c.get('nombre','')}</td>
                 <td class="precio">{fmt_precio(c.get('precio_1'))}<br><small style="color:#888">{c.get('supermercado_1','')}</small></td>
                 <td class="precio">{fmt_precio(c.get('precio_2'))}<br><small style="color:#888">{c.get('supermercado_2','')}</small></td>
                 <td style="color:{'#2ecc71' if c.get('diff_pct',0)<0 else '#e74c3c'};font-weight:700">{fmt_pct(c.get('diff_pct'))}</td>
                 <td><span class="badge badge-{'piala' if mas_barato=='piala' else 'chanear'}">{mas_barato.title()} 🏆</span></td>
             </tr>"""
+        extra = len(comps) - 10
+        if extra > 0:
+            rows += f'<tr id="comp-ver-mas-row"><td colspan="5" style="text-align:center;padding:12px"><button onclick="verMasComp()" style="background:none;border:1px solid #555;color:#ccc;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:14px">Ver {extra} más ▼</button></td></tr>'
         return rows
 
     # Lista completa de precios por local
@@ -139,8 +143,17 @@ def generar_html(resumen, graficos, ranking_dia, ranking_7d, precios_todos=None)
             "chanear": ("El Chañar",        "badge-chanear"),
         }
 
-        # Agrupar por supermercado, ordenado por categoría y nombre
+        # Quedarse solo con el precio más reciente por (supermercado, nombre)
+        # precios_compacto tiene múltiples fechas — deduplicar
         from collections import defaultdict
+        ultimos = {}  # clave (sup, nombre) → fila con fecha más alta
+        for p in productos:
+            key = (p["supermercado"], p["nombre"])
+            fecha = p.get("fecha", "")
+            if key not in ultimos or fecha > ultimos[key].get("fecha", ""):
+                ultimos[key] = p
+        productos = list(ultimos.values())
+
         por_sup = defaultdict(list)
         for p in productos:
             por_sup[p["supermercado"]].append(p)
@@ -200,6 +213,14 @@ def generar_html(resumen, graficos, ranking_dia, ranking_7d, precios_todos=None)
   </section>"""
 
         js_filtro = """
+
+// ── Ver más comparativa ──────────────────────────────────────────
+function verMasComp() {
+  document.querySelectorAll('.comp-extra').forEach(tr => tr.style.display = '');
+  const btn = document.getElementById('comp-ver-mas-row');
+  if (btn) btn.style.display = 'none';
+}
+
 // ── Lista completa de precios ────────────────────────────────────────────
 (function() {
   const tbody  = document.getElementById('lista-tbody');

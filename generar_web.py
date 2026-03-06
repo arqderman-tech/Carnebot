@@ -6,6 +6,7 @@ Estilo: carnicería argentina, diseño oscuro tipo pizarrón con acentos rojo-sa
 """
 
 import json
+import csv
 from pathlib import Path
 from datetime import datetime
 
@@ -19,6 +20,14 @@ def leer_json(nombre, default=None):
         with open(ruta, encoding="utf-8") as f:
             return json.load(f)
     return default
+
+
+def leer_csv(nombre):
+    ruta = DIR_DATA / nombre
+    if not ruta.exists():
+        return []
+    with open(ruta, encoding="utf-8") as f:
+        return list(csv.DictReader(f))
 
 
 def fmt_precio(p):
@@ -47,7 +56,7 @@ def color_pct(p):
     return "#888"
 
 
-def generar_html(resumen, graficos, ranking_dia, ranking_7d):
+def generar_html(resumen, graficos, ranking_dia, ranking_7d, precios_todos=None):
     fecha_str = resumen.get("fecha", "")
     try:
         fecha_fmt = datetime.strptime(fecha_str, "%Y%m%d").strftime("%d/%m/%Y")
@@ -120,7 +129,116 @@ def generar_html(resumen, graficos, ranking_dia, ranking_7d):
             </tr>"""
         return rows
 
-    # Tarjetas por supermercado
+    # Lista completa de precios por local
+    def lista_precios_html(productos):
+        if not productos:
+            return "", ""
+
+        NOMBRE_LOCAL = {
+            "piala":   ("Piala de Patria", "badge-piala"),
+            "chanear": ("El Chañar",        "badge-chanear"),
+        }
+
+        # Agrupar por supermercado, ordenado por categoría y nombre
+        from collections import defaultdict
+        por_sup = defaultdict(list)
+        for p in productos:
+            por_sup[p["supermercado"]].append(p)
+
+        # Obtener categorías únicas para el filtro JS
+        cats = sorted({p["categoria"] for p in productos})
+        sups = sorted(por_sup.keys())
+
+        # Opciones de filtro supermercado
+        sup_opts = '<option value="">Todos los locales</option>' + "".join(
+            f'<option value="{s}">{NOMBRE_LOCAL.get(s, (s.title(),))[0]}</option>'
+            for s in sups
+        )
+        cat_opts = '<option value="">Todas las categorías</option>' + "".join(
+            f'<option value="{c}">{c}</option>' for c in cats
+        )
+
+        # Filas de la tabla (todas, el filtrado lo hace JS)
+        filas = ""
+        for p in sorted(productos, key=lambda x: (x["supermercado"], x["categoria"], x["nombre"])):
+            nombre_sup, badge_cls = NOMBRE_LOCAL.get(p["supermercado"], (p["supermercado"].title(), ""))
+            try:
+                precio_val = float(p["precio_actual"])
+                precio_fmt = fmt_precio(precio_val)
+            except (ValueError, TypeError):
+                precio_fmt = "—"
+            unidad = p.get("unidad", "")
+            unidad_txt = f"/{unidad}" if unidad else ""
+            filas += (
+                f'<tr data-sup="{p["supermercado"]}" data-cat="{p["categoria"]}">'
+                f'<td class="nombre-prod">{p["nombre"].title()}</td>'
+                f'<td><span class="badge {badge_cls}">{nombre_sup}</span></td>'
+                f'<td>{p["categoria"]}</td>'
+                f'<td class="precio">{precio_fmt}{unidad_txt}</td>'
+                f'</tr>\n'
+            )
+
+        html_seccion = f"""
+  <!-- LISTA COMPLETA DE PRECIOS -->
+  <section class="section" id="lista-precios">
+    <h2 class="section-title">🗒️ Lista completa de precios</h2>
+    <div class="lista-controls">
+      <input type="text" id="lista-buscar" placeholder="Buscar producto..." class="lista-input">
+      <select id="lista-sup" class="lista-select">{sup_opts}</select>
+      <select id="lista-cat" class="lista-select">{cat_opts}</select>
+      <span id="lista-count" class="lista-count"></span>
+    </div>
+    <div class="table-wrap">
+      <table id="tabla-precios">
+        <thead><tr>
+          <th>Producto</th><th>Local</th><th>Categoría</th><th>Precio</th>
+        </tr></thead>
+        <tbody id="lista-tbody">
+{filas}        </tbody>
+      </table>
+    </div>
+  </section>"""
+
+        js_filtro = """
+// ── Lista completa de precios ────────────────────────────────────────────
+(function() {
+  const tbody  = document.getElementById('lista-tbody');
+  const buscar = document.getElementById('lista-buscar');
+  const selSup = document.getElementById('lista-sup');
+  const selCat = document.getElementById('lista-cat');
+  const count  = document.getElementById('lista-count');
+  if (!tbody) return;
+
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+
+  function filtrar() {
+    const q   = buscar.value.toLowerCase();
+    const sup = selSup.value;
+    const cat = selCat.value;
+    let visible = 0;
+    rows.forEach(tr => {
+      const nombre = tr.querySelector('td').textContent.toLowerCase();
+      const trSup  = tr.dataset.sup;
+      const trCat  = tr.dataset.cat;
+      const ok = (!q || nombre.includes(q)) &&
+                 (!sup || trSup === sup) &&
+                 (!cat || trCat === cat);
+      tr.style.display = ok ? '' : 'none';
+      if (ok) visible++;
+    });
+    count.textContent = visible + ' producto' + (visible !== 1 ? 's' : '');
+  }
+
+  buscar.addEventListener('input', filtrar);
+  selSup.addEventListener('change', filtrar);
+  selCat.addEventListener('change', filtrar);
+  filtrar();
+})();
+"""
+        return html_seccion, js_filtro
+
+    lista_html, lista_js = lista_precios_html(precios_todos or [])
+
     def sup_cards():
         cards = ""
         for sup in res_sups:
@@ -507,6 +625,53 @@ footer a {{ color: var(--red-light); text-decoration: none; }}
   .hero h1 {{ font-size: 2.5rem; }}
   .sup-grid {{ grid-template-columns: 1fr; }}
 }}
+
+/* LISTA COMPLETA DE PRECIOS */
+.lista-controls {{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}}
+
+.lista-input {{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  outline: none;
+  flex: 1;
+  min-width: 180px;
+  transition: border-color .2s;
+}}
+
+.lista-input:focus {{ border-color: var(--red); }}
+
+.lista-select {{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  padding: 8px 12px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color .2s;
+}}
+
+.lista-select:focus {{ border-color: var(--red); }}
+
+.lista-count {{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+}}
 </style>
 </head>
 <body>
@@ -520,270 +685,4 @@ footer a {{ color: var(--red-light); text-decoration: none; }}
   <h1>Monitor de <em>Precios</em><br>de Carnicerías</h1>
   <p class="hero-sub">Seguimiento diario de precios en Piala de Patria &amp; El Chañar · Rosario, Argentina</p>
   <div class="kpi-row">
-    <div class="kpi-card">
-      <div class="kpi-valor kpi-neu">{total_prods}</div>
-      <div class="kpi-label">Cortes monitoreados</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-valor {'kpi-up' if (var_dia or 0) > 0 else 'kpi-down' if (var_dia or 0) < 0 else 'kpi-neu'}">{fmt_pct(var_dia, arrow=False)}</div>
-      <div class="kpi-label">Var. hoy vs ayer</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-valor {'kpi-up' if (var_7d or 0) > 0 else 'kpi-down' if (var_7d or 0) < 0 else 'kpi-neu'}">{fmt_pct(var_7d, arrow=False)}</div>
-      <div class="kpi-label">Var. 7 días</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-valor" style="color:#e74c3c">{subieron}</div>
-      <div class="kpi-label">Subieron hoy</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-valor" style="color:#2ecc71">{bajaron}</div>
-      <div class="kpi-label">Bajaron hoy</div>
-    </div>
-  </div>
-</section>
-
-<main class="main">
-
-  <!-- SUPERMERCADOS -->
-  <section class="section">
-    <h2 class="section-title">📍 Carnicerías</h2>
-    <div class="sup-grid">
-      {sup_cards()}
-    </div>
-  </section>
-
-  <!-- GRÁFICOS -->
-  <section class="section">
-    <h2 class="section-title">📈 Evolución de precios</h2>
-    <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('tab-7d', this)">7 días</button>
-      <button class="tab-btn" onclick="switchTab('tab-30d', this)">30 días</button>
-    </div>
-    <div id="tab-7d" class="tab-content active">
-      <div class="chart-wrapper"><canvas id="chart7d"></canvas></div>
-    </div>
-    <div id="tab-30d" class="tab-content">
-      <div class="chart-wrapper"><canvas id="chart30d"></canvas></div>
-    </div>
-  </section>
-
-  <!-- RANKINGS HOY -->
-  <section class="section">
-    <h2 class="section-title">🔥 Movimientos de hoy</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="ranking-grid">
-      <div>
-        <h3 style="font-family:'Bebas Neue';letter-spacing:2px;color:#e74c3c;margin-bottom:12px;font-size:1.1rem">▲ MÁS SUBIERON</h3>
-        <div class="table-wrap">
-          <table>
-            <thead><tr>
-              <th>Producto</th><th>Carnicería</th><th>Antes</th><th>Ahora</th><th>Var.</th>
-            </tr></thead>
-            <tbody>{ranking_rows((ranking_dia or {{}}).get('subidas', []), 10)}</tbody>
-          </table>
-        </div>
-      </div>
-      <div>
-        <h3 style="font-family:'Bebas Neue';letter-spacing:2px;color:#2ecc71;margin-bottom:12px;font-size:1.1rem">▼ MÁS BAJARON</h3>
-        <div class="table-wrap">
-          <table>
-            <thead><tr>
-              <th>Producto</th><th>Carnicería</th><th>Antes</th><th>Ahora</th><th>Var.</th>
-            </tr></thead>
-            <tbody>{ranking_rows((ranking_dia or {{}}).get('bajadas', []), 10)}</tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPARATIVA -->
-  <section class="section">
-    <h2 class="section-title">⚖️ Comparativa entre carnicerías</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr>
-          <th>Corte</th>
-          <th>Piala</th>
-          <th>El Chañar</th>
-          <th>Diferencia</th>
-          <th>Más barato</th>
-        </tr></thead>
-        <tbody>{comparativas_rows(comparativas)}</tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- RANKING 7D -->
-  <section class="section">
-    <h2 class="section-title">📊 Top subidas · últimos 7 días</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr>
-          <th>Producto</th><th>Carnicería</th><th>Precio hace 7d</th><th>Precio actual</th><th>Var. 7d</th>
-        </tr></thead>
-        <tbody>{ranking_rows(ranking_7d or [], 15)}</tbody>
-      </table>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <p>CarneBot · Monitor de precios de carnicerías en Rosario, Argentina</p>
-  <p style="margin-top:8px">
-    <a href="https://www.piala.com.ar/productos/" target="_blank">Piala de Patria</a> ·
-    <a href="https://carneselchanear.com.ar/shop" target="_blank">Carnes El Chañar</a> ·
-    Datos actualizados diariamente via GitHub Actions
-  </p>
-  <p style="margin-top:8px;color:#555;font-size:0.7rem">Los precios son de referencia. Verificar en cada local.</p>
-</footer>
-
-<script>
-// ── Tabs ─────────────────────────────────────────────────────────────────
-function switchTab(id, btn) {{
-  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
-}}
-
-// ── Chart helper ────────────────────────────────────────────────────────
-const CHART_DEFAULTS = {{
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {{
-    legend: {{
-      labels: {{ color: '#aaa', font: {{ family: 'IBM Plex Mono', size: 11 }} }}
-    }},
-    tooltip: {{
-      backgroundColor: '#1e1e1e',
-      titleColor: '#e8e8e8',
-      bodyColor: '#aaa',
-      borderColor: '#333',
-      borderWidth: 1,
-      callbacks: {{
-        label: ctx => ` ${{ctx.dataset.label}}: ${{ctx.parsed.y > 0 ? '+' : ''}}${{ctx.parsed.y.toFixed(2)}}%`
-      }}
-    }}
-  }},
-  scales: {{
-    x: {{
-      ticks: {{ color: '#666', font: {{ family: 'IBM Plex Mono', size: 10 }} }},
-      grid:  {{ color: '#1e1e1e' }}
-    }},
-    y: {{
-      ticks: {{
-        color: '#666',
-        font: {{ family: 'IBM Plex Mono', size: 10 }},
-        callback: v => (v>0?'+':'')+v.toFixed(1)+'%'
-      }},
-      grid: {{ color: '#1e1e1e' }},
-    }}
-  }}
-}};
-
-function makeChart(canvasId, labels, datasets) {{
-  const ctx = document.getElementById(canvasId);
-  if (!ctx) return;
-  new Chart(ctx, {{
-    type: 'line',
-    data: {{ labels, datasets }},
-    options: CHART_DEFAULTS
-  }});
-}}
-
-// ── 7d Chart ────────────────────────────────────────────────────────────
-makeChart('chart7d', {labels_7d}, [
-  {{
-    label: 'Total',
-    data: {vals_7d_total},
-    borderColor: '#e74c3c',
-    backgroundColor: 'rgba(231,76,60,.08)',
-    borderWidth: 2.5,
-    pointRadius: 4,
-    pointBackgroundColor: '#e74c3c',
-    fill: true,
-    tension: 0.3,
-  }},
-  {{
-    label: 'Piala',
-    data: {vals_7d_piala},
-    borderColor: '#c0392b',
-    borderWidth: 1.5,
-    borderDash: [4,3],
-    pointRadius: 3,
-    pointBackgroundColor: '#c0392b',
-    fill: false,
-    tension: 0.3,
-  }},
-  {{
-    label: 'El Chañar',
-    data: {vals_7d_chanear},
-    borderColor: '#2980b9',
-    borderWidth: 1.5,
-    borderDash: [4,3],
-    pointRadius: 3,
-    pointBackgroundColor: '#2980b9',
-    fill: false,
-    tension: 0.3,
-  }},
-]);
-
-// ── 30d Chart ────────────────────────────────────────────────────────────
-makeChart('chart30d', {labels_30d}, [
-  {{
-    label: 'Total',
-    data: {vals_30d_total},
-    borderColor: '#e74c3c',
-    backgroundColor: 'rgba(231,76,60,.08)',
-    borderWidth: 2.5,
-    pointRadius: 3,
-    pointBackgroundColor: '#e74c3c',
-    fill: true,
-    tension: 0.4,
-  }},
-  {{
-    label: 'Piala',
-    data: {vals_30d_piala},
-    borderColor: '#c0392b',
-    borderWidth: 1.5,
-    borderDash: [4,3],
-    pointRadius: 2,
-    pointBackgroundColor: '#c0392b',
-    fill: false,
-    tension: 0.4,
-  }},
-  {{
-    label: 'El Chañar',
-    data: {vals_30d_chanear},
-    borderColor: '#2980b9',
-    borderWidth: 1.5,
-    borderDash: [4,3],
-    pointRadius: 2,
-    pointBackgroundColor: '#2980b9',
-    fill: false,
-    tension: 0.4,
-  }},
-]);
-</script>
-</body>
-</html>"""
-
-
-def main():
-    DIR_DOCS.mkdir(exist_ok=True)
-
-    resumen    = leer_json("resumen.json", {})
-    graficos   = leer_json("graficos.json", {})
-    ranking_d  = leer_json("ranking_dia.json", {})
-    ranking_7d = leer_json("ranking_7d.json", [])
-
-    html = generar_html(resumen, graficos, ranking_d, ranking_7d)
-    out = DIR_DOCS / "index.html"
-    out.write_text(html, encoding="utf-8")
-    print(f"✅ Web generada → {out}")
-
-
-if __name__ == "__main__":
-    main()
+            

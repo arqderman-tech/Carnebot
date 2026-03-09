@@ -1,52 +1,52 @@
 {
-  "fecha": "20260308",
+  "fecha": "20260309",
   "total_productos": 180,
-  "variacion_dia": 0.0,
+  "variacion_dia": 0.27,
   "variacion_7d": null,
   "variacion_mes": null,
-  "productos_subieron_dia": 0,
+  "productos_subieron_dia": 4,
   "productos_bajaron_dia": 0,
-  "productos_sin_cambio_dia": 180,
+  "productos_sin_cambio_dia": 176,
   "ranking_subida_dia": [
     {
-      "clave": "piala__picada común",
-      "nombre": "Picada común",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 9000.0,
-      "precio_hoy": 9000.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "clave": "chanear_302.0_costeletas de cerdo",
+      "nombre": "COSTELETAS DE CERDO",
+      "supermercado": "chanear",
+      "categoria": "Cerdo",
+      "precio_antes": 7300.0,
+      "precio_hoy": 8500.0,
+      "diff_abs": 1200.0,
+      "diff_pct": 16.44
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 12000.0,
-      "precio_hoy": 12000.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "clave": "chanear_419.0_albondigas de pollo",
+      "nombre": "ALBONDIGAS DE POLLO",
+      "supermercado": "chanear",
+      "categoria": "Pollo",
+      "precio_antes": 8000.0,
+      "precio_hoy": 8900.0,
+      "diff_abs": 900.0,
+      "diff_pct": 11.25
     },
     {
-      "clave": "piala__pata de ternera de 7kg",
-      "nombre": "Pata de ternera de 7kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 13332.0,
-      "precio_hoy": 13332.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "clave": "chanear_412.0_milanesa de pechuga",
+      "nombre": "MILANESA DE PECHUGA",
+      "supermercado": "chanear",
+      "categoria": "Pollo",
+      "precio_antes": 8900.0,
+      "precio_hoy": 9900.0,
+      "diff_abs": 1000.0,
+      "diff_pct": 11.24
     },
     {
-      "clave": "piala__lomo",
-      "nombre": "Lomo",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 26200.0,
-      "precio_hoy": 26200.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "clave": "chanear_421.0_milanesa de pechuga de oferta",
+      "nombre": "MILANESA DE PECHUGA DE OFERTA",
+      "supermercado": "chanear",
+      "categoria": "Pollo",
+      "precio_antes": 8900.0,
+      "precio_hoy": 9700.0,
+      "diff_abs": 800.0,
+      "diff_pct": 8.99
     },
     {
       "clave": "piala__falda",
@@ -169,42 +169,42 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__asado de novillito",
-      "nombre": "Asado de novillito",
+      "clave": "piala__picada común",
+      "nombre": "Picada común",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 19000.0,
-      "precio_hoy": 19000.0,
+      "precio_antes": 9000.0,
+      "precio_hoy": 9000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__vacio",
-      "nombre": "Vacio",
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 26000.0,
-      "precio_hoy": 26000.0,
+      "precio_antes": 12000.0,
+      "precio_hoy": 12000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__tapa de asado",
-      "nombre": "Tapa de asado",
+      "clave": "piala__pata de ternera de 7kg",
+      "nombre": "Pata de ternera de 7kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 16000.0,
-      "precio_hoy": 16000.0,
+      "precio_antes": 13332.0,
+      "precio_hoy": 13332.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__osobuco",
-      "nombre": "Osobuco",
+      "clave": "piala__lomo",
+      "nombre": "Lomo",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 10200.0,
-      "precio_hoy": 10200.0,
+      "precio_antes": 26200.0,
+      "precio_hoy": 26200.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     }
@@ -587,8 +587,8 @@
         },
         {
           "categoria": "Cerdo",
-          "precio_promedio": 12413.57,
-          "precio_min": 7300.0,
+          "precio_promedio": 12499.29,
+          "precio_min": 8500.0,
           "precio_max": 22900.0,
           "cantidad": 14
         },
@@ -615,7 +615,7 @@
         },
         {
           "categoria": "Pollo",
-          "precio_promedio": 8671.15,
+          "precio_promedio": 8878.85,
           "precio_min": 4390.0,
           "precio_max": 16100.0,
           "cantidad": 13

@@ -63,7 +63,15 @@ def parsear_productos(html, rubro_nombre, rubro_url):
     fecha = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     # ── Estrategia 1: cards de materialize CSS ────────────────────────────────
-    cards = soup.select("div.col.s6, div.col.s12.m6, div.card, div.producto")
+    # Selector ampliado: cubre col s6, s12 m6, l3, card, producto, etc.
+    cards = soup.select(
+        "div.col.s6, div.col.s12.m6, div.col.m4, div.col.l3, "
+        "div.card, div.card-content, div.producto, "
+        "div[class*='product'], li[class*='product']"
+    )
+    if not cards:
+        # Fallback: cualquier div que contenga un precio visible
+        cards = [d for d in soup.find_all("div") if "$" in d.get_text()]
 
     for card in cards:
         texto = card.get_text(" ", strip=True)
@@ -84,22 +92,24 @@ def parsear_productos(html, rubro_nombre, rubro_url):
 
         # Nombre: primer tag con texto en mayúsculas
         nombre = ""
-        for tag in card.find_all(["strong", "b", "span", "p", "div"]):
+        for tag in card.find_all(["strong", "b", "span", "p", "h4", "h5", "h6", "div"]):
             t = tag.get_text(strip=True)
-            if (t and len(t) > 3 and t == t.upper()
+            if (t and 3 < len(t) < 80
+                    and t == t.upper()
                     and not re.match(r"^[\d\s$.,]+$", t)
                     and "COD" not in t.upper()
-                    and "$" not in t):
+                    and "$" not in t
+                    and "POR" not in t.upper()):
                 nombre = t
                 break
 
-        # Fallback: palabras en mayúsculas antes del precio en el texto
+        # Fallback: palabras en mayúsculas antes del precio en el texto plano
         if not nombre:
             idx    = texto.find(precio_m.group(0))
             before = texto[:idx].split()
             palabras = []
             for w in reversed(before):
-                if w == w.upper() and not re.match(r"^[\d.,]+$", w):
+                if w == w.upper() and not re.match(r"^[\d.,\-\$]+$", w) and len(w) > 1:
                     palabras.insert(0, w)
                 else:
                     break
@@ -168,30 +178,58 @@ def parsear_productos(html, rubro_nombre, rubro_url):
     return productos
 
 
+def _navegar_con_reintentos(page, url, rubro_nombre):
+    """
+    Navega a una URL probando distintas estrategias de espera.
+    Retorna True si la navegación fue exitosa (aunque sea parcialmente).
+    """
+    # Intento 1: networkidle (ideal, pero Vue.js mantiene conexiones abiertas)
+    try:
+        page.goto(url, wait_until="networkidle", timeout=25_000)
+        return True
+    except PWTimeout:
+        log.warning(f"  Timeout networkidle en {rubro_nombre}, reintentando con load...")
+
+    # Intento 2: wait_until="load" + espera extra para que Vue termine de montar
+    try:
+        page.goto(url, wait_until="load", timeout=20_000)
+        page.wait_for_timeout(4_000)
+        return True
+    except PWTimeout:
+        log.warning(f"  Timeout load en {rubro_nombre}, reintentando con commit...")
+
+    # Intento 3: wait_until="commit" (sólo espera primer byte) + espera larga
+    try:
+        page.goto(url, wait_until="commit", timeout=15_000)
+        page.wait_for_timeout(8_000)
+        return True
+    except PWTimeout:
+        log.error(f"  FALLO definitivo: {url}")
+        return False
+
+
 def scrape_rubro_playwright(page, rubro):
     """Navega a un rubro y espera que Vue.js renderice los productos."""
     url = f"{BASE_URL}/shop/rubros/{rubro['id']}/{rubro['slug']}"
 
-    try:
-        page.goto(url, wait_until="networkidle", timeout=30_000)
-    except PWTimeout:
-        log.warning(f"  Timeout networkidle en {rubro['nombre']}, reintentando con load...")
-        try:
-            page.goto(url, wait_until="load", timeout=20_000)
-            page.wait_for_timeout(3000)
-        except PWTimeout:
-            log.error(f"  FALLO definitivo: {url}")
-            return []
+    if not _navegar_con_reintentos(page, url, rubro["nombre"]):
+        return []
 
-    # Esperar que Vue monte los componentes
+    # Esperar selector de precio — más robusto que esperar sólo h3
+    # El sitio puede usar h3, span, div, p con el símbolo $
     try:
-        page.wait_for_selector("h3", timeout=8_000)
+        page.wait_for_selector(
+            "h3, [class*='precio'], [class*='price'], span:has-text('$')",
+            timeout=10_000
+        )
     except PWTimeout:
-        log.warning(f"  No se encontró h3 en {rubro['nombre']}")
+        log.warning(f"  No se encontró selector de precio en {rubro['nombre']}, continuando...")
 
-    # Scroll para lazy-loading
+    # Scroll para activar lazy-loading
     page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-    page.wait_for_timeout(800)
+    page.wait_for_timeout(1_000)
+    page.evaluate("window.scrollTo(0, 0)")
+    page.wait_for_timeout(500)
 
     html = page.content()
     return parsear_productos(html, rubro["nombre"], url)
@@ -208,16 +246,21 @@ def scrape_all():
     with sync_playwright() as pw:
         browser = pw.chromium.launch(
             headless=True,
-            args=["--no-sandbox", "--disable-dev-shm-usage"],
+            args=[
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-blink-features=AutomationControlled",
+            ],
         )
         context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36",
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                       "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
             locale="es-AR",
             viewport={"width": 1280, "height": 900},
         )
         page = context.new_page()
 
-        # Bloquear recursos pesados para acelerar la carga
+        # Bloquear recursos pesados — NO bloquear JS/XHR porque Vue los necesita
         page.route(
             "**/*.{png,jpg,jpeg,gif,webp,svg,woff,woff2,ttf,otf}",
             lambda r: r.abort()
@@ -225,6 +268,8 @@ def scrape_all():
         page.route("**/google-analytics.com/**", lambda r: r.abort())
         page.route("**/googletagmanager.com/**", lambda r: r.abort())
         page.route("**/facebook.com/**",         lambda r: r.abort())
+        page.route("**/hotjar.com/**",           lambda r: r.abort())
+        page.route("**/clarity.ms/**",           lambda r: r.abort())
 
         for rubro in RUBROS:
             log.info(f"[Chanear] Rubro: {rubro['nombre']}")
@@ -253,3 +298,4 @@ if __name__ == "__main__":
         guardar(productos, OUTPUT_DIR, "chanear")
     else:
         log.warning("[Chanear] Sin productos obtenidos")
+        

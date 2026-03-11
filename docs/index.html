@@ -389,7 +389,7 @@ footer a { color: var(--red-light); text-decoration: none; }
 
 <header class="header">
   <div class="logo">🥩 <span>Carne</span>Bot</div>
-  <div class="header-fecha">Actualizado: 10/03/2026</div>
+  <div class="header-fecha">Actualizado: 11/03/2026</div>
 </header>
 
 <section class="hero">
@@ -401,7 +401,7 @@ footer a { color: var(--red-light); text-decoration: none; }
       <div class="kpi-label">Cortes monitoreados</div>
     </div>
     <div class="kpi-card">
-      <div class="kpi-valor kpi-up">+0.09%</div>
+      <div class="kpi-valor kpi-neu">0.00%</div>
       <div class="kpi-label">Var. hoy vs ayer</div>
     </div>
     <div class="kpi-card">
@@ -409,11 +409,11 @@ footer a { color: var(--red-light); text-decoration: none; }
       <div class="kpi-label">Var. 7 días</div>
     </div>
     <div class="kpi-card">
-      <div class="kpi-valor" style="color:#e74c3c">2</div>
+      <div class="kpi-valor" style="color:#e74c3c">0</div>
       <div class="kpi-label">Subieron hoy</div>
     </div>
     <div class="kpi-card">
-      <div class="kpi-valor" style="color:#2ecc71">1</div>
+      <div class="kpi-valor" style="color:#2ecc71">0</div>
       <div class="kpi-label">Bajaron hoy</div>
     </div>
   </div>
@@ -539,24 +539,24 @@ footer a { color: var(--red-light); text-decoration: none; }
             </tr></thead>
             <tbody>
             <tr>
-                <td class="nombre-prod">Pata muslo</td>
+                <td class="nombre-prod">Picada común</td>
                 <td><span class="badge badge-piala">Piala</span></td>
-                <td class="precio">$3.000</td>
-                <td class="precio">$4.100</td>
-                <td style="color:#e74c3c;font-weight:700">▲ +36.67%</td>
-            </tr>
-            <tr>
-                <td class="nombre-prod">POLLO ENTERO</td>
-                <td><span class="badge badge-chanear">El Chañar</span></td>
-                <td class="precio">$5.400</td>
-                <td class="precio">$5.700</td>
-                <td style="color:#e74c3c;font-weight:700">▲ +5.56%</td>
+                <td class="precio">$9.000</td>
+                <td class="precio">$9.000</td>
+                <td style="color:#888;font-weight:700">– 0.00%</td>
             </tr>
             <tr>
                 <td class="nombre-prod">Brazuelo con hueso/ Pata de ternera de 10kg</td>
                 <td><span class="badge badge-piala">Piala</span></td>
                 <td class="precio">$12.000</td>
                 <td class="precio">$12.000</td>
+                <td style="color:#888;font-weight:700">– 0.00%</td>
+            </tr>
+            <tr>
+                <td class="nombre-prod">Pata de ternera de 7kg</td>
+                <td><span class="badge badge-piala">Piala</span></td>
+                <td class="precio">$13.332</td>
+                <td class="precio">$13.332</td>
                 <td style="color:#888;font-weight:700">– 0.00%</td>
             </tr>
             <tr>
@@ -620,17 +620,17 @@ footer a { color: var(--red-light); text-decoration: none; }
             </tr></thead>
             <tbody>
             <tr>
-                <td class="nombre-prod">FILET DE MUSLO DE POLLO</td>
-                <td><span class="badge badge-chanear">El Chañar</span></td>
-                <td class="precio">$12.200</td>
-                <td class="precio">$9.050</td>
-                <td style="color:#2ecc71;font-weight:700">▼ -25.82%</td>
-            </tr>
-            <tr>
                 <td class="nombre-prod">Picada común</td>
                 <td><span class="badge badge-piala">Piala</span></td>
                 <td class="precio">$9.000</td>
                 <td class="precio">$9.000</td>
+                <td style="color:#888;font-weight:700">– 0.00%</td>
+            </tr>
+            <tr>
+                <td class="nombre-prod">Brazuelo con hueso/ Pata de ternera de 10kg</td>
+                <td><span class="badge badge-piala">Piala</span></td>
+                <td class="precio">$12.000</td>
+                <td class="precio">$12.000</td>
                 <td style="color:#888;font-weight:700">– 0.00%</td>
             </tr>
             <tr>
@@ -641,10 +641,10 @@ footer a { color: var(--red-light); text-decoration: none; }
                 <td style="color:#888;font-weight:700">– 0.00%</td>
             </tr>
             <tr>
-                <td class="nombre-prod">Brazuelo con hueso/ Pata de ternera de 10kg</td>
+                <td class="nombre-prod">Lomo</td>
                 <td><span class="badge badge-piala">Piala</span></td>
-                <td class="precio">$12.000</td>
-                <td class="precio">$12.000</td>
+                <td class="precio">$26.200</td>
+                <td class="precio">$26.200</td>
                 <td style="color:#888;font-weight:700">– 0.00%</td>
             </tr>
             <tr>
@@ -669,10 +669,10 @@ footer a { color: var(--red-light); text-decoration: none; }
                 <td style="color:#888;font-weight:700">– 0.00%</td>
             </tr>
             <tr>
-                <td class="nombre-prod">Lomo</td>
+                <td class="nombre-prod">Cuadril</td>
                 <td><span class="badge badge-piala">Piala</span></td>
-                <td class="precio">$26.200</td>
-                <td class="precio">$26.200</td>
+                <td class="precio">$19.300</td>
+                <td class="precio">$19.300</td>
                 <td style="color:#888;font-weight:700">– 0.00%</td>
             </tr>
             <tr>
@@ -1105,10 +1105,10 @@ function makeChart(canvasId, labels, datasets) {
 }
 
 // ── 7d Chart ────────────────────────────────────────────────────────────
-makeChart('chart7d', ["2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "2026-03-09", "2026-03-10"], [
+makeChart('chart7d', ["2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "2026-03-09", "2026-03-10", "2026-03-11"], [
   {
     label: 'Total',
-    data: [0.0, 0.0, 0.03, 0.03, 0.3, 0.39],
+    data: [0.0, 0.0, 0.03, 0.03, 0.3, 0.39, 0.39],
     borderColor: '#e74c3c',
     backgroundColor: 'rgba(231,76,60,.08)',
     borderWidth: 2.5,
@@ -1119,7 +1119,7 @@ makeChart('chart7d', ["2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "2
   },
   {
     label: 'Piala',
-    data: [0.0, 0.0, 0.05, 0.05, 0.05, 0.4],
+    data: [0.0, 0.0, 0.05, 0.05, 0.05, 0.4, 0.4],
     borderColor: '#c0392b',
     borderWidth: 1.5,
     borderDash: [4,3],
@@ -1130,7 +1130,7 @@ makeChart('chart7d', ["2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "2
   },
   {
     label: 'El Chañar',
-    data: [0.0, 0.0, 0.0, 0.0, 0.64, 0.37],
+    data: [0.0, 0.0, 0.0, 0.0, 0.64, 0.37, 0.37],
     borderColor: '#2980b9',
     borderWidth: 1.5,
     borderDash: [4,3],
@@ -1142,10 +1142,10 @@ makeChart('chart7d', ["2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "2
 ]);
 
 // ── 30d Chart ────────────────────────────────────────────────────────────
-makeChart('chart30d', ["2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "2026-03-09", "2026-03-10"], [
+makeChart('chart30d', ["2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "2026-03-09", "2026-03-10", "2026-03-11"], [
   {
     label: 'Total',
-    data: [0.0, 0.0, 0.03, 0.03, 0.3, 0.39],
+    data: [0.0, 0.0, 0.03, 0.03, 0.3, 0.39, 0.39],
     borderColor: '#e74c3c',
     backgroundColor: 'rgba(231,76,60,.08)',
     borderWidth: 2.5,
@@ -1156,7 +1156,7 @@ makeChart('chart30d', ["2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "
   },
   {
     label: 'Piala',
-    data: [0.0, 0.0, 0.05, 0.05, 0.05, 0.4],
+    data: [0.0, 0.0, 0.05, 0.05, 0.05, 0.4, 0.4],
     borderColor: '#c0392b',
     borderWidth: 1.5,
     borderDash: [4,3],
@@ -1167,7 +1167,7 @@ makeChart('chart30d', ["2026-03-05", "2026-03-06", "2026-03-07", "2026-03-08", "
   },
   {
     label: 'El Chañar',
-    data: [0.0, 0.0, 0.0, 0.0, 0.64, 0.37],
+    data: [0.0, 0.0, 0.0, 0.0, 0.64, 0.37, 0.37],
     borderColor: '#2980b9',
     borderWidth: 1.5,
     borderDash: [4,3],

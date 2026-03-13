@@ -1,14 +1,14 @@
 {
   "subidas": [
     {
-      "clave": "chanear_427.0_patitas rebozadas de pollo",
-      "nombre": "PATITAS REBOZADAS DE POLLO",
-      "supermercado": "chanear",
-      "categoria": "Pollo",
-      "precio_antes": 11300.0,
-      "precio_hoy": 12000.0,
-      "diff_abs": 700.0,
-      "diff_pct": 6.19
+      "clave": "piala__picada común",
+      "nombre": "Picada común",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 9000.0,
+      "precio_hoy": 9000.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
     },
     {
       "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
@@ -21,12 +21,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__picada común",
-      "nombre": "Picada común",
+      "clave": "piala__pata de ternera de 7kg",
+      "nombre": "Pata de ternera de 7kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 9000.0,
-      "precio_hoy": 9000.0,
+      "precio_antes": 13332.0,
+      "precio_hoy": 13332.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -181,12 +181,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__pata de ternera de 7kg",
-      "nombre": "Pata de ternera de 7kg",
+      "clave": "piala__tapa de asado",
+      "nombre": "Tapa de asado",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 13332.0,
-      "precio_hoy": 13332.0,
+      "precio_antes": 16000.0,
+      "precio_hoy": 16000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },

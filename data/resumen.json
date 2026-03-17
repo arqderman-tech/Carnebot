@@ -1,32 +1,32 @@
 {
-  "fecha": "20260316",
+  "fecha": "20260317",
   "total_productos": 74,
-  "variacion_dia": 0.0,
+  "variacion_dia": 0.07,
   "variacion_7d": null,
   "variacion_mes": null,
-  "productos_subieron_dia": 0,
+  "productos_subieron_dia": 2,
   "productos_bajaron_dia": 0,
-  "productos_sin_cambio_dia": 74,
+  "productos_sin_cambio_dia": 72,
   "ranking_subida_dia": [
     {
-      "clave": "chanear_128_azotillo",
-      "nombre": "AZOTILLO",
+      "clave": "chanear_504_morcilla salada",
+      "nombre": "MORCILLA SALADA",
       "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 8300.0,
-      "precio_hoy": 8300.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "categoria": "Embutidos",
+      "precio_antes": 8200.0,
+      "precio_hoy": 8400.0,
+      "diff_abs": 200.0,
+      "diff_pct": 2.44
     },
     {
-      "clave": "chanear_124_bife a 7 costillas",
-      "nombre": "BIFE A 7 COSTILLAS",
+      "clave": "chanear_505_morcilla dulce",
+      "nombre": "MORCILLA DULCE",
       "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 16400.0,
-      "precio_hoy": 16400.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "categoria": "Embutidos",
+      "precio_antes": 8200.0,
+      "precio_hoy": 8400.0,
+      "diff_abs": 200.0,
+      "diff_pct": 2.44
     },
     {
       "clave": "chanear_175_bife de entrecot especial madurado",
@@ -89,12 +89,22 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_123_costeletas grandes",
-      "nombre": "COSTELETAS GRANDES",
+      "clave": "chanear_128_azotillo",
+      "nombre": "AZOTILLO",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 12900.0,
-      "precio_hoy": 12900.0,
+      "precio_antes": 8300.0,
+      "precio_hoy": 8300.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "chanear_124_bife a 7 costillas",
+      "nombre": "BIFE A 7 COSTILLAS",
+      "supermercado": "chanear",
+      "categoria": "Carnes Vacunas",
+      "precio_antes": 16400.0,
+      "precio_hoy": 16400.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -105,6 +115,16 @@
       "categoria": "Carnes Vacunas",
       "precio_antes": 23200.0,
       "precio_hoy": 23200.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "chanear_123_costeletas grandes",
+      "nombre": "COSTELETAS GRANDES",
+      "supermercado": "chanear",
+      "categoria": "Carnes Vacunas",
+      "precio_antes": 12900.0,
+      "precio_hoy": 12900.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -129,26 +149,6 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_139_entraña fina",
-      "nombre": "ENTRAÑA FINA",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 30500.0,
-      "precio_hoy": 30500.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "chanear_120_entrecot comun",
-      "nombre": "ENTRECOT COMUN",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 13900.0,
-      "precio_hoy": 13900.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
       "clave": "chanear_122_entrecot especial",
       "nombre": "ENTRECOT ESPECIAL",
       "supermercado": "chanear",
@@ -169,22 +169,22 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_103_jamon cuadrado",
-      "nombre": "JAMON CUADRADO",
+      "clave": "chanear_139_entraña fina",
+      "nombre": "ENTRAÑA FINA",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 16700.0,
-      "precio_hoy": 16700.0,
+      "precio_antes": 30500.0,
+      "precio_hoy": 30500.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_108_jamon redondo",
-      "nombre": "JAMON REDONDO",
+      "clave": "chanear_120_entrecot comun",
+      "nombre": "ENTRECOT COMUN",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 23800.0,
-      "precio_hoy": 23800.0,
+      "precio_antes": 13900.0,
+      "precio_hoy": 13900.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -447,8 +447,8 @@
         },
         {
           "categoria": "Embutidos",
-          "precio_promedio": 9815.0,
-          "precio_min": 8200.0,
+          "precio_promedio": 9881.67,
+          "precio_min": 8400.0,
           "precio_max": 12000.0,
           "cantidad": 6
         },

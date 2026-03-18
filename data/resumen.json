@@ -1,32 +1,32 @@
 {
-  "fecha": "20260317",
+  "fecha": "20260318",
   "total_productos": 74,
-  "variacion_dia": 0.07,
+  "variacion_dia": 0.12,
   "variacion_7d": null,
   "variacion_mes": null,
-  "productos_subieron_dia": 2,
+  "productos_subieron_dia": 1,
   "productos_bajaron_dia": 0,
-  "productos_sin_cambio_dia": 72,
+  "productos_sin_cambio_dia": 73,
   "ranking_subida_dia": [
     {
-      "clave": "chanear_504_morcilla salada",
-      "nombre": "MORCILLA SALADA",
+      "clave": "chanear_436_arrollado de pollo",
+      "nombre": "ARROLLADO DE POLLO",
       "supermercado": "chanear",
-      "categoria": "Embutidos",
-      "precio_antes": 8200.0,
-      "precio_hoy": 8400.0,
-      "diff_abs": 200.0,
-      "diff_pct": 2.44
+      "categoria": "Pollo",
+      "precio_antes": 16100.0,
+      "precio_hoy": 17500.0,
+      "diff_abs": 1400.0,
+      "diff_pct": 8.7
     },
     {
-      "clave": "chanear_505_morcilla dulce",
-      "nombre": "MORCILLA DULCE",
+      "clave": "chanear_128_azotillo",
+      "nombre": "AZOTILLO",
       "supermercado": "chanear",
-      "categoria": "Embutidos",
-      "precio_antes": 8200.0,
-      "precio_hoy": 8400.0,
-      "diff_abs": 200.0,
-      "diff_pct": 2.44
+      "categoria": "Carnes Vacunas",
+      "precio_antes": 8300.0,
+      "precio_hoy": 8300.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
     },
     {
       "clave": "chanear_175_bife de entrecot especial madurado",
@@ -89,12 +89,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_128_azotillo",
-      "nombre": "AZOTILLO",
+      "clave": "chanear_123_costeletas grandes",
+      "nombre": "COSTELETAS GRANDES",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 8300.0,
-      "precio_hoy": 8300.0,
+      "precio_antes": 12900.0,
+      "precio_hoy": 12900.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -119,22 +119,22 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_123_costeletas grandes",
-      "nombre": "COSTELETAS GRANDES",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 12900.0,
-      "precio_hoy": 12900.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
       "clave": "chanear_104_cuadril",
       "nombre": "CUADRIL",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
       "precio_antes": 19300.0,
       "precio_hoy": 19300.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "chanear_139_entraña fina",
+      "nombre": "ENTRAÑA FINA",
+      "supermercado": "chanear",
+      "categoria": "Carnes Vacunas",
+      "precio_antes": 30500.0,
+      "precio_hoy": 30500.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -169,12 +169,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_139_entraña fina",
-      "nombre": "ENTRAÑA FINA",
+      "clave": "chanear_103_jamon cuadrado",
+      "nombre": "JAMON CUADRADO",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 30500.0,
-      "precio_hoy": 30500.0,
+      "precio_antes": 16700.0,
+      "precio_hoy": 16700.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -454,9 +454,9 @@
         },
         {
           "categoria": "Pollo",
-          "precio_promedio": 8713.46,
+          "precio_promedio": 8821.15,
           "precio_min": 4390.0,
-          "precio_max": 16100.0,
+          "precio_max": 17500.0,
           "cantidad": 13
         }
       ]

@@ -1,15 +1,5 @@
 [
   {
-    "clave": "piala__milanesa de soja",
-    "nombre": "Milanesa de soja",
-    "supermercado": "piala",
-    "categoria": "Elaborados",
-    "precio_antes": 2600.0,
-    "precio_hoy": 3000.0,
-    "diff_abs": 400.0,
-    "diff_pct": 15.38
-  },
-  {
     "clave": "piala__filet de muslo",
     "nombre": "Filet de muslo",
     "supermercado": "piala",
@@ -50,6 +40,16 @@
     "diff_pct": 1.55
   },
   {
+    "clave": "piala__falda",
+    "nombre": "Falda",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 11800.0,
+    "precio_hoy": 11800.0,
+    "diff_abs": 0.0,
+    "diff_pct": 0.0
+  },
+  {
     "clave": "piala__lomo",
     "nombre": "Lomo",
     "supermercado": "piala",
@@ -80,12 +80,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__falda",
-    "nombre": "Falda",
+    "clave": "piala__costeleta grande",
+    "nombre": "Costeleta grande",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 11800.0,
-    "precio_hoy": 11800.0,
+    "precio_antes": 11999.99,
+    "precio_hoy": 11999.99,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -160,12 +160,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__costeleta grande",
-    "nombre": "Costeleta grande",
+    "clave": "piala__asado de novillito",
+    "nombre": "Asado de novillito",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 11999.99,
-    "precio_hoy": 11999.99,
+    "precio_antes": 19000.0,
+    "precio_hoy": 19000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },

@@ -1,14 +1,14 @@
 {
   "subidas": [
     {
-      "clave": "piala__picada común",
-      "nombre": "Picada común",
+      "clave": "piala__pata muslo",
+      "nombre": "Pata muslo",
       "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 9000.0,
-      "precio_hoy": 9000.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "categoria": "Pollos y Derivados",
+      "precio_antes": 3500.0,
+      "precio_hoy": 3900.0,
+      "diff_abs": 400.0,
+      "diff_pct": 11.43
     },
     {
       "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
@@ -21,12 +21,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__pata de ternera de 7kg",
-      "nombre": "Pata de ternera de 7kg",
+      "clave": "piala__picada común",
+      "nombre": "Picada común",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 13332.0,
-      "precio_hoy": 13332.0,
+      "precio_antes": 9000.0,
+      "precio_hoy": 9000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -181,6 +181,16 @@
       "diff_pct": 0.0
     },
     {
+      "clave": "piala__pata de ternera de 7kg",
+      "nombre": "Pata de ternera de 7kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 13332.0,
+      "precio_hoy": 13332.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
       "clave": "piala__tapa de asado",
       "nombre": "Tapa de asado",
       "supermercado": "piala",
@@ -189,19 +199,19 @@
       "precio_hoy": 16000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__osobuco",
-      "nombre": "Osobuco",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 10200.0,
-      "precio_hoy": 10200.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
     }
   ],
   "bajadas": [
+    {
+      "clave": "piala__cajon de pollo",
+      "nombre": "Cajon de pollo",
+      "supermercado": "piala",
+      "categoria": "Pollos y Derivados",
+      "precio_antes": 81250.0,
+      "precio_hoy": 75000.0,
+      "diff_abs": -6250.0,
+      "diff_pct": -7.69
+    },
     {
       "clave": "piala__picada común",
       "nombre": "Picada común",
@@ -209,16 +219,6 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 9000.0,
       "precio_hoy": 9000.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 11499.99,
-      "precio_hoy": 11499.99,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -233,12 +233,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__lomo",
-      "nombre": "Lomo",
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 26200.0,
-      "precio_hoy": 26200.0,
+      "precio_antes": 11499.99,
+      "precio_hoy": 11499.99,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -273,12 +273,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__cuadril",
-      "nombre": "Cuadril",
+      "clave": "piala__lomo",
+      "nombre": "Lomo",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 19300.0,
-      "precio_hoy": 19300.0,
+      "precio_antes": 26200.0,
+      "precio_hoy": 26200.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -353,12 +353,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__arañita",
-      "nombre": "Arañita",
+      "clave": "piala__cuadril",
+      "nombre": "Cuadril",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 19600.0,
-      "precio_hoy": 19600.0,
+      "precio_antes": 19300.0,
+      "precio_hoy": 19300.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },

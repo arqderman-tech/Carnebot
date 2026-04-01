@@ -1,22 +1,22 @@
 {
-  "fecha": "20260331",
+  "fecha": "20260401",
   "total_productos": 179,
-  "variacion_dia": 0.02,
-  "variacion_7d": -0.06,
+  "variacion_dia": -0.13,
+  "variacion_7d": -0.18,
   "variacion_mes": null,
-  "productos_subieron_dia": 1,
+  "productos_subieron_dia": 0,
   "productos_bajaron_dia": 1,
-  "productos_sin_cambio_dia": 177,
+  "productos_sin_cambio_dia": 178,
   "ranking_subida_dia": [
     {
-      "clave": "piala__pata muslo",
-      "nombre": "Pata muslo",
+      "clave": "piala__picada común",
+      "nombre": "Picada común",
       "supermercado": "piala",
-      "categoria": "Pollos y Derivados",
-      "precio_antes": 3500.0,
-      "precio_hoy": 3900.0,
-      "diff_abs": 400.0,
-      "diff_pct": 11.43
+      "categoria": "Cortes vacunos",
+      "precio_antes": 9000.0,
+      "precio_hoy": 9000.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
     },
     {
       "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
@@ -29,12 +29,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__picada común",
-      "nombre": "Picada común",
+      "clave": "piala__pata de ternera de 7kg",
+      "nombre": "Pata de ternera de 7kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 9000.0,
-      "precio_hoy": 9000.0,
+      "precio_antes": 13332.0,
+      "precio_hoy": 13332.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -189,16 +189,6 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__pata de ternera de 7kg",
-      "nombre": "Pata de ternera de 7kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 13332.0,
-      "precio_hoy": 13332.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
       "clave": "piala__tapa de asado",
       "nombre": "Tapa de asado",
       "supermercado": "piala",
@@ -207,18 +197,28 @@
       "precio_hoy": 16000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__osobuco",
+      "nombre": "Osobuco",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 10200.0,
+      "precio_hoy": 10200.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
     }
   ],
   "ranking_baja_dia": [
     {
-      "clave": "piala__cajon de pollo",
-      "nombre": "Cajon de pollo",
+      "clave": "piala__pata muslo",
+      "nombre": "Pata muslo",
       "supermercado": "piala",
       "categoria": "Pollos y Derivados",
-      "precio_antes": 81250.0,
-      "precio_hoy": 75000.0,
-      "diff_abs": -6250.0,
-      "diff_pct": -7.69
+      "precio_antes": 3900.0,
+      "precio_hoy": 2999.99,
+      "diff_abs": -900.01,
+      "diff_pct": -23.08
     },
     {
       "clave": "piala__picada común",
@@ -413,6 +413,16 @@
   ],
   "comparativa_supermercados": [
     {
+      "nombre": "Pata muslo",
+      "supermercado_1": "piala",
+      "precio_1": 2999.99,
+      "supermercado_2": "chanear",
+      "precio_2": 4700.0,
+      "diff_abs": 1700.01,
+      "diff_pct": 56.67,
+      "mas_barato": "piala"
+    },
+    {
       "nombre": "Filet de pechuga",
       "supermercado_1": "piala",
       "precio_1": 10500.0,
@@ -480,16 +490,6 @@
       "precio_2": 16800.0,
       "diff_abs": 800.0,
       "diff_pct": 5.0,
-      "mas_barato": "piala"
-    },
-    {
-      "nombre": "Pata muslo",
-      "supermercado_1": "piala",
-      "precio_1": 3900.0,
-      "supermercado_2": "chanear",
-      "precio_2": 4700.0,
-      "diff_abs": 800.0,
-      "diff_pct": 20.51,
       "mas_barato": "piala"
     },
     {
@@ -670,7 +670,7 @@
         },
         {
           "categoria": "Pollos y Derivados",
-          "precio_promedio": 14245.0,
+          "precio_promedio": 14155.0,
           "precio_min": 1100.0,
           "precio_max": 75000.0,
           "cantidad": 10

@@ -203,22 +203,22 @@
   ],
   "bajadas": [
     {
-      "clave": "piala__pata muslo",
-      "nombre": "Pata muslo",
-      "supermercado": "piala",
-      "categoria": "Pollos y Derivados",
-      "precio_antes": 3900.0,
-      "precio_hoy": 2999.99,
-      "diff_abs": -900.01,
-      "diff_pct": -23.08
-    },
-    {
       "clave": "piala__picada común",
       "nombre": "Picada común",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
       "precio_antes": 9000.0,
       "precio_hoy": 9000.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 11499.99,
+      "precio_hoy": 11499.99,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -233,12 +233,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "clave": "piala__lomo",
+      "nombre": "Lomo",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 11499.99,
-      "precio_hoy": 11499.99,
+      "precio_antes": 26200.0,
+      "precio_hoy": 26200.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -273,12 +273,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__lomo",
-      "nombre": "Lomo",
+      "clave": "piala__cuadril",
+      "nombre": "Cuadril",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 26200.0,
-      "precio_hoy": 26200.0,
+      "precio_antes": 19300.0,
+      "precio_hoy": 19300.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -353,12 +353,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__cuadril",
-      "nombre": "Cuadril",
+      "clave": "piala__arañita",
+      "nombre": "Arañita",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 19300.0,
-      "precio_hoy": 19300.0,
+      "precio_antes": 19600.0,
+      "precio_hoy": 19600.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },

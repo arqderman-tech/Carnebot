@@ -1,22 +1,22 @@
 {
-  "fecha": "20260407",
+  "fecha": "20260408",
   "total_productos": 74,
-  "variacion_dia": 0.0,
+  "variacion_dia": -0.01,
   "variacion_7d": null,
   "variacion_mes": null,
-  "productos_subieron_dia": 0,
-  "productos_bajaron_dia": 0,
-  "productos_sin_cambio_dia": 74,
+  "productos_subieron_dia": 1,
+  "productos_bajaron_dia": 1,
+  "productos_sin_cambio_dia": 71,
   "ranking_subida_dia": [
     {
-      "clave": "chanear_128_azotillo",
-      "nombre": "AZOTILLO",
+      "clave": "chanear_129_lomo",
+      "nombre": "LOMO",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 8300.0,
-      "precio_hoy": 8300.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "precio_antes": 26200.0,
+      "precio_hoy": 26990.0,
+      "diff_abs": 790.0,
+      "diff_pct": 3.02
     },
     {
       "clave": "chanear_124_bife a 7 costillas",
@@ -89,6 +89,16 @@
       "diff_pct": 0.0
     },
     {
+      "clave": "chanear_128_azotillo",
+      "nombre": "AZOTILLO",
+      "supermercado": "chanear",
+      "categoria": "Carnes Vacunas",
+      "precio_antes": 8300.0,
+      "precio_hoy": 8300.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
       "clave": "chanear_123_costeletas grandes",
       "nombre": "COSTELETAS GRANDES",
       "supermercado": "chanear",
@@ -109,16 +119,6 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_104_cuadril",
-      "nombre": "CUADRIL",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 19300.0,
-      "precio_hoy": 19300.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
       "clave": "chanear_109_cuadril con punta",
       "nombre": "CUADRIL CON PUNTA",
       "supermercado": "chanear",
@@ -129,12 +129,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_139_entraña fina",
-      "nombre": "ENTRAÑA FINA",
+      "clave": "chanear_104_cuadril",
+      "nombre": "CUADRIL",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 30500.0,
-      "precio_hoy": 30500.0,
+      "precio_antes": 19300.0,
+      "precio_hoy": 19300.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -169,6 +169,16 @@
       "diff_pct": 0.0
     },
     {
+      "clave": "chanear_139_entraña fina",
+      "nombre": "ENTRAÑA FINA",
+      "supermercado": "chanear",
+      "categoria": "Carnes Vacunas",
+      "precio_antes": 30500.0,
+      "precio_hoy": 30500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
       "clave": "chanear_103_jamon cuadrado",
       "nombre": "JAMON CUADRADO",
       "supermercado": "chanear",
@@ -185,16 +195,6 @@
       "categoria": "Carnes Vacunas",
       "precio_antes": 23800.0,
       "precio_hoy": 23800.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "chanear_129_lomo",
-      "nombre": "LOMO",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 26200.0,
-      "precio_hoy": 26200.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -211,22 +211,22 @@
   ],
   "ranking_baja_dia": [
     {
+      "clave": "chanear_134_matambre de ternera",
+      "nombre": "MATAMBRE DE TERNERA",
+      "supermercado": "chanear",
+      "categoria": "Carnes Vacunas",
+      "precio_antes": 17500.0,
+      "precio_hoy": 16900.0,
+      "diff_abs": -600.0,
+      "diff_pct": -3.43
+    },
+    {
       "clave": "chanear_128_azotillo",
       "nombre": "AZOTILLO",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
       "precio_antes": 8300.0,
       "precio_hoy": 8300.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "chanear_124_bife a 7 costillas",
-      "nombre": "BIFE A 7 COSTILLAS",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 16400.0,
-      "precio_hoy": 16400.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -241,12 +241,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_101_bola de lomo",
-      "nombre": "BOLA DE LOMO",
+      "clave": "chanear_124_bife a 7 costillas",
+      "nombre": "BIFE A 7 COSTILLAS",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 16700.0,
-      "precio_hoy": 16700.0,
+      "precio_antes": 16400.0,
+      "precio_hoy": 16400.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -281,12 +281,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_130_costeleta del medio",
-      "nombre": "COSTELETA DEL MEDIO",
+      "clave": "chanear_101_bola de lomo",
+      "nombre": "BOLA DE LOMO",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 16500.0,
-      "precio_hoy": 16500.0,
+      "precio_antes": 16700.0,
+      "precio_hoy": 16700.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -361,6 +361,16 @@
       "diff_pct": 0.0
     },
     {
+      "clave": "chanear_130_costeleta del medio",
+      "nombre": "COSTELETA DEL MEDIO",
+      "supermercado": "chanear",
+      "categoria": "Carnes Vacunas",
+      "precio_antes": 16500.0,
+      "precio_hoy": 16500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
       "clave": "chanear_116_falda",
       "nombre": "FALDA",
       "supermercado": "chanear",
@@ -381,32 +391,22 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_108_jamon redondo",
-      "nombre": "JAMON REDONDO",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 23800.0,
-      "precio_hoy": 23800.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "chanear_129_lomo",
-      "nombre": "LOMO",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 26200.0,
-      "precio_hoy": 26200.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
       "clave": "chanear_131_mar del plata de ternera",
       "nombre": "MAR DEL PLATA DE TERNERA",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
       "precio_antes": 19700.0,
       "precio_hoy": 19700.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "chanear_108_jamon redondo",
+      "nombre": "JAMON REDONDO",
+      "supermercado": "chanear",
+      "categoria": "Carnes Vacunas",
+      "precio_antes": 23800.0,
+      "precio_hoy": 23800.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     }
@@ -419,7 +419,7 @@
       "categorias": [
         {
           "categoria": "Carnes Vacunas",
-          "precio_promedio": 18623.24,
+          "precio_promedio": 18628.82,
           "precio_min": 5800.0,
           "precio_max": 31000.0,
           "cantidad": 34

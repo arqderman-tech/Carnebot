@@ -1,12 +1,12 @@
 {
-  "fecha": "20260409",
-  "total_productos": 74,
+  "fecha": "20260410",
+  "total_productos": 73,
   "variacion_dia": 0.0,
   "variacion_7d": null,
   "variacion_mes": null,
   "productos_subieron_dia": 0,
   "productos_bajaron_dia": 0,
-  "productos_sin_cambio_dia": 74,
+  "productos_sin_cambio_dia": 73,
   "ranking_subida_dia": [
     {
       "clave": "chanear_128_azotillo",
@@ -415,7 +415,7 @@
   "resumen_supermercados": [
     {
       "supermercado": "chanear",
-      "total_productos": 74,
+      "total_productos": 73,
       "categorias": [
         {
           "categoria": "Carnes Vacunas",
@@ -433,10 +433,10 @@
         },
         {
           "categoria": "Elaborados",
-          "precio_promedio": 6750.0,
-          "precio_min": 2000.0,
+          "precio_promedio": 11500.0,
+          "precio_min": 11500.0,
           "precio_max": 11500.0,
-          "cantidad": 2
+          "cantidad": 1
         },
         {
           "categoria": "Elaborados Premium",

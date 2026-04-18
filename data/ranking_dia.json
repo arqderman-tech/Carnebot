@@ -203,74 +203,14 @@
   ],
   "bajadas": [
     {
-      "clave": "chanear_330.0_milanesas de cerdo",
-      "nombre": "MILANESAS DE CERDO",
-      "supermercado": "chanear",
-      "categoria": "Cerdo",
-      "precio_antes": 9990.0,
-      "precio_hoy": 6900.0,
-      "diff_abs": -3090.0,
-      "diff_pct": -30.93
-    },
-    {
-      "clave": "chanear_141.0_milanesas de ternera x kg",
-      "nombre": "MILANESAS DE TERNERA X KG",
-      "supermercado": "chanear",
-      "categoria": "Elaborados Premium",
-      "precio_antes": 13700.0,
-      "precio_hoy": 10900.0,
-      "diff_abs": -2800.0,
-      "diff_pct": -20.44
-    },
-    {
-      "clave": "chanear_138.0_milanesas de ternera de oferta x 2 kg o mas",
-      "nombre": "MILANESAS DE TERNERA DE OFERTA X 2 KG O MAS",
-      "supermercado": "chanear",
-      "categoria": "Elaborados Premium",
-      "precio_antes": 12200.0,
-      "precio_hoy": 10500.0,
-      "diff_abs": -1700.0,
-      "diff_pct": -13.93
-    },
-    {
-      "clave": "chanear_421.0_milanesa de pechuga de oferta",
-      "nombre": "MILANESA DE PECHUGA DE OFERTA",
-      "supermercado": "chanear",
-      "categoria": "Pollo",
-      "precio_antes": 9700.0,
-      "precio_hoy": 8700.0,
-      "diff_abs": -1000.0,
-      "diff_pct": -10.31
-    },
-    {
-      "clave": "chanear_412.0_milanesa de pechuga",
-      "nombre": "MILANESA DE PECHUGA",
-      "supermercado": "chanear",
-      "categoria": "Pollo",
-      "precio_antes": 9900.0,
-      "precio_hoy": 8900.0,
-      "diff_abs": -1000.0,
-      "diff_pct": -10.1
-    },
-    {
-      "clave": "chanear_132.0_costilla de th",
-      "nombre": "COSTILLA DE TH",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 23200.0,
-      "precio_hoy": 22990.0,
-      "diff_abs": -210.0,
-      "diff_pct": -0.91
-    },
-    {
-      "clave": "piala__pata de ternera de 7kg",
-      "nombre": "Pata de ternera de 7kg",
+      "clave": "piala__pata muslo",
+      "nombre": "Pata muslo",
       "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 12550.0,
-      "precio_hoy": 12550.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "categoria": "Pollos y Derivados",
+      "precio_antes": 3900.0,
+      "precio_hoy": 2999.99,
+      "diff_abs": -900.01,
+      "diff_pct": -23.08
     },
     {
       "clave": "piala__picada común",
@@ -283,32 +223,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__costeleta grande",
-      "nombre": "Costeleta grande",
+      "clave": "piala__pata de ternera de 7kg",
+      "nombre": "Pata de ternera de 7kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 10500.0,
-      "precio_hoy": 10500.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__costeleta chica",
-      "nombre": "Costeleta chica",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 16800.0,
-      "precio_hoy": 16800.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__colita de cuadril / punta de vacio",
-      "nombre": "Colita de cuadril / Punta de vacio",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 22900.0,
-      "precio_hoy": 22900.0,
+      "precio_antes": 12550.0,
+      "precio_hoy": 12550.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -359,6 +279,86 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 28400.0,
       "precio_hoy": 28400.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__costeleta grande",
+      "nombre": "Costeleta grande",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 10500.0,
+      "precio_hoy": 10500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__costeleta chica",
+      "nombre": "Costeleta chica",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 16800.0,
+      "precio_hoy": 16800.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__colita de cuadril / punta de vacio",
+      "nombre": "Colita de cuadril / Punta de vacio",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 22900.0,
+      "precio_hoy": 22900.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__cima de ternera",
+      "nombre": "Cima de ternera",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 16500.0,
+      "precio_hoy": 16500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__cabeza de lomo / bola de lomo",
+      "nombre": "Cabeza de lomo / Bola de lomo",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 16700.0,
+      "precio_hoy": 16700.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo sin hueso",
+      "nombre": "Brazuelo sin hueso",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 16300.0,
+      "precio_hoy": 16300.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 5kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 5kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__cuadril",
+      "nombre": "Cuadril",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 19800.0,
+      "precio_hoy": 19800.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },

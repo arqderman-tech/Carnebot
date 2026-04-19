@@ -1,12 +1,12 @@
 {
-  "fecha": "20260418",
+  "fecha": "20260419",
   "total_productos": 178,
-  "variacion_dia": -0.13,
+  "variacion_dia": 0.0,
   "variacion_7d": 0.21,
   "variacion_mes": null,
   "productos_subieron_dia": 0,
-  "productos_bajaron_dia": 1,
-  "productos_sin_cambio_dia": 177,
+  "productos_bajaron_dia": 0,
+  "productos_sin_cambio_dia": 178,
   "ranking_subida_dia": [
     {
       "clave": "piala__picada común",
@@ -211,22 +211,22 @@
   ],
   "ranking_baja_dia": [
     {
-      "clave": "piala__pata muslo",
-      "nombre": "Pata muslo",
-      "supermercado": "piala",
-      "categoria": "Pollos y Derivados",
-      "precio_antes": 3900.0,
-      "precio_hoy": 2999.99,
-      "diff_abs": -900.01,
-      "diff_pct": -23.08
-    },
-    {
       "clave": "piala__picada común",
       "nombre": "Picada común",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
       "precio_antes": 9400.0,
       "precio_hoy": 9400.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -241,12 +241,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "clave": "piala__lomo",
+      "nombre": "Lomo",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
+      "precio_antes": 28400.0,
+      "precio_hoy": 28400.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -281,12 +281,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__lomo",
-      "nombre": "Lomo",
+      "clave": "piala__cuadril",
+      "nombre": "Cuadril",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 28400.0,
-      "precio_hoy": 28400.0,
+      "precio_antes": 19800.0,
+      "precio_hoy": 19800.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -361,12 +361,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__cuadril",
-      "nombre": "Cuadril",
+      "clave": "piala__arañita",
+      "nombre": "Arañita",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 19800.0,
-      "precio_hoy": 19800.0,
+      "precio_antes": 19600.0,
+      "precio_hoy": 19600.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },

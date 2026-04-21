@@ -1,22 +1,22 @@
 {
   "subidas": [
     {
+      "clave": "piala__pata muslo",
+      "nombre": "Pata muslo",
+      "supermercado": "piala",
+      "categoria": "Pollos y Derivados",
+      "precio_antes": 2999.99,
+      "precio_hoy": 3900.0,
+      "diff_abs": 900.01,
+      "diff_pct": 30.0
+    },
+    {
       "clave": "piala__picada común",
       "nombre": "Picada común",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
       "precio_antes": 9400.0,
       "precio_hoy": 9400.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -171,6 +171,16 @@
       "diff_pct": 0.0
     },
     {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
       "clave": "piala__vacio",
       "nombre": "Vacio",
       "supermercado": "piala",
@@ -187,16 +197,6 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 16000.0,
       "precio_hoy": 16000.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__osobuco",
-      "nombre": "Osobuco",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     }

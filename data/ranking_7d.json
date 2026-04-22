@@ -1,5 +1,55 @@
 [
   {
+    "clave": "piala__sesos",
+    "nombre": "Sesos",
+    "supermercado": "piala",
+    "categoria": "Menudencias",
+    "precio_antes": 2600.0,
+    "precio_hoy": 2900.0,
+    "diff_abs": 300.0,
+    "diff_pct": 11.54
+  },
+  {
+    "clave": "piala__riñon sin grasa",
+    "nombre": "Riñon sin grasa",
+    "supermercado": "piala",
+    "categoria": "Menudencias",
+    "precio_antes": 5850.0,
+    "precio_hoy": 6500.0,
+    "diff_abs": 650.0,
+    "diff_pct": 11.11
+  },
+  {
+    "clave": "piala__puchero común",
+    "nombre": "Puchero común",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 5800.0,
+    "precio_hoy": 6400.0,
+    "diff_abs": 600.0,
+    "diff_pct": 10.34
+  },
+  {
+    "clave": "piala__riñon con grasa",
+    "nombre": "Riñon con grasa",
+    "supermercado": "piala",
+    "categoria": "Menudencias",
+    "precio_antes": 6500.0,
+    "precio_hoy": 7150.0,
+    "diff_abs": 650.0,
+    "diff_pct": 10.0
+  },
+  {
+    "clave": "piala__molleja",
+    "nombre": "Molleja",
+    "supermercado": "piala",
+    "categoria": "Menudencias",
+    "precio_antes": 33150.0,
+    "precio_hoy": 35750.0,
+    "diff_abs": 2600.0,
+    "diff_pct": 7.84
+  },
+  {
     "clave": "piala__lomo",
     "nombre": "Lomo",
     "supermercado": "piala",
@@ -10,24 +60,34 @@
     "diff_pct": 7.58
   },
   {
-    "clave": "piala__provoleta c/ bandeja",
-    "nombre": "Provoleta c/ bandeja",
+    "clave": "piala__chinchulines",
+    "nombre": "Chinchulines",
     "supermercado": "piala",
-    "categoria": "Elaborados",
-    "precio_antes": 20550.0,
-    "precio_hoy": 22000.0,
-    "diff_abs": 1450.0,
-    "diff_pct": 7.06
+    "categoria": "Menudencias",
+    "precio_antes": 7150.0,
+    "precio_hoy": 7670.0,
+    "diff_abs": 520.0,
+    "diff_pct": 7.27
   },
   {
-    "clave": "piala__provoleta",
-    "nombre": "Provoleta",
+    "clave": "piala__palomita",
+    "nombre": "Palomita",
     "supermercado": "piala",
-    "categoria": "Elaborados",
-    "precio_antes": 20300.0,
-    "precio_hoy": 21500.0,
-    "diff_abs": 1200.0,
-    "diff_pct": 5.91
+    "categoria": "Cortes vacunos",
+    "precio_antes": 13300.0,
+    "precio_hoy": 13900.0,
+    "diff_abs": 600.0,
+    "diff_pct": 4.51
+  },
+  {
+    "clave": "piala__entrecot comun / roast beef",
+    "nombre": "Entrecot comun / Roast beef",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 13300.0,
+    "precio_hoy": 13900.0,
+    "diff_abs": 600.0,
+    "diff_pct": 4.51
   },
   {
     "clave": "piala__picada común",
@@ -40,14 +100,14 @@
     "diff_pct": 4.44
   },
   {
-    "clave": "piala__puchero común",
-    "nombre": "Puchero común",
+    "clave": "piala__lengua",
+    "nombre": "Lengua",
     "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 5800.0,
-    "precio_hoy": 6000.0,
-    "diff_abs": 200.0,
-    "diff_pct": 3.45
+    "categoria": "Menudencias",
+    "precio_antes": 11830.0,
+    "precio_hoy": 12220.0,
+    "diff_abs": 390.0,
+    "diff_pct": 3.3
   },
   {
     "clave": "piala__picada especial",
@@ -60,26 +120,6 @@
     "diff_pct": 3.08
   },
   {
-    "clave": "piala__entrecot comun / roast beef",
-    "nombre": "Entrecot comun / Roast beef",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 13300.0,
-    "precio_hoy": 13600.0,
-    "diff_abs": 300.0,
-    "diff_pct": 2.26
-  },
-  {
-    "clave": "piala__palomita",
-    "nombre": "Palomita",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 13300.0,
-    "precio_hoy": 13600.0,
-    "diff_abs": 300.0,
-    "diff_pct": 2.26
-  },
-  {
     "clave": "piala__brazuelo sin hueso",
     "nombre": "Brazuelo sin hueso",
     "supermercado": "piala",
@@ -88,6 +128,16 @@
     "precio_hoy": 16300.0,
     "diff_abs": 300.0,
     "diff_pct": 1.88
+  },
+  {
+    "clave": "piala__entraña fina",
+    "nombre": "Entraña fina",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 30000.0,
+    "precio_hoy": 30500.0,
+    "diff_abs": 500.0,
+    "diff_pct": 1.67
   },
   {
     "clave": "piala__cuadril",
@@ -100,16 +150,6 @@
     "diff_pct": 1.54
   },
   {
-    "clave": "piala__brazuelo con hueso/ pata de ternera de 5kg",
-    "nombre": "Brazuelo con hueso/ Pata de ternera de 5kg",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 11000.0,
-    "precio_hoy": 11000.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
-  },
-  {
     "clave": "piala__colita de cuadril / punta de vacio",
     "nombre": "Colita de cuadril / Punta de vacio",
     "supermercado": "piala",
@@ -120,52 +160,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__cima de ternera",
-    "nombre": "Cima de ternera",
+    "clave": "piala__brazuelo con hueso/ pata de ternera de 5kg",
+    "nombre": "Brazuelo con hueso/ Pata de ternera de 5kg",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 16500.0,
-    "precio_hoy": 16500.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
-  },
-  {
-    "clave": "piala__cabeza de lomo / bola de lomo",
-    "nombre": "Cabeza de lomo / Bola de lomo",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 16700.0,
-    "precio_hoy": 16700.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
-  },
-  {
-    "clave": "piala__asado de novillito",
-    "nombre": "Asado de novillito",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 19000.0,
-    "precio_hoy": 19000.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
-  },
-  {
-    "clave": "piala__entraña fina",
-    "nombre": "Entraña fina",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 30000.0,
-    "precio_hoy": 30000.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
-  },
-  {
-    "clave": "piala__costeleta grande",
-    "nombre": "Costeleta grande",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 10500.0,
-    "precio_hoy": 10500.0,
+    "precio_antes": 11000.0,
+    "precio_hoy": 11000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },

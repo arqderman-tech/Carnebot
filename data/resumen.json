@@ -1,13 +1,23 @@
 {
-  "fecha": "20260504",
+  "fecha": "20260505",
   "total_productos": 178,
-  "variacion_dia": 0.0,
-  "variacion_7d": null,
+  "variacion_dia": 0.02,
+  "variacion_7d": 0.14,
   "variacion_mes": null,
-  "productos_subieron_dia": 0,
+  "productos_subieron_dia": 1,
   "productos_bajaron_dia": 0,
-  "productos_sin_cambio_dia": 178,
+  "productos_sin_cambio_dia": 177,
   "ranking_subida_dia": [
+    {
+      "clave": "chanear_427.0_patitas rebozadas de pollo",
+      "nombre": "PATITAS REBOZADAS DE POLLO",
+      "supermercado": "chanear",
+      "categoria": "Pollo",
+      "precio_antes": 12000.0,
+      "precio_hoy": 12500.0,
+      "diff_abs": 500.0,
+      "diff_pct": 4.17
+    },
     {
       "clave": "piala__picada común",
       "nombre": "Picada común",
@@ -15,16 +25,6 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 9400.0,
       "precio_hoy": 9400.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -179,12 +179,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__vacio",
-      "nombre": "Vacio",
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 25600.0,
-      "precio_hoy": 25600.0,
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -615,7 +615,7 @@
         },
         {
           "categoria": "Pollo",
-          "precio_promedio": 8686.54,
+          "precio_promedio": 8725.0,
           "precio_min": 4390.0,
           "precio_max": 17500.0,
           "cantidad": 13

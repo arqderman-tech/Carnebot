@@ -1,22 +1,22 @@
 {
   "subidas": [
     {
-      "clave": "chanear_411.0_filet de muslo de pollo",
-      "nombre": "FILET DE MUSLO DE POLLO",
-      "supermercado": "chanear",
-      "categoria": "Pollo",
-      "precio_antes": 9300.0,
-      "precio_hoy": 9500.0,
-      "diff_abs": 200.0,
-      "diff_pct": 2.15
-    },
-    {
       "clave": "piala__picada común",
       "nombre": "Picada común",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
       "precio_antes": 9500.0,
       "precio_hoy": 9500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -171,12 +171,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "clave": "piala__vacio",
+      "nombre": "Vacio",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
+      "precio_antes": 25600.0,
+      "precio_hoy": 25600.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -203,66 +203,6 @@
   ],
   "bajadas": [
     {
-      "clave": "piala__pechuga con alas",
-      "nombre": "Pechuga con alas",
-      "supermercado": "piala",
-      "categoria": "Pollos y Derivados",
-      "precio_antes": 11500.0,
-      "precio_hoy": 9600.0,
-      "diff_abs": -1900.0,
-      "diff_pct": -16.52
-    },
-    {
-      "clave": "piala__filet de muslo",
-      "nombre": "Filet de muslo",
-      "supermercado": "piala",
-      "categoria": "Pollos y Derivados",
-      "precio_antes": 9949.99,
-      "precio_hoy": 8450.0,
-      "diff_abs": -1499.99,
-      "diff_pct": -15.08
-    },
-    {
-      "clave": "piala__filet de pechuga",
-      "nombre": "Filet de pechuga",
-      "supermercado": "piala",
-      "categoria": "Pollos y Derivados",
-      "precio_antes": 9999.99,
-      "precio_hoy": 8500.0,
-      "diff_abs": -1499.99,
-      "diff_pct": -15.0
-    },
-    {
-      "clave": "piala__pata muslo",
-      "nombre": "Pata muslo",
-      "supermercado": "piala",
-      "categoria": "Pollos y Derivados",
-      "precio_antes": 3900.0,
-      "precio_hoy": 3700.0,
-      "diff_abs": -200.0,
-      "diff_pct": -5.13
-    },
-    {
-      "clave": "piala__pollo",
-      "nombre": "Pollo",
-      "supermercado": "piala",
-      "categoria": "Pollos y Derivados",
-      "precio_antes": 3900.0,
-      "precio_hoy": 3700.0,
-      "diff_abs": -200.0,
-      "diff_pct": -5.13
-    },
-    {
-      "clave": "piala__cajon de pollo",
-      "nombre": "Cajon de pollo",
-      "supermercado": "piala",
-      "categoria": "Pollos y Derivados",
-      "precio_antes": 75000.0,
-      "precio_hoy": 71250.0,
-      "diff_abs": -3750.0,
-      "diff_pct": -5.0
-    },
-    {
       "clave": "piala__picada común",
       "nombre": "Picada común",
       "supermercado": "piala",
@@ -279,26 +219,6 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 11000.0,
       "precio_hoy": 11000.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__costeleta grande",
-      "nombre": "Costeleta grande",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__costeleta chica",
-      "nombre": "Costeleta chica",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 16800.0,
-      "precio_hoy": 16800.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -359,6 +279,86 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 19900.0,
       "precio_hoy": 19900.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__costeleta grande",
+      "nombre": "Costeleta grande",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__costeleta chica",
+      "nombre": "Costeleta chica",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 16800.0,
+      "precio_hoy": 16800.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__colita de cuadril / punta de vacio",
+      "nombre": "Colita de cuadril / Punta de vacio",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 22900.0,
+      "precio_hoy": 22900.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__cima de ternera",
+      "nombre": "Cima de ternera",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 16500.0,
+      "precio_hoy": 16500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__cabeza de lomo / bola de lomo",
+      "nombre": "Cabeza de lomo / Bola de lomo",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 16700.0,
+      "precio_hoy": 16700.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo sin hueso",
+      "nombre": "Brazuelo sin hueso",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 16500.0,
+      "precio_hoy": 16500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 5kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 5kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__arañita",
+      "nombre": "Arañita",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 19600.0,
+      "precio_hoy": 19600.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },

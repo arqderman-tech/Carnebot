@@ -1,12 +1,12 @@
 {
-  "fecha": "20260530",
+  "fecha": "20260531",
   "total_productos": 178,
-  "variacion_dia": 0.0,
-  "variacion_7d": -0.34,
+  "variacion_dia": -0.11,
+  "variacion_7d": -0.44,
   "variacion_mes": null,
   "productos_subieron_dia": 0,
-  "productos_bajaron_dia": 0,
-  "productos_sin_cambio_dia": 178,
+  "productos_bajaron_dia": 1,
+  "productos_sin_cambio_dia": 177,
   "ranking_subida_dia": [
     {
       "clave": "piala__picada común",
@@ -211,22 +211,22 @@
   ],
   "ranking_baja_dia": [
     {
+      "clave": "piala__pata muslo",
+      "nombre": "Pata muslo",
+      "supermercado": "piala",
+      "categoria": "Pollos y Derivados",
+      "precio_antes": 3700.0,
+      "precio_hoy": 2999.99,
+      "diff_abs": -700.01,
+      "diff_pct": -18.92
+    },
+    {
       "clave": "piala__picada común",
       "nombre": "Picada común",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
       "precio_antes": 9500.0,
       "precio_hoy": 9500.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -241,12 +241,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__lomo",
-      "nombre": "Lomo",
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 29500.0,
-      "precio_hoy": 29500.0,
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -281,12 +281,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__cuadril",
-      "nombre": "Cuadril",
+      "clave": "piala__lomo",
+      "nombre": "Lomo",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 19900.0,
-      "precio_hoy": 19900.0,
+      "precio_antes": 29500.0,
+      "precio_hoy": 29500.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -361,12 +361,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__arañita",
-      "nombre": "Arañita",
+      "clave": "piala__cuadril",
+      "nombre": "Cuadril",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 19600.0,
-      "precio_hoy": 19600.0,
+      "precio_antes": 19900.0,
+      "precio_hoy": 19900.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -423,6 +423,16 @@
       "mas_barato": "piala"
     },
     {
+      "nombre": "Pata muslo",
+      "supermercado_1": "piala",
+      "precio_1": 2999.99,
+      "supermercado_2": "chanear",
+      "precio_2": 4700.0,
+      "diff_abs": 1700.01,
+      "diff_pct": 56.67,
+      "mas_barato": "piala"
+    },
+    {
       "nombre": "Tapa de nalga",
       "supermercado_1": "piala",
       "precio_1": 17000.0,
@@ -440,16 +450,6 @@
       "precio_2": 9500.0,
       "diff_abs": 1050.0,
       "diff_pct": 12.43,
-      "mas_barato": "piala"
-    },
-    {
-      "nombre": "Pata muslo",
-      "supermercado_1": "piala",
-      "precio_1": 3700.0,
-      "supermercado_2": "chanear",
-      "precio_2": 4700.0,
-      "diff_abs": 1000.0,
-      "diff_pct": 27.03,
       "mas_barato": "piala"
     },
     {
@@ -670,7 +670,7 @@
         },
         {
           "categoria": "Pollos y Derivados",
-          "precio_promedio": 13250.0,
+          "precio_promedio": 13180.0,
           "precio_min": 1200.0,
           "precio_max": 71250.0,
           "cantidad": 10

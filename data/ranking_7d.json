@@ -20,6 +20,16 @@
     "diff_pct": 4.41
   },
   {
+    "clave": "chanear_427.0_patitas rebozadas de pollo",
+    "nombre": "PATITAS REBOZADAS DE POLLO",
+    "supermercado": "chanear",
+    "categoria": "Pollo",
+    "precio_antes": 12500.0,
+    "precio_hoy": 12990.0,
+    "diff_abs": 490.0,
+    "diff_pct": 3.92
+  },
+  {
     "clave": "chanear_156.0_tomahawk",
     "nombre": "TOMAHAWK",
     "supermercado": "chanear",
@@ -30,8 +40,8 @@
     "diff_pct": 2.9
   },
   {
-    "clave": "chanear_138.0_milanesas de ternera de oferta x 2 kg o mas",
-    "nombre": "MILANESAS DE TERNERA DE OFERTA X 2 KG O MAS",
+    "clave": "chanear_141.0_milanesas de ternera x kg",
+    "nombre": "MILANESAS DE TERNERA X KG",
     "supermercado": "chanear",
     "categoria": "Elaborados Premium",
     "precio_antes": 10900.0,
@@ -40,8 +50,8 @@
     "diff_pct": 2.75
   },
   {
-    "clave": "chanear_141.0_milanesas de ternera x kg",
-    "nombre": "MILANESAS DE TERNERA X KG",
+    "clave": "chanear_138.0_milanesas de ternera de oferta x 2 kg o mas",
+    "nombre": "MILANESAS DE TERNERA DE OFERTA X 2 KG O MAS",
     "supermercado": "chanear",
     "categoria": "Elaborados Premium",
     "precio_antes": 10900.0,
@@ -120,16 +130,6 @@
     "diff_pct": 1.97
   },
   {
-    "clave": "chanear_105.0_palomita de ternera",
-    "nombre": "PALOMITA DE TERNERA",
-    "supermercado": "chanear",
-    "categoria": "Carnes Vacunas",
-    "precio_antes": 15800.0,
-    "precio_hoy": 16100.0,
-    "diff_abs": 300.0,
-    "diff_pct": 1.9
-  },
-  {
     "clave": "chanear_110.0_tapa de nalga",
     "nombre": "TAPA DE NALGA",
     "supermercado": "chanear",
@@ -140,8 +140,18 @@
     "diff_pct": 1.9
   },
   {
-    "clave": "chanear_103.0_jamon cuadrado",
-    "nombre": "JAMON CUADRADO",
+    "clave": "chanear_105.0_palomita de ternera",
+    "nombre": "PALOMITA DE TERNERA",
+    "supermercado": "chanear",
+    "categoria": "Carnes Vacunas",
+    "precio_antes": 15800.0,
+    "precio_hoy": 16100.0,
+    "diff_abs": 300.0,
+    "diff_pct": 1.9
+  },
+  {
+    "clave": "chanear_101.0_bola de lomo",
+    "nombre": "BOLA DE LOMO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
     "precio_antes": 16990.0,
@@ -150,8 +160,8 @@
     "diff_pct": 1.82
   },
   {
-    "clave": "chanear_101.0_bola de lomo",
-    "nombre": "BOLA DE LOMO",
+    "clave": "chanear_103.0_jamon cuadrado",
+    "nombre": "JAMON CUADRADO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
     "precio_antes": 16990.0,
@@ -278,16 +288,6 @@
     "precio_hoy": 16700.0,
     "diff_abs": 200.0,
     "diff_pct": 1.21
-  },
-  {
-    "clave": "chanear_114.0_tapa de asado de ternera",
-    "nombre": "TAPA DE ASADO DE TERNERA",
-    "supermercado": "chanear",
-    "categoria": "Carnes Vacunas",
-    "precio_antes": 16800.0,
-    "precio_hoy": 17000.0,
-    "diff_abs": 200.0,
-    "diff_pct": 1.19
   },
   {
     "clave": "chanear_112.0_brazuelo sin hueso",

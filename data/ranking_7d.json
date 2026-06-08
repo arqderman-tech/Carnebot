@@ -1,6 +1,6 @@
 [
   {
-    "clave": "chanear_160.0_albondigas de carne vacuna",
+    "clave": "chanear_160_albondigas de carne vacuna",
     "nombre": "ALBONDIGAS DE CARNE VACUNA",
     "supermercado": "chanear",
     "categoria": "Elaborados",
@@ -10,7 +10,7 @@
     "diff_pct": 12.96
   },
   {
-    "clave": "chanear_117.0_puchero comun de ternera",
+    "clave": "chanear_117_puchero comun de ternera",
     "nombre": "PUCHERO COMUN DE TERNERA",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -20,7 +20,7 @@
     "diff_pct": 4.41
   },
   {
-    "clave": "chanear_427.0_patitas rebozadas de pollo",
+    "clave": "chanear_427_patitas rebozadas de pollo",
     "nombre": "PATITAS REBOZADAS DE POLLO",
     "supermercado": "chanear",
     "categoria": "Pollo",
@@ -30,7 +30,7 @@
     "diff_pct": 3.92
   },
   {
-    "clave": "chanear_156.0_tomahawk",
+    "clave": "chanear_156_tomahawk",
     "nombre": "TOMAHAWK",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -40,7 +40,7 @@
     "diff_pct": 2.9
   },
   {
-    "clave": "chanear_141.0_milanesas de ternera x kg",
+    "clave": "chanear_141_milanesas de ternera x kg",
     "nombre": "MILANESAS DE TERNERA X KG",
     "supermercado": "chanear",
     "categoria": "Elaborados Premium",
@@ -50,7 +50,7 @@
     "diff_pct": 2.75
   },
   {
-    "clave": "chanear_138.0_milanesas de ternera de oferta x 2 kg o mas",
+    "clave": "chanear_138_milanesas de ternera de oferta x 2 kg o mas",
     "nombre": "MILANESAS DE TERNERA DE OFERTA X 2 KG O MAS",
     "supermercado": "chanear",
     "categoria": "Elaborados Premium",
@@ -60,7 +60,7 @@
     "diff_pct": 2.75
   },
   {
-    "clave": "chanear_113.0_marucha de ternera",
+    "clave": "chanear_113_marucha de ternera",
     "nombre": "MARUCHA DE TERNERA",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -70,7 +70,7 @@
     "diff_pct": 2.5
   },
   {
-    "clave": "chanear_124.0_bife a 7 costillas",
+    "clave": "chanear_124_bife a 7 costillas",
     "nombre": "BIFE A 7 COSTILLAS",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -80,7 +80,7 @@
     "diff_pct": 2.44
   },
   {
-    "clave": "chanear_125.0_costeleta con lomo o t-bone",
+    "clave": "chanear_125_costeleta con lomo o t-bone",
     "nombre": "COSTELETA CON LOMO O T-BONE",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -90,7 +90,7 @@
     "diff_pct": 2.16
   },
   {
-    "clave": "chanear_120.0_entrecot comun",
+    "clave": "chanear_120_entrecot comun",
     "nombre": "ENTRECOT COMUN",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -100,7 +100,7 @@
     "diff_pct": 2.07
   },
   {
-    "clave": "chanear_126.0_picada comun de ternera",
+    "clave": "chanear_126_picada comun de ternera",
     "nombre": "PICADA COMUN DE TERNERA",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -110,7 +110,7 @@
     "diff_pct": 2.02
   },
   {
-    "clave": "chanear_128.0_azotillo",
+    "clave": "chanear_128_azotillo",
     "nombre": "AZOTILLO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -120,7 +120,7 @@
     "diff_pct": 2.02
   },
   {
-    "clave": "chanear_111.0_brazuelo con hueso",
+    "clave": "chanear_111_brazuelo con hueso",
     "nombre": "BRAZUELO CON HUESO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -130,17 +130,7 @@
     "diff_pct": 1.97
   },
   {
-    "clave": "chanear_110.0_tapa de nalga",
-    "nombre": "TAPA DE NALGA",
-    "supermercado": "chanear",
-    "categoria": "Carnes Vacunas",
-    "precio_antes": 15800.0,
-    "precio_hoy": 16100.0,
-    "diff_abs": 300.0,
-    "diff_pct": 1.9
-  },
-  {
-    "clave": "chanear_105.0_palomita de ternera",
+    "clave": "chanear_105_palomita de ternera",
     "nombre": "PALOMITA DE TERNERA",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -150,7 +140,17 @@
     "diff_pct": 1.9
   },
   {
-    "clave": "chanear_101.0_bola de lomo",
+    "clave": "chanear_110_tapa de nalga",
+    "nombre": "TAPA DE NALGA",
+    "supermercado": "chanear",
+    "categoria": "Carnes Vacunas",
+    "precio_antes": 15800.0,
+    "precio_hoy": 16100.0,
+    "diff_abs": 300.0,
+    "diff_pct": 1.9
+  },
+  {
+    "clave": "chanear_101_bola de lomo",
     "nombre": "BOLA DE LOMO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -160,7 +160,7 @@
     "diff_pct": 1.82
   },
   {
-    "clave": "chanear_103.0_jamon cuadrado",
+    "clave": "chanear_103_jamon cuadrado",
     "nombre": "JAMON CUADRADO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -170,17 +170,7 @@
     "diff_pct": 1.82
   },
   {
-    "clave": "chanear_175.0_bife de entrecot especial madurado",
-    "nombre": "BIFE DE ENTRECOT ESPECIAL MADURADO",
-    "supermercado": "chanear",
-    "categoria": "Carnes Vacunas",
-    "precio_antes": 32000.0,
-    "precio_hoy": 32500.0,
-    "diff_abs": 500.0,
-    "diff_pct": 1.56
-  },
-  {
-    "clave": "chanear_170.0_ojo de bife relleno",
+    "clave": "chanear_170_ojo de bife relleno",
     "nombre": "OJO DE BIFE RELLENO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -190,7 +180,7 @@
     "diff_pct": 1.56
   },
   {
-    "clave": "chanear_163.0_tapita de cuadril rellena",
+    "clave": "chanear_163_tapita de cuadril rellena",
     "nombre": "TAPITA DE CUADRIL RELLENA",
     "supermercado": "chanear",
     "categoria": "Elaborados Premium",
@@ -200,7 +190,17 @@
     "diff_pct": 1.56
   },
   {
-    "clave": "chanear_123.0_costeletas grandes",
+    "clave": "chanear_175_bife de entrecot especial madurado",
+    "nombre": "BIFE DE ENTRECOT ESPECIAL MADURADO",
+    "supermercado": "chanear",
+    "categoria": "Carnes Vacunas",
+    "precio_antes": 32000.0,
+    "precio_hoy": 32500.0,
+    "diff_abs": 500.0,
+    "diff_pct": 1.56
+  },
+  {
+    "clave": "chanear_123_costeletas grandes",
     "nombre": "COSTELETAS GRANDES",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -210,7 +210,7 @@
     "diff_pct": 1.55
   },
   {
-    "clave": "chanear_109.0_cuadril con punta",
+    "clave": "chanear_109_cuadril con punta",
     "nombre": "CUADRIL CON PUNTA",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -220,7 +220,7 @@
     "diff_pct": 1.53
   },
   {
-    "clave": "chanear_106.0_picaña de ternera",
+    "clave": "chanear_106_picaña de ternera",
     "nombre": "PICAÑA DE TERNERA",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -230,7 +230,7 @@
     "diff_pct": 1.44
   },
   {
-    "clave": "chanear_102.0_nalga",
+    "clave": "chanear_102_nalga",
     "nombre": "NALGA",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -240,7 +240,7 @@
     "diff_pct": 1.4
   },
   {
-    "clave": "chanear_147.0_matambre arrollado casero de ternera",
+    "clave": "chanear_147_matambre arrollado casero de ternera",
     "nombre": "MATAMBRE ARROLLADO CASERO DE TERNERA",
     "supermercado": "chanear",
     "categoria": "Elaborados Premium",
@@ -250,7 +250,7 @@
     "diff_pct": 1.39
   },
   {
-    "clave": "chanear_140.0_picada especial de ternera",
+    "clave": "chanear_140_picada especial de ternera",
     "nombre": "PICADA ESPECIAL DE TERNERA",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -260,7 +260,7 @@
     "diff_pct": 1.34
   },
   {
-    "clave": "chanear_139.0_entraña fina",
+    "clave": "chanear_139_entraña fina",
     "nombre": "ENTRAÑA FINA",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -270,7 +270,7 @@
     "diff_pct": 1.31
   },
   {
-    "clave": "chanear_122.0_entrecot especial",
+    "clave": "chanear_122_entrecot especial",
     "nombre": "ENTRECOT ESPECIAL",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -280,7 +280,7 @@
     "diff_pct": 1.26
   },
   {
-    "clave": "chanear_130.0_costeleta del medio",
+    "clave": "chanear_130_costeleta del medio",
     "nombre": "COSTELETA DEL MEDIO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
@@ -290,7 +290,7 @@
     "diff_pct": 1.21
   },
   {
-    "clave": "chanear_112.0_brazuelo sin hueso",
+    "clave": "chanear_112_brazuelo sin hueso",
     "nombre": "BRAZUELO SIN HUESO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",

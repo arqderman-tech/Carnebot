@@ -1,12 +1,12 @@
 {
-  "fecha": "20260610",
+  "fecha": "20260611",
   "total_productos": 73,
-  "variacion_dia": -0.36,
+  "variacion_dia": 0.0,
   "variacion_7d": null,
   "variacion_mes": null,
   "productos_subieron_dia": 0,
-  "productos_bajaron_dia": 1,
-  "productos_sin_cambio_dia": 72,
+  "productos_bajaron_dia": 0,
+  "productos_sin_cambio_dia": 73,
   "ranking_subida_dia": [
     {
       "clave": "chanear_128_azotillo",
@@ -211,22 +211,22 @@
   ],
   "ranking_baja_dia": [
     {
-      "clave": "chanear_307_matambrito de cerdo",
-      "nombre": "MATAMBRITO DE CERDO",
-      "supermercado": "chanear",
-      "categoria": "Cerdo",
-      "precio_antes": 19600.0,
-      "precio_hoy": 14500.0,
-      "diff_abs": -5100.0,
-      "diff_pct": -26.02
-    },
-    {
       "clave": "chanear_128_azotillo",
       "nombre": "AZOTILLO",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
       "precio_antes": 10100.0,
       "precio_hoy": 10100.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "chanear_124_bife a 7 costillas",
+      "nombre": "BIFE A 7 COSTILLAS",
+      "supermercado": "chanear",
+      "categoria": "Carnes Vacunas",
+      "precio_antes": 16800.0,
+      "precio_hoy": 16800.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -241,12 +241,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_124_bife a 7 costillas",
-      "nombre": "BIFE A 7 COSTILLAS",
+      "clave": "chanear_101_bola de lomo",
+      "nombre": "BOLA DE LOMO",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 16800.0,
-      "precio_hoy": 16800.0,
+      "precio_antes": 17300.0,
+      "precio_hoy": 17300.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -281,12 +281,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_101_bola de lomo",
-      "nombre": "BOLA DE LOMO",
+      "clave": "chanear_130_costeleta del medio",
+      "nombre": "COSTELETA DEL MEDIO",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 17300.0,
-      "precio_hoy": 17300.0,
+      "precio_antes": 16700.0,
+      "precio_hoy": 16700.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -361,12 +361,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "chanear_130_costeleta del medio",
-      "nombre": "COSTELETA DEL MEDIO",
+      "clave": "chanear_116_falda",
+      "nombre": "FALDA",
       "supermercado": "chanear",
       "categoria": "Carnes Vacunas",
-      "precio_antes": 16700.0,
-      "precio_hoy": 16700.0,
+      "precio_antes": 10900.0,
+      "precio_hoy": 10900.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },

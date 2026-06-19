@@ -389,7 +389,7 @@ footer a { color: var(--red-light); text-decoration: none; }
 
 <header class="header">
   <div class="logo">🥩 <span>Carne</span>Bot</div>
-  <div class="header-fecha">Actualizado: 18/06/2026</div>
+  <div class="header-fecha">Actualizado: 19/06/2026</div>
 </header>
 
 <section class="hero">
@@ -401,7 +401,7 @@ footer a { color: var(--red-light); text-decoration: none; }
       <div class="kpi-label">Cortes monitoreados</div>
     </div>
     <div class="kpi-card">
-      <div class="kpi-valor kpi-neu">0.00%</div>
+      <div class="kpi-valor kpi-up">+0.04%</div>
       <div class="kpi-label">Var. hoy vs ayer</div>
     </div>
     <div class="kpi-card">
@@ -409,7 +409,7 @@ footer a { color: var(--red-light); text-decoration: none; }
       <div class="kpi-label">Var. 7 días</div>
     </div>
     <div class="kpi-card">
-      <div class="kpi-valor" style="color:#e74c3c">0</div>
+      <div class="kpi-valor" style="color:#e74c3c">1</div>
       <div class="kpi-label">Subieron hoy</div>
     </div>
     <div class="kpi-card">
@@ -437,7 +437,7 @@ footer a { color: var(--red-light); text-decoration: none; }
                         <div class="sup-stat-label">Cortes</div>
                     </div>
                     <div class="sup-stat">
-                        <div class="sup-stat-valor">$15.238</div>
+                        <div class="sup-stat-valor">$15.247</div>
                         <div class="sup-stat-label">Precio prom/kg</div>
                     </div>
                 </div>
@@ -456,7 +456,7 @@ footer a { color: var(--red-light); text-decoration: none; }
                 </div>
                 <div class="cat-row">
                     <span class="cat-nombre">Embutidos</span>
-                    <span class="cat-precio">$10.415 prom · 6 cortes</span>
+                    <span class="cat-precio">$10.532 prom · 6 cortes</span>
                 </div>
                 <div class="cat-row">
                     <span class="cat-nombre">Elaborados Premium</span>
@@ -539,17 +539,17 @@ footer a { color: var(--red-light); text-decoration: none; }
             </tr></thead>
             <tbody>
             <tr>
+                <td class="nombre-prod">MORCILLA SALADA</td>
+                <td><span class="badge badge-chanear">El Chañar</span></td>
+                <td class="precio">$10.000</td>
+                <td class="precio">$10.700</td>
+                <td style="color:#e74c3c;font-weight:700">▲ +7.00%</td>
+            </tr>
+            <tr>
                 <td class="nombre-prod">Picada común</td>
                 <td><span class="badge badge-piala">Piala</span></td>
                 <td class="precio">$9.500</td>
                 <td class="precio">$9.500</td>
-                <td style="color:#888;font-weight:700">– 0.00%</td>
-            </tr>
-            <tr>
-                <td class="nombre-prod">Brazuelo con hueso/ Pata de ternera de 10kg</td>
-                <td><span class="badge badge-piala">Piala</span></td>
-                <td class="precio">$11.000</td>
-                <td class="precio">$11.000</td>
                 <td style="color:#888;font-weight:700">– 0.00%</td>
             </tr>
             <tr>
@@ -1019,7 +1019,7 @@ footer a { color: var(--red-light); text-decoration: none; }
 <tr data-sup="chanear" data-cat="Embutidos"><td class="nombre-prod">Chorizo Mezcla</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Embutidos</td><td class="precio">$9.500/unidad</td></tr>
 <tr data-sup="chanear" data-cat="Embutidos"><td class="nombre-prod">Chorizo Puro Cerdo</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Embutidos</td><td class="precio">$12.000/unidad</td></tr>
 <tr data-sup="chanear" data-cat="Embutidos"><td class="nombre-prod">Morcilla Dulce</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Embutidos</td><td class="precio">$10.000/unidad</td></tr>
-<tr data-sup="chanear" data-cat="Embutidos"><td class="nombre-prod">Morcilla Salada</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Embutidos</td><td class="precio">$10.000/unidad</td></tr>
+<tr data-sup="chanear" data-cat="Embutidos"><td class="nombre-prod">Morcilla Salada</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Embutidos</td><td class="precio">$10.700/unidad</td></tr>
 <tr data-sup="chanear" data-cat="Embutidos"><td class="nombre-prod">Salchicha Parrillera</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Embutidos</td><td class="precio">$10.990/unidad</td></tr>
 <tr data-sup="chanear" data-cat="Pollo"><td class="nombre-prod">Albondigas De Pollo</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Pollo</td><td class="precio">$8.900/kg</td></tr>
 <tr data-sup="chanear" data-cat="Pollo"><td class="nombre-prod">Arrollado De Pollo</td><td><span class="badge badge-chanear">El Chañar</span></td><td>Pollo</td><td class="precio">$18.750/unidad</td></tr>
@@ -1211,10 +1211,10 @@ function makeChart(canvasId, labels, datasets) {
 }
 
 // ── 7d Chart ────────────────────────────────────────────────────────────
-makeChart('chart7d', ["2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18"], [
+makeChart('chart7d', ["2026-06-12", "2026-06-13", "2026-06-14", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-19"], [
   {
     label: 'Total',
-    data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.03, -0.03],
+    data: [0.0, 0.0, 0.0, 0.0, 0.0, -0.03, -0.03, 0.01],
     borderColor: '#e74c3c',
     backgroundColor: 'rgba(231,76,60,.08)',
     borderWidth: 2.5,
@@ -1236,7 +1236,7 @@ makeChart('chart7d', ["2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2
   },
   {
     label: 'El Chañar',
-    data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.07, -0.07],
+    data: [0.0, 0.0, 0.0, 0.0, 0.0, -0.07, -0.07, 0.03],
     borderColor: '#2980b9',
     borderWidth: 1.5,
     borderDash: [4,3],
@@ -1248,10 +1248,10 @@ makeChart('chart7d', ["2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2
 ]);
 
 // ── 30d Chart ────────────────────────────────────────────────────────────
-makeChart('chart30d', ["2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-24", "2026-05-25", "2026-05-27", "2026-05-28", "2026-05-29", "2026-05-30", "2026-05-31", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-06", "2026-06-07", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18"], [
+makeChart('chart30d', ["2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-24", "2026-05-25", "2026-05-27", "2026-05-28", "2026-05-29", "2026-05-30", "2026-05-31", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-06", "2026-06-07", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-19"], [
   {
     label: 'Total',
-    data: [0.0, 0.0, 0.21, 0.21, 0.21, 0.21, 0.21, -0.13, -0.13, -0.13, -0.13, -0.24, -0.24, -0.24, 0.14, -0.03, -0.03, -0.03, -0.03, -0.03, -0.03, -0.39, -0.39, -0.39, -0.39, -0.39, -0.39, -0.39, -0.42, -0.42],
+    data: [0.0, 0.21, 0.21, 0.21, 0.21, 0.21, -0.13, -0.13, -0.13, -0.13, -0.24, -0.24, -0.24, 0.14, -0.03, -0.03, -0.03, -0.03, -0.03, -0.03, -0.39, -0.39, -0.39, -0.39, -0.39, -0.39, -0.39, -0.42, -0.42, -0.38],
     borderColor: '#e74c3c',
     backgroundColor: 'rgba(231,76,60,.08)',
     borderWidth: 2.5,
@@ -1262,7 +1262,7 @@ makeChart('chart30d', ["2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "
   },
   {
     label: 'Piala',
-    data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.59, -0.59, -0.59, -0.59, -0.77, -0.77, -0.77, -0.82, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92],
+    data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.59, -0.59, -0.59, -0.59, -0.77, -0.77, -0.77, -0.82, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92, -0.92],
     borderColor: '#c0392b',
     borderWidth: 1.5,
     borderDash: [4,3],
@@ -1273,7 +1273,7 @@ makeChart('chart30d', ["2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "
   },
   {
     label: 'El Chañar',
-    data: [0.0, 0.0, 0.21, 0.21, 0.21, 0.21, 0.21, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 1.23, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.59, 0.59, 0.59, 0.59, 0.59, 0.59, 0.59, 0.52, 0.52],
+    data: [0.0, 0.21, 0.21, 0.21, 0.21, 0.21, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 1.23, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.59, 0.59, 0.59, 0.59, 0.59, 0.59, 0.59, 0.52, 0.52, 0.62],
     borderColor: '#2980b9',
     borderWidth: 1.5,
     borderDash: [4,3],

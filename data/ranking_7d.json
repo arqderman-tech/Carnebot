@@ -60,14 +60,14 @@
     "diff_pct": 4.19
   },
   {
-    "clave": "piala__entraña fina",
-    "nombre": "Entraña fina",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 30500.0,
-    "precio_hoy": 30500.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
+    "clave": "chanear_117.0_puchero comun de ternera",
+    "nombre": "PUCHERO COMUN DE TERNERA",
+    "supermercado": "chanear",
+    "categoria": "Carnes Vacunas",
+    "precio_antes": 7100.0,
+    "precio_hoy": 7300.0,
+    "diff_abs": 200.0,
+    "diff_pct": 2.82
   },
   {
     "clave": "piala__pata de ternera de 7kg",
@@ -140,12 +140,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__brazuelo con hueso/ pata de ternera de 5kg",
-    "nombre": "Brazuelo con hueso/ Pata de ternera de 5kg",
+    "clave": "piala__entraña fina",
+    "nombre": "Entraña fina",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 11000.0,
-    "precio_hoy": 11000.0,
+    "precio_antes": 30500.0,
+    "precio_hoy": 30500.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },

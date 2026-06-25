@@ -1,23 +1,13 @@
 {
-  "fecha": "20260624",
+  "fecha": "20260625",
   "total_productos": 178,
-  "variacion_dia": -0.01,
-  "variacion_7d": 0.27,
+  "variacion_dia": -0.14,
+  "variacion_7d": 0.11,
   "variacion_mes": null,
-  "productos_subieron_dia": 1,
+  "productos_subieron_dia": 0,
   "productos_bajaron_dia": 1,
-  "productos_sin_cambio_dia": 176,
+  "productos_sin_cambio_dia": 177,
   "ranking_subida_dia": [
-    {
-      "clave": "chanear_117.0_puchero comun de ternera",
-      "nombre": "PUCHERO COMUN DE TERNERA",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 7100.0,
-      "precio_hoy": 7300.0,
-      "diff_abs": 200.0,
-      "diff_pct": 2.82
-    },
     {
       "clave": "piala__picada común",
       "nombre": "Picada común",
@@ -25,6 +15,16 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 9500.0,
       "precio_hoy": 9500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -179,12 +179,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "clave": "piala__vacio",
+      "nombre": "Vacio",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
+      "precio_antes": 25600.0,
+      "precio_hoy": 25600.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -211,14 +211,14 @@
   ],
   "ranking_baja_dia": [
     {
-      "clave": "chanear_300.0_pechito de cerdo",
-      "nombre": "PECHITO DE CERDO",
-      "supermercado": "chanear",
-      "categoria": "Cerdo",
-      "precio_antes": 7900.0,
-      "precio_hoy": 7500.0,
-      "diff_abs": -400.0,
-      "diff_pct": -5.06
+      "clave": "piala__pata muslo",
+      "nombre": "Pata muslo",
+      "supermercado": "piala",
+      "categoria": "Pollos y Derivados",
+      "precio_antes": 3999.99,
+      "precio_hoy": 2999.99,
+      "diff_abs": -1000.0,
+      "diff_pct": -25.0
     },
     {
       "clave": "piala__picada común",
@@ -423,6 +423,16 @@
       "mas_barato": "piala"
     },
     {
+      "nombre": "Pata muslo",
+      "supermercado_1": "piala",
+      "precio_1": 2999.99,
+      "supermercado_2": "chanear",
+      "precio_2": 4700.0,
+      "diff_abs": 1700.01,
+      "diff_pct": 56.67,
+      "mas_barato": "piala"
+    },
+    {
       "nombre": "Filet de muslo",
       "supermercado_1": "piala",
       "precio_1": 8450.0,
@@ -461,16 +471,6 @@
       "diff_abs": -900.0,
       "diff_pct": -5.29,
       "mas_barato": "chanear"
-    },
-    {
-      "nombre": "Pata muslo",
-      "supermercado_1": "piala",
-      "precio_1": 3999.99,
-      "supermercado_2": "chanear",
-      "precio_2": 4700.0,
-      "diff_abs": 700.01,
-      "diff_pct": 17.5,
-      "mas_barato": "piala"
     },
     {
       "nombre": "Bondiola de cerdo",
@@ -670,7 +670,7 @@
         },
         {
           "categoria": "Pollos y Derivados",
-          "precio_promedio": 13685.0,
+          "precio_promedio": 13585.0,
           "precio_min": 1200.0,
           "precio_max": 75000.0,
           "cantidad": 10

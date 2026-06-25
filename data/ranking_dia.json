@@ -1,22 +1,22 @@
 {
   "subidas": [
     {
-      "clave": "chanear_117.0_puchero comun de ternera",
-      "nombre": "PUCHERO COMUN DE TERNERA",
-      "supermercado": "chanear",
-      "categoria": "Carnes Vacunas",
-      "precio_antes": 7100.0,
-      "precio_hoy": 7300.0,
-      "diff_abs": 200.0,
-      "diff_pct": 2.82
-    },
-    {
       "clave": "piala__picada común",
       "nombre": "Picada común",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
       "precio_antes": 9500.0,
       "precio_hoy": 9500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -171,12 +171,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "clave": "piala__vacio",
+      "nombre": "Vacio",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
+      "precio_antes": 25600.0,
+      "precio_hoy": 25600.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -203,14 +203,14 @@
   ],
   "bajadas": [
     {
-      "clave": "chanear_300.0_pechito de cerdo",
-      "nombre": "PECHITO DE CERDO",
-      "supermercado": "chanear",
-      "categoria": "Cerdo",
-      "precio_antes": 7900.0,
-      "precio_hoy": 7500.0,
-      "diff_abs": -400.0,
-      "diff_pct": -5.06
+      "clave": "piala__pata muslo",
+      "nombre": "Pata muslo",
+      "supermercado": "piala",
+      "categoria": "Pollos y Derivados",
+      "precio_antes": 3999.99,
+      "precio_hoy": 2999.99,
+      "diff_abs": -1000.0,
+      "diff_pct": -25.0
     },
     {
       "clave": "piala__picada común",

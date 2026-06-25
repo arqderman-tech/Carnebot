@@ -10,16 +10,6 @@
     "diff_pct": 14.29
   },
   {
-    "clave": "piala__pata muslo",
-    "nombre": "Pata muslo",
-    "supermercado": "piala",
-    "categoria": "Pollos y Derivados",
-    "precio_antes": 3500.0,
-    "precio_hoy": 3999.99,
-    "diff_abs": 499.99,
-    "diff_pct": 14.29
-  },
-  {
     "clave": "chanear_504.0_morcilla salada",
     "nombre": "MORCILLA SALADA",
     "supermercado": "chanear",
@@ -76,6 +66,16 @@
     "categoria": "Cortes vacunos",
     "precio_antes": 12550.0,
     "precio_hoy": 12550.0,
+    "diff_abs": 0.0,
+    "diff_pct": 0.0
+  },
+  {
+    "clave": "piala__lomo",
+    "nombre": "Lomo",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 29500.0,
+    "precio_hoy": 29500.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -150,12 +150,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__lomo",
-    "nombre": "Lomo",
+    "clave": "piala__cuadril",
+    "nombre": "Cuadril",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 29500.0,
-    "precio_hoy": 29500.0,
+    "precio_antes": 19900.0,
+    "precio_hoy": 19900.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -200,22 +200,22 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__arañita",
-    "nombre": "Arañita",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 19600.0,
-    "precio_hoy": 19600.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
-  },
-  {
     "clave": "piala__tapa de asado",
     "nombre": "Tapa de asado",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
     "precio_antes": 16000.0,
     "precio_hoy": 16000.0,
+    "diff_abs": 0.0,
+    "diff_pct": 0.0
+  },
+  {
+    "clave": "piala__osobuco",
+    "nombre": "Osobuco",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 11000.0,
+    "precio_hoy": 11000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -230,12 +230,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__osobuco",
-    "nombre": "Osobuco",
+    "clave": "piala__jamon redondo / peceto",
+    "nombre": "Jamon redondo / Peceto",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 11000.0,
-    "precio_hoy": 11000.0,
+    "precio_antes": 21000.0,
+    "precio_hoy": 21000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },

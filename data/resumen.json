@@ -1,52 +1,52 @@
 {
-  "fecha": "20260629",
+  "fecha": "20260630",
   "total_productos": 178,
-  "variacion_dia": 0.0,
-  "variacion_7d": 0.23,
+  "variacion_dia": 0.14,
+  "variacion_7d": 0.12,
   "variacion_mes": null,
-  "productos_subieron_dia": 0,
+  "productos_subieron_dia": 4,
   "productos_bajaron_dia": 0,
-  "productos_sin_cambio_dia": 178,
+  "productos_sin_cambio_dia": 174,
   "ranking_subida_dia": [
     {
-      "clave": "piala__picada común",
-      "nombre": "Picada común",
+      "clave": "piala__chorizo puro",
+      "nombre": "Chorizo puro",
       "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 9500.0,
-      "precio_hoy": 9500.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "categoria": "Embutidos",
+      "precio_antes": 8350.0,
+      "precio_hoy": 9000.0,
+      "diff_abs": 650.0,
+      "diff_pct": 7.78
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "clave": "piala__chorizo ahumado",
+      "nombre": "Chorizo ahumado",
       "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "categoria": "Embutidos",
+      "precio_antes": 9400.0,
+      "precio_hoy": 10000.0,
+      "diff_abs": 600.0,
+      "diff_pct": 6.38
     },
     {
-      "clave": "piala__pata de ternera de 7kg",
-      "nombre": "Pata de ternera de 7kg",
+      "clave": "piala__salchicha fresca",
+      "nombre": "Salchicha fresca",
       "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 12550.0,
-      "precio_hoy": 12550.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "categoria": "Embutidos",
+      "precio_antes": 9800.0,
+      "precio_hoy": 10300.0,
+      "diff_abs": 500.0,
+      "diff_pct": 5.1
     },
     {
-      "clave": "piala__lomo",
-      "nombre": "Lomo",
+      "clave": "piala__chorizo colorado",
+      "nombre": "Chorizo colorado",
       "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 29500.0,
-      "precio_hoy": 29500.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
+      "categoria": "Embutidos",
+      "precio_antes": 9800.0,
+      "precio_hoy": 10300.0,
+      "diff_abs": 500.0,
+      "diff_pct": 5.1
     },
     {
       "clave": "piala__falda",
@@ -69,22 +69,22 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__entraña fina",
-      "nombre": "Entraña fina",
+      "clave": "piala__pata de ternera de 7kg",
+      "nombre": "Pata de ternera de 7kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 30500.0,
-      "precio_hoy": 30500.0,
+      "precio_antes": 12550.0,
+      "precio_hoy": 12550.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__cuadril",
-      "nombre": "Cuadril",
+      "clave": "piala__lomo",
+      "nombre": "Lomo",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 19900.0,
-      "precio_hoy": 19900.0,
+      "precio_antes": 29500.0,
+      "precio_hoy": 29500.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -149,42 +149,42 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 5kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 5kg",
+      "clave": "piala__entraña fina",
+      "nombre": "Entraña fina",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 30500.0,
+      "precio_hoy": 30500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__cuadril",
+      "nombre": "Cuadril",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 19900.0,
+      "precio_hoy": 19900.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__picada común",
+      "nombre": "Picada común",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 9500.0,
+      "precio_hoy": 9500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
       "precio_antes": 11000.0,
       "precio_hoy": 11000.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__arañita",
-      "nombre": "Arañita",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 19600.0,
-      "precio_hoy": 19600.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__asado de novillito",
-      "nombre": "Asado de novillito",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 18200.0,
-      "precio_hoy": 18200.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__vacio",
-      "nombre": "Vacio",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 25600.0,
-      "precio_hoy": 25600.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -656,7 +656,7 @@
         },
         {
           "categoria": "Embutidos",
-          "precio_promedio": 10314.29,
+          "precio_promedio": 10635.71,
           "precio_min": 6800.0,
           "precio_max": 21000.0,
           "cantidad": 7

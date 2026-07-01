@@ -40,22 +40,22 @@
     "diff_pct": 5.1
   },
   {
-    "clave": "chanear_117.0_puchero comun de ternera",
-    "nombre": "PUCHERO COMUN DE TERNERA",
-    "supermercado": "chanear",
-    "categoria": "Carnes Vacunas",
-    "precio_antes": 7100.0,
-    "precio_hoy": 7300.0,
-    "diff_abs": 200.0,
-    "diff_pct": 2.82
-  },
-  {
     "clave": "piala__falda",
     "nombre": "Falda",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
     "precio_antes": 11500.0,
     "precio_hoy": 11500.0,
+    "diff_abs": 0.0,
+    "diff_pct": 0.0
+  },
+  {
+    "clave": "piala__entrecot comun / roast beef",
+    "nombre": "Entrecot comun / Roast beef",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 14300.0,
+    "precio_hoy": 14300.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -130,12 +130,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__entrecot comun / roast beef",
-    "nombre": "Entrecot comun / Roast beef",
+    "clave": "piala__brazuelo sin hueso",
+    "nombre": "Brazuelo sin hueso",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 14300.0,
-    "precio_hoy": 14300.0,
+    "precio_antes": 16500.0,
+    "precio_hoy": 16500.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },

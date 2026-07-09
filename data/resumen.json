@@ -1,15 +1,176 @@
 {
-  "fecha": "20260708",
-  "total_productos": 73,
+  "fecha": "20260709",
+  "total_productos": 178,
   "variacion_dia": null,
-  "variacion_7d": null,
+  "variacion_7d": 0.16,
   "variacion_mes": null,
   "productos_subieron_dia": 0,
   "productos_bajaron_dia": 0,
   "productos_sin_cambio_dia": 0,
   "ranking_subida_dia": [],
   "ranking_baja_dia": [],
-  "comparativa_supermercados": [],
+  "comparativa_supermercados": [
+    {
+      "nombre": "Nalga",
+      "supermercado_1": "piala",
+      "precio_1": 19200.0,
+      "supermercado_2": "chanear",
+      "precio_2": 21800.0,
+      "diff_abs": 2600.0,
+      "diff_pct": 13.54,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Pata muslo",
+      "supermercado_1": "piala",
+      "precio_1": 2999.99,
+      "supermercado_2": "chanear",
+      "precio_2": 4700.0,
+      "diff_abs": 1700.01,
+      "diff_pct": 56.67,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Tapa de asado",
+      "supermercado_1": "piala",
+      "precio_1": 16000.0,
+      "supermercado_2": "chanear",
+      "precio_2": 17000.0,
+      "diff_abs": 1000.0,
+      "diff_pct": 6.25,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Mar del plata de cerdo",
+      "supermercado_1": "piala",
+      "precio_1": 7900.0,
+      "supermercado_2": "chanear",
+      "precio_2": 8900.0,
+      "diff_abs": 1000.0,
+      "diff_pct": 12.66,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Tapa de nalga",
+      "supermercado_1": "piala",
+      "precio_1": 17000.0,
+      "supermercado_2": "chanear",
+      "precio_2": 16100.0,
+      "diff_abs": -900.0,
+      "diff_pct": -5.29,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Jamon cuadrado",
+      "supermercado_1": "piala",
+      "precio_1": 16900.0,
+      "supermercado_2": "chanear",
+      "precio_2": 17790.0,
+      "diff_abs": 890.0,
+      "diff_pct": 5.27,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Bondiola de cerdo",
+      "supermercado_1": "piala",
+      "precio_1": 10000.0,
+      "supermercado_2": "chanear",
+      "precio_2": 10650.0,
+      "diff_abs": 650.0,
+      "diff_pct": 6.5,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Falda",
+      "supermercado_1": "piala",
+      "precio_1": 11500.0,
+      "supermercado_2": "chanear",
+      "precio_2": 10900.0,
+      "diff_abs": -600.0,
+      "diff_pct": -5.22,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Filet de muslo",
+      "supermercado_1": "piala",
+      "precio_1": 8950.0,
+      "supermercado_2": "chanear",
+      "precio_2": 9500.0,
+      "diff_abs": 550.0,
+      "diff_pct": 6.15,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Brazuelo sin hueso",
+      "supermercado_1": "piala",
+      "precio_1": 16500.0,
+      "supermercado_2": "chanear",
+      "precio_2": 17000.0,
+      "diff_abs": 500.0,
+      "diff_pct": 3.03,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Cuadril",
+      "supermercado_1": "piala",
+      "precio_1": 20000.0,
+      "supermercado_2": "chanear",
+      "precio_2": 20190.0,
+      "diff_abs": 190.0,
+      "diff_pct": 0.95,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Colita de cuadril / Punta de vacio",
+      "supermercado_1": "piala",
+      "precio_1": 23000.0,
+      "supermercado_2": "chanear",
+      "precio_2": 23190.0,
+      "diff_abs": 190.0,
+      "diff_pct": 0.83,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Lomo",
+      "supermercado_1": "piala",
+      "precio_1": 30000.0,
+      "supermercado_2": "chanear",
+      "precio_2": 30100.0,
+      "diff_abs": 100.0,
+      "diff_pct": 0.33,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Matambre de ternera",
+      "supermercado_1": "piala",
+      "precio_1": 16000.0,
+      "supermercado_2": "chanear",
+      "precio_2": 15900.0,
+      "diff_abs": -100.0,
+      "diff_pct": -0.62,
+      "mas_barato": "chanear"
+    },
+    {
+      "nombre": "Filet de pechuga",
+      "supermercado_1": "piala",
+      "precio_1": 9000.0,
+      "supermercado_2": "chanear",
+      "precio_2": 9050.0,
+      "diff_abs": 50.0,
+      "diff_pct": 0.56,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Entraña fina",
+      "supermercado_1": "piala",
+      "precio_1": 30900.0,
+      "supermercado_2": "chanear",
+      "precio_2": 30900.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0,
+      "mas_barato": "chanear"
+    }
+  ],
   "resumen_supermercados": [
     {
       "supermercado": "chanear",
@@ -56,6 +217,61 @@
           "precio_min": 4390.0,
           "precio_max": 18750.0,
           "cantidad": 13
+        }
+      ]
+    },
+    {
+      "supermercado": "piala",
+      "total_productos": 105,
+      "categorias": [
+        {
+          "categoria": "Bichos",
+          "precio_promedio": 13937.25,
+          "precio_min": 5799.0,
+          "precio_max": 19850.0,
+          "cantidad": 4
+        },
+        {
+          "categoria": "Cortes de Cerdo",
+          "precio_promedio": 9810.78,
+          "precio_min": 5799.0,
+          "precio_max": 19700.0,
+          "cantidad": 9
+        },
+        {
+          "categoria": "Cortes vacunos",
+          "precio_promedio": 17675.0,
+          "precio_min": 7000.0,
+          "precio_max": 30900.0,
+          "cantidad": 34
+        },
+        {
+          "categoria": "Elaborados",
+          "precio_promedio": 15210.29,
+          "precio_min": 810.0,
+          "precio_max": 28850.0,
+          "cantidad": 35
+        },
+        {
+          "categoria": "Embutidos",
+          "precio_promedio": 10635.71,
+          "precio_min": 6800.0,
+          "precio_max": 21000.0,
+          "cantidad": 7
+        },
+        {
+          "categoria": "Menudencias",
+          "precio_promedio": 12031.67,
+          "precio_min": 2900.0,
+          "precio_max": 35750.0,
+          "cantidad": 6
+        },
+        {
+          "categoria": "Pollos y Derivados",
+          "precio_promedio": 13770.0,
+          "precio_min": 1200.0,
+          "precio_max": 75000.0,
+          "cantidad": 10
         }
       ]
     }

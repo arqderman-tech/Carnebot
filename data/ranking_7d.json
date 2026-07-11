@@ -1,7 +1,17 @@
 [
   {
-    "clave": "chanear_138.0_milanesas de ternera de oferta x 2 kg o mas",
-    "nombre": "MILANESAS DE TERNERA DE OFERTA X 2 KG O MAS",
+    "clave": "piala__pata muslo",
+    "nombre": "Pata muslo",
+    "supermercado": "piala",
+    "categoria": "Pollos y Derivados",
+    "precio_antes": 3499.99,
+    "precio_hoy": 3999.99,
+    "diff_abs": 500.0,
+    "diff_pct": 14.29
+  },
+  {
+    "clave": "chanear_141.0_milanesas de ternera x kg",
+    "nombre": "MILANESAS DE TERNERA X KG",
     "supermercado": "chanear",
     "categoria": "Elaborados Premium",
     "precio_antes": 11200.0,
@@ -10,8 +20,8 @@
     "diff_pct": 6.25
   },
   {
-    "clave": "chanear_141.0_milanesas de ternera x kg",
-    "nombre": "MILANESAS DE TERNERA X KG",
+    "clave": "chanear_138.0_milanesas de ternera de oferta x 2 kg o mas",
+    "nombre": "MILANESAS DE TERNERA DE OFERTA X 2 KG O MAS",
     "supermercado": "chanear",
     "categoria": "Elaborados Premium",
     "precio_antes": 11200.0,
@@ -40,6 +50,26 @@
     "diff_pct": 5.21
   },
   {
+    "clave": "piala__provoleta",
+    "nombre": "Provoleta",
+    "supermercado": "piala",
+    "categoria": "Elaborados",
+    "precio_antes": 22400.0,
+    "precio_hoy": 23550.0,
+    "diff_abs": 1150.0,
+    "diff_pct": 5.13
+  },
+  {
+    "clave": "piala__provoleta c/ bandeja",
+    "nombre": "Provoleta c/ bandeja",
+    "supermercado": "piala",
+    "categoria": "Elaborados",
+    "precio_antes": 23200.0,
+    "precio_hoy": 24350.0,
+    "diff_abs": 1150.0,
+    "diff_pct": 4.96
+  },
+  {
     "clave": "piala__filet de pechuga",
     "nombre": "Filet de pechuga",
     "supermercado": "piala",
@@ -50,8 +80,8 @@
     "diff_pct": 3.45
   },
   {
-    "clave": "chanear_101.0_bola de lomo",
-    "nombre": "BOLA DE LOMO",
+    "clave": "chanear_103.0_jamon cuadrado",
+    "nombre": "JAMON CUADRADO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
     "precio_antes": 17300.0,
@@ -60,8 +90,8 @@
     "diff_pct": 2.83
   },
   {
-    "clave": "chanear_103.0_jamon cuadrado",
-    "nombre": "JAMON CUADRADO",
+    "clave": "chanear_101.0_bola de lomo",
+    "nombre": "BOLA DE LOMO",
     "supermercado": "chanear",
     "categoria": "Carnes Vacunas",
     "precio_antes": 17300.0,
@@ -140,16 +170,6 @@
     "diff_pct": 0.44
   },
   {
-    "clave": "piala__arañita",
-    "nombre": "Arañita",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 19600.0,
-    "precio_hoy": 19600.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
-  },
-  {
     "clave": "piala__costeleta grande",
     "nombre": "Costeleta grande",
     "supermercado": "piala",
@@ -160,42 +180,22 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__cima de ternera",
-    "nombre": "Cima de ternera",
+    "clave": "piala__muslo rellenos salado/agridulce",
+    "nombre": "Muslo rellenos salado/agridulce",
     "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 16500.0,
-    "precio_hoy": 16500.0,
+    "categoria": "Pollos y Derivados",
+    "precio_antes": 12250.0,
+    "precio_hoy": 12250.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__picada común",
-    "nombre": "Picada común",
+    "clave": "piala__muslo 4 estaciones",
+    "nombre": "Muslo 4 estaciones",
     "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 9500.0,
-    "precio_hoy": 9500.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
-  },
-  {
-    "clave": "piala__matambrito",
-    "nombre": "Matambrito",
-    "supermercado": "piala",
-    "categoria": "Cortes de Cerdo",
-    "precio_antes": 19700.0,
-    "precio_hoy": 19700.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
-  },
-  {
-    "clave": "piala__puchero común",
-    "nombre": "Puchero común",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 7000.0,
-    "precio_hoy": 7000.0,
+    "categoria": "Pollos y Derivados",
+    "precio_antes": 13000.0,
+    "precio_hoy": 13000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -230,12 +230,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__matambre de ternera",
-    "nombre": "Matambre de ternera",
+    "clave": "piala__cima de ternera",
+    "nombre": "Cima de ternera",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 16000.0,
-    "precio_hoy": 16000.0,
+    "precio_antes": 16500.0,
+    "precio_hoy": 16500.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },

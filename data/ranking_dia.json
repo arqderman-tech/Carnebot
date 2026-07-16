@@ -1,22 +1,22 @@
 {
   "subidas": [
     {
-      "clave": "chanear_427.0_patitas rebozadas de pollo",
-      "nombre": "PATITAS REBOZADAS DE POLLO",
-      "supermercado": "chanear",
-      "categoria": "Pollo",
-      "precio_antes": 12990.0,
-      "precio_hoy": 13300.0,
-      "diff_abs": 310.0,
-      "diff_pct": 2.39
-    },
-    {
       "clave": "piala__picada común",
       "nombre": "Picada común",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
       "precio_antes": 9500.0,
       "precio_hoy": 9500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 10500.0,
+      "precio_hoy": 10500.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -171,12 +171,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "clave": "piala__vacio",
+      "nombre": "Vacio",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 10500.0,
-      "precio_hoy": 10500.0,
+      "precio_antes": 25600.0,
+      "precio_hoy": 25600.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },

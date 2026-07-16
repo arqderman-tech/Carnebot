@@ -30,14 +30,14 @@
     "diff_pct": 4.96
   },
   {
-    "clave": "piala__lomo",
-    "nombre": "Lomo",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 30000.0,
-    "precio_hoy": 30000.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
+    "clave": "chanear_427.0_patitas rebozadas de pollo",
+    "nombre": "PATITAS REBOZADAS DE POLLO",
+    "supermercado": "chanear",
+    "categoria": "Pollo",
+    "precio_antes": 12990.0,
+    "precio_hoy": 13300.0,
+    "diff_abs": 310.0,
+    "diff_pct": 2.39
   },
   {
     "clave": "piala__pata de ternera de 7kg",
@@ -70,12 +70,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__cuadril",
-    "nombre": "Cuadril",
+    "clave": "piala__lomo",
+    "nombre": "Lomo",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 20000.0,
-    "precio_hoy": 20000.0,
+    "precio_antes": 30000.0,
+    "precio_hoy": 30000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -150,12 +150,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__arañita",
-    "nombre": "Arañita",
+    "clave": "piala__cuadril",
+    "nombre": "Cuadril",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 19600.0,
-    "precio_hoy": 19600.0,
+    "precio_antes": 20000.0,
+    "precio_hoy": 20000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },

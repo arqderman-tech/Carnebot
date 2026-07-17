@@ -1,15 +1,5 @@
 [
   {
-    "clave": "piala__pata muslo",
-    "nombre": "Pata muslo",
-    "supermercado": "piala",
-    "categoria": "Pollos y Derivados",
-    "precio_antes": 2999.99,
-    "precio_hoy": 3999.99,
-    "diff_abs": 1000.0,
-    "diff_pct": 33.33
-  },
-  {
     "clave": "piala__provoleta",
     "nombre": "Provoleta",
     "supermercado": "piala",
@@ -50,6 +40,16 @@
     "diff_pct": 0.0
   },
   {
+    "clave": "piala__falda",
+    "nombre": "Falda",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 11500.0,
+    "precio_hoy": 11500.0,
+    "diff_abs": 0.0,
+    "diff_pct": 0.0
+  },
+  {
     "clave": "piala__entrecot comun / roast beef",
     "nombre": "Entrecot comun / Roast beef",
     "supermercado": "piala",
@@ -80,12 +80,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__falda",
-    "nombre": "Falda",
+    "clave": "piala__costeleta grande",
+    "nombre": "Costeleta grande",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 11500.0,
-    "precio_hoy": 11500.0,
+    "precio_antes": 11000.0,
+    "precio_hoy": 11000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -160,16 +160,6 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__costeleta grande",
-    "nombre": "Costeleta grande",
-    "supermercado": "piala",
-    "categoria": "Cortes vacunos",
-    "precio_antes": 11000.0,
-    "precio_hoy": 11000.0,
-    "diff_abs": 0.0,
-    "diff_pct": 0.0
-  },
-  {
     "clave": "piala__picada común",
     "nombre": "Picada común",
     "supermercado": "piala",
@@ -180,12 +170,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__vacio",
-    "nombre": "Vacio",
+    "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+    "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 25600.0,
-    "precio_hoy": 25600.0,
+    "precio_antes": 10500.0,
+    "precio_hoy": 10500.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -200,6 +190,16 @@
     "diff_pct": 0.0
   },
   {
+    "clave": "piala__osobuco",
+    "nombre": "Osobuco",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 11000.0,
+    "precio_hoy": 11000.0,
+    "diff_abs": 0.0,
+    "diff_pct": 0.0
+  },
+  {
     "clave": "piala__nalga",
     "nombre": "Nalga",
     "supermercado": "piala",
@@ -210,12 +210,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__osobuco",
-    "nombre": "Osobuco",
+    "clave": "piala__matambre de ternera",
+    "nombre": "Matambre de ternera",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 11000.0,
-    "precio_hoy": 11000.0,
+    "precio_antes": 16000.0,
+    "precio_hoy": 16000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -250,12 +250,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__matambre de ternera",
-    "nombre": "Matambre de ternera",
+    "clave": "piala__entrecot especial / bife de chorizo",
+    "nombre": "Entrecot especial / Bife de chorizo",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 16000.0,
-    "precio_hoy": 16000.0,
+    "precio_antes": 24500.0,
+    "precio_hoy": 24500.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },

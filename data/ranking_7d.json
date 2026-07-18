@@ -1,25 +1,5 @@
 [
   {
-    "clave": "piala__provoleta",
-    "nombre": "Provoleta",
-    "supermercado": "piala",
-    "categoria": "Elaborados",
-    "precio_antes": 22400.0,
-    "precio_hoy": 23550.0,
-    "diff_abs": 1150.0,
-    "diff_pct": 5.13
-  },
-  {
-    "clave": "piala__provoleta c/ bandeja",
-    "nombre": "Provoleta c/ bandeja",
-    "supermercado": "piala",
-    "categoria": "Elaborados",
-    "precio_antes": 23200.0,
-    "precio_hoy": 24350.0,
-    "diff_abs": 1150.0,
-    "diff_pct": 4.96
-  },
-  {
     "clave": "chanear_427.0_patitas rebozadas de pollo",
     "nombre": "PATITAS REBOZADAS DE POLLO",
     "supermercado": "chanear",
@@ -30,12 +10,32 @@
     "diff_pct": 2.39
   },
   {
+    "clave": "piala__picada común",
+    "nombre": "Picada común",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 9500.0,
+    "precio_hoy": 9500.0,
+    "diff_abs": 0.0,
+    "diff_pct": 0.0
+  },
+  {
     "clave": "piala__pata de ternera de 7kg",
     "nombre": "Pata de ternera de 7kg",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
     "precio_antes": 12550.0,
     "precio_hoy": 12550.0,
+    "diff_abs": 0.0,
+    "diff_pct": 0.0
+  },
+  {
+    "clave": "piala__lomo",
+    "nombre": "Lomo",
+    "supermercado": "piala",
+    "categoria": "Cortes vacunos",
+    "precio_antes": 30000.0,
+    "precio_hoy": 30000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -70,12 +70,12 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__lomo",
-    "nombre": "Lomo",
+    "clave": "piala__cuadril",
+    "nombre": "Cuadril",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 30000.0,
-    "precio_hoy": 30000.0,
+    "precio_antes": 20000.0,
+    "precio_hoy": 20000.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
@@ -150,22 +150,22 @@
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__cuadril",
-    "nombre": "Cuadril",
+    "clave": "piala__arañita",
+    "nombre": "Arañita",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 20000.0,
-    "precio_hoy": 20000.0,
+    "precio_antes": 19600.0,
+    "precio_hoy": 19600.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },
   {
-    "clave": "piala__picada común",
-    "nombre": "Picada común",
+    "clave": "piala__asado de novillito",
+    "nombre": "Asado de novillito",
     "supermercado": "piala",
     "categoria": "Cortes vacunos",
-    "precio_antes": 9500.0,
-    "precio_hoy": 9500.0,
+    "precio_antes": 18200.0,
+    "precio_hoy": 18200.0,
     "diff_abs": 0.0,
     "diff_pct": 0.0
   },

@@ -1,13 +1,23 @@
 {
-  "fecha": "20260718",
+  "fecha": "20260719",
   "total_productos": 178,
-  "variacion_dia": 0.0,
-  "variacion_7d": -0.13,
+  "variacion_dia": 0.19,
+  "variacion_7d": 0.01,
   "variacion_mes": null,
-  "productos_subieron_dia": 0,
+  "productos_subieron_dia": 1,
   "productos_bajaron_dia": 0,
-  "productos_sin_cambio_dia": 178,
+  "productos_sin_cambio_dia": 177,
   "ranking_subida_dia": [
+    {
+      "clave": "piala__pata muslo",
+      "nombre": "Pata muslo",
+      "supermercado": "piala",
+      "categoria": "Pollos y Derivados",
+      "precio_antes": 2999.99,
+      "precio_hoy": 3999.99,
+      "diff_abs": 1000.0,
+      "diff_pct": 33.33
+    },
     {
       "clave": "piala__picada común",
       "nombre": "Picada común",
@@ -15,16 +25,6 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 9500.0,
       "precio_hoy": 9500.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 10500.0,
-      "precio_hoy": 10500.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -179,6 +179,16 @@
       "diff_pct": 0.0
     },
     {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 10500.0,
+      "precio_hoy": 10500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
       "clave": "piala__vacio",
       "nombre": "Vacio",
       "supermercado": "piala",
@@ -195,16 +205,6 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 16000.0,
       "precio_hoy": 16000.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__osobuco",
-      "nombre": "Osobuco",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 11000.0,
-      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     }
@@ -423,16 +423,6 @@
       "mas_barato": "piala"
     },
     {
-      "nombre": "Pata muslo",
-      "supermercado_1": "piala",
-      "precio_1": 2999.99,
-      "supermercado_2": "chanear",
-      "precio_2": 4700.0,
-      "diff_abs": 1700.01,
-      "diff_pct": 56.67,
-      "mas_barato": "piala"
-    },
-    {
       "nombre": "Tapa de asado",
       "supermercado_1": "piala",
       "precio_1": 16000.0,
@@ -470,6 +460,16 @@
       "precio_2": 17790.0,
       "diff_abs": 890.0,
       "diff_pct": 5.27,
+      "mas_barato": "piala"
+    },
+    {
+      "nombre": "Pata muslo",
+      "supermercado_1": "piala",
+      "precio_1": 3999.99,
+      "supermercado_2": "chanear",
+      "precio_2": 4700.0,
+      "diff_abs": 700.01,
+      "diff_pct": 17.5,
       "mas_barato": "piala"
     },
     {
@@ -670,7 +670,7 @@
         },
         {
           "categoria": "Pollos y Derivados",
-          "precio_promedio": 13770.0,
+          "precio_promedio": 13870.0,
           "precio_min": 1200.0,
           "precio_max": 75000.0,
           "cantidad": 10

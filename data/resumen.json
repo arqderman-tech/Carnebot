@@ -1,23 +1,13 @@
 {
-  "fecha": "20260719",
+  "fecha": "20260720",
   "total_productos": 178,
-  "variacion_dia": 0.19,
+  "variacion_dia": 0.0,
   "variacion_7d": 0.01,
   "variacion_mes": null,
-  "productos_subieron_dia": 1,
+  "productos_subieron_dia": 0,
   "productos_bajaron_dia": 0,
-  "productos_sin_cambio_dia": 177,
+  "productos_sin_cambio_dia": 178,
   "ranking_subida_dia": [
-    {
-      "clave": "piala__pata muslo",
-      "nombre": "Pata muslo",
-      "supermercado": "piala",
-      "categoria": "Pollos y Derivados",
-      "precio_antes": 2999.99,
-      "precio_hoy": 3999.99,
-      "diff_abs": 1000.0,
-      "diff_pct": 33.33
-    },
     {
       "clave": "piala__picada común",
       "nombre": "Picada común",
@@ -25,6 +15,16 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 9500.0,
       "precio_hoy": 9500.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
+      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 10500.0,
+      "precio_hoy": 10500.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -179,16 +179,6 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 10kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 10kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 10500.0,
-      "precio_hoy": 10500.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
       "clave": "piala__vacio",
       "nombre": "Vacio",
       "supermercado": "piala",
@@ -205,6 +195,16 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 16000.0,
       "precio_hoy": 16000.0,
+      "diff_abs": 0.0,
+      "diff_pct": 0.0
+    },
+    {
+      "clave": "piala__osobuco",
+      "nombre": "Osobuco",
+      "supermercado": "piala",
+      "categoria": "Cortes vacunos",
+      "precio_antes": 11000.0,
+      "precio_hoy": 11000.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     }

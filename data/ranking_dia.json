@@ -203,14 +203,24 @@
   ],
   "bajadas": [
     {
-      "clave": "piala__pata muslo",
-      "nombre": "Pata muslo",
+      "clave": "piala__filet de muslo",
+      "nombre": "Filet de muslo",
       "supermercado": "piala",
       "categoria": "Pollos y Derivados",
-      "precio_antes": 3999.99,
-      "precio_hoy": 2999.99,
-      "diff_abs": -1000.0,
-      "diff_pct": -25.0
+      "precio_antes": 8950.0,
+      "precio_hoy": 8450.0,
+      "diff_abs": -500.0,
+      "diff_pct": -5.59
+    },
+    {
+      "clave": "piala__filet de pechuga",
+      "nombre": "Filet de pechuga",
+      "supermercado": "piala",
+      "categoria": "Pollos y Derivados",
+      "precio_antes": 9000.0,
+      "precio_hoy": 8500.0,
+      "diff_abs": -500.0,
+      "diff_pct": -5.56
     },
     {
       "clave": "piala__picada común",
@@ -219,16 +229,6 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 9500.0,
       "precio_hoy": 9500.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__pata de ternera de 7kg",
-      "nombre": "Pata de ternera de 7kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 12550.0,
-      "precio_hoy": 12550.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -263,12 +263,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__entraña fina",
-      "nombre": "Entraña fina",
+      "clave": "piala__pata de ternera de 7kg",
+      "nombre": "Pata de ternera de 7kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 30900.0,
-      "precio_hoy": 30900.0,
+      "precio_antes": 12550.0,
+      "precio_hoy": 12550.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -343,12 +343,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 5kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 5kg",
+      "clave": "piala__entraña fina",
+      "nombre": "Entraña fina",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 10500.0,
-      "precio_hoy": 10500.0,
+      "precio_antes": 30900.0,
+      "precio_hoy": 30900.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },

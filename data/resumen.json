@@ -1,12 +1,12 @@
 {
-  "fecha": "20260722",
+  "fecha": "20260723",
   "total_productos": 178,
-  "variacion_dia": -0.14,
-  "variacion_7d": -0.14,
+  "variacion_dia": -0.06,
+  "variacion_7d": -0.2,
   "variacion_mes": null,
   "productos_subieron_dia": 0,
-  "productos_bajaron_dia": 1,
-  "productos_sin_cambio_dia": 177,
+  "productos_bajaron_dia": 2,
+  "productos_sin_cambio_dia": 176,
   "ranking_subida_dia": [
     {
       "clave": "piala__picada común",
@@ -211,14 +211,24 @@
   ],
   "ranking_baja_dia": [
     {
-      "clave": "piala__pata muslo",
-      "nombre": "Pata muslo",
+      "clave": "piala__filet de muslo",
+      "nombre": "Filet de muslo",
       "supermercado": "piala",
       "categoria": "Pollos y Derivados",
-      "precio_antes": 3999.99,
-      "precio_hoy": 2999.99,
-      "diff_abs": -1000.0,
-      "diff_pct": -25.0
+      "precio_antes": 8950.0,
+      "precio_hoy": 8450.0,
+      "diff_abs": -500.0,
+      "diff_pct": -5.59
+    },
+    {
+      "clave": "piala__filet de pechuga",
+      "nombre": "Filet de pechuga",
+      "supermercado": "piala",
+      "categoria": "Pollos y Derivados",
+      "precio_antes": 9000.0,
+      "precio_hoy": 8500.0,
+      "diff_abs": -500.0,
+      "diff_pct": -5.56
     },
     {
       "clave": "piala__picada común",
@@ -227,16 +237,6 @@
       "categoria": "Cortes vacunos",
       "precio_antes": 9500.0,
       "precio_hoy": 9500.0,
-      "diff_abs": 0.0,
-      "diff_pct": 0.0
-    },
-    {
-      "clave": "piala__pata de ternera de 7kg",
-      "nombre": "Pata de ternera de 7kg",
-      "supermercado": "piala",
-      "categoria": "Cortes vacunos",
-      "precio_antes": 12550.0,
-      "precio_hoy": 12550.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -271,12 +271,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__entraña fina",
-      "nombre": "Entraña fina",
+      "clave": "piala__pata de ternera de 7kg",
+      "nombre": "Pata de ternera de 7kg",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 30900.0,
-      "precio_hoy": 30900.0,
+      "precio_antes": 12550.0,
+      "precio_hoy": 12550.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -351,12 +351,12 @@
       "diff_pct": 0.0
     },
     {
-      "clave": "piala__brazuelo con hueso/ pata de ternera de 5kg",
-      "nombre": "Brazuelo con hueso/ Pata de ternera de 5kg",
+      "clave": "piala__entraña fina",
+      "nombre": "Entraña fina",
       "supermercado": "piala",
       "categoria": "Cortes vacunos",
-      "precio_antes": 10500.0,
-      "precio_hoy": 10500.0,
+      "precio_antes": 30900.0,
+      "precio_hoy": 30900.0,
       "diff_abs": 0.0,
       "diff_pct": 0.0
     },
@@ -433,6 +433,16 @@
       "mas_barato": "piala"
     },
     {
+      "nombre": "Filet de muslo",
+      "supermercado_1": "piala",
+      "precio_1": 8450.0,
+      "supermercado_2": "chanear",
+      "precio_2": 9500.0,
+      "diff_abs": 1050.0,
+      "diff_pct": 12.43,
+      "mas_barato": "piala"
+    },
+    {
       "nombre": "Tapa de asado",
       "supermercado_1": "piala",
       "precio_1": 16000.0,
@@ -493,13 +503,13 @@
       "mas_barato": "chanear"
     },
     {
-      "nombre": "Filet de muslo",
+      "nombre": "Filet de pechuga",
       "supermercado_1": "piala",
-      "precio_1": 8950.0,
+      "precio_1": 8500.0,
       "supermercado_2": "chanear",
-      "precio_2": 9500.0,
+      "precio_2": 9050.0,
       "diff_abs": 550.0,
-      "diff_pct": 6.15,
+      "diff_pct": 6.47,
       "mas_barato": "piala"
     },
     {
@@ -551,16 +561,6 @@
       "diff_abs": -100.0,
       "diff_pct": -0.62,
       "mas_barato": "chanear"
-    },
-    {
-      "nombre": "Filet de pechuga",
-      "supermercado_1": "piala",
-      "precio_1": 9000.0,
-      "supermercado_2": "chanear",
-      "precio_2": 9050.0,
-      "diff_abs": 50.0,
-      "diff_pct": 0.56,
-      "mas_barato": "piala"
     },
     {
       "nombre": "Entraña fina",
@@ -670,7 +670,7 @@
         },
         {
           "categoria": "Pollos y Derivados",
-          "precio_promedio": 13770.0,
+          "precio_promedio": 13670.0,
           "precio_min": 1200.0,
           "precio_max": 75000.0,
           "cantidad": 10
